@@ -44,7 +44,7 @@ const Navbar = () => {
         if (dropdownRef.current && navRef.current) {
             if (activeDropdown) {
                 const dropdownHeight = dropdownRef.current.offsetHeight;
-                setNavHeight(navRef.current.offsetHeight + dropdownHeight + 'px');
+                setNavHeight(`${parseInt(NAVBAR_DEFAULT_HEIGHT) + dropdownHeight}px`);
             } else {
                 setNavHeight(NAVBAR_DEFAULT_HEIGHT);
             }
@@ -68,7 +68,7 @@ const Navbar = () => {
                 </ul>
 
                 {activeDropdown.length > 0 &&
-                    <div ref={dropdownRef} onMouseLeave={handleMouseLeave}>
+                    <div ref={dropdownRef} className={style.dropdownContainer} onMouseLeave={handleMouseLeave}>
                         <Dropdown category={activeDropdown} />
                     </div>
                 }
