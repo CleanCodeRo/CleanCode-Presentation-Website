@@ -1,17 +1,50 @@
-@import "@/style/globalVariables.scss";
+@import "@style/globalVariables.scss";
 
 .dropdown {
     left: 0;
-    z-index: -1;
+    z-index: 1000;
     background-color: rgba(0,0,0,0);
     width:100%;
     pointer-events: none; 
     padding:10px;
     animation: descend 0.5s linear forwards;
+    box-sizing: border-box;
+
+    // Set max height to 50% of the container's height
+    max-height: 50%; // Using 50% of the viewport height, adjust as needed
+    overflow: hidden; // Ensures no scrolling, items will wrap into columns
+    display: block;   // Ensure block display for proper height and columns
+
+    // Optional: Add background or border if needed
+}
+
+.bigItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    column-count: 3;    // Set the desired number of columns (can be adjusted)
+    column-gap: 20px;    // Gap between the columns
+    max-height: 50%;
+}
+
+.itemsList {
+    // Set a flexible width for each item
+    max-height: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    break-inside: avoid;  // Prevents awkward breaking of items between columns
 }
 
 .text{
     animation: appear 0.5s linear forwards;
+    list-style-type: none;
+    padding: 10px;
+    max-width: 100%;
+    max-height: 50%;
+    
 }
 @keyframes appear {
     0% {

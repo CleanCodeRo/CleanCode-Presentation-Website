@@ -10,7 +10,7 @@ const [activeMenu, setActiveMenu]=useState<string>("main");
   return (
     <div className={`${style.dropdown}`}>
       <CSSTransition in={activeMenu==="main"} unmountOnExit timeout={500} classNames={`${style.menuPrimary}`}>
-      <ul>
+      <ul className={`${style.bigItemsList}`}>
         {category.map((value, index) => (
           <li className={`${style.text}`} key={index}>{value.name}</li>
         ))}
