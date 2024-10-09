@@ -19,6 +19,7 @@ const Navbar = () => {
 
     const navRef = useRef<HTMLDivElement>(null);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
+    const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     const fetchData = async (path: string) => {
         try {
@@ -35,9 +36,18 @@ const Navbar = () => {
         }
     };
 
+    const handleMouseEnter = (path: string) => {
+        if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+        }
+        fetchData(path);
+    };
+
     const handleMouseLeave = () => {
-        setNavHeight(NAVBAR_DEFAULT_HEIGHT);
-        setActiveDropdown([]);
+        hoverTimeoutRef.current = setTimeout(() => {
+            setNavHeight(NAVBAR_DEFAULT_HEIGHT);
+            setActiveDropdown([]);
+        }, 100);
     };
 
     useEffect(() => {
@@ -56,11 +66,11 @@ const Navbar = () => {
             <nav ref={navRef} className={`${style.nav}`} style={{ height: navHeight }} >
                 <ul className={style.navList}>
                     <li className={style.navItem}><Logo /></li>
-                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => fetchData(SERVICES_JSON_PATH)}
+                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
                     >Services</a></li>
-                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => fetchData(INDUSTRY_JSON_PATH)}
+                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
                     >Industries</a></li>
-                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => fetchData(ABOUT_JSON_PATH)}
+                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(ABOUT_JSON_PATH)}
                     >About Us</a></li>
                     <li className={`${style.navItem}`}>
                         <button className={style.button}>Contact us</button>
@@ -68,7 +78,11 @@ const Navbar = () => {
                 </ul>
 
                 {activeDropdown.length > 0 &&
-                    <div ref={dropdownRef} className={style.dropdownContainer} onMouseLeave={handleMouseLeave}>
+                    <div ref={dropdownRef} 
+                        className={style.dropdownContainer} 
+                        onMouseEnter={() => hoverTimeoutRef.current && clearTimeout(hoverTimeoutRef.current)}
+                        onMouseLeave={handleMouseLeave}
+                    >
                         <Dropdown category={activeDropdown} />
                     </div>
                 }

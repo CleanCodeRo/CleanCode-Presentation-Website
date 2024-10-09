@@ -12,7 +12,7 @@ const [activeMenu, setActiveMenu]=useState<string>("main");
       <CSSTransition in={activeMenu==="main"} unmountOnExit timeout={500} classNames={`${style.menuPrimary}`}>
       <ul className={`${style.bigItemsList}`}>
         {category.map((value, index) => (
-          <li className={`${style.text}`} key={index}>{value.name}</li>
+          <li className={`${style.text}`} key={index}><a className={`${style.element}`}>{value.name}</a></li>
         ))}
       </ul>
       </CSSTransition>
