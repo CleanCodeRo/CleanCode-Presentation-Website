@@ -1,0 +1,224 @@
+/* components/Contact/style.module.scss */
+@import "@style/globalVariables.scss";
+
+.contactContainer {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    font-family: $RubikRegular;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formGroup {
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%; /* Default width for form groups */
+}
+
+.inputLabel {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    font-size: 12px;
+    color: #747474;
+    transition: all 1s ease;
+    opacity: 1; /* Ensure the label is visible */
+}
+
+/* Adjust input and select styles */
+.formGroup input,
+.formGroup select {
+    width: 100%;
+    padding: 10px;
+    margin: 0px 10px;
+    height: 40px; /* Ensure same height for consistency */
+    border: none;
+    border-bottom: 2px solid #ccc;
+    color: #ccc;
+    border-radius: 0;
+    background-color: transparent;
+    box-sizing: border-box; /* Ensure padding/border are included in width */
+
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid #747474;
+        color: black;
+        font-family: $RubikRegular;
+    }
+
+    &::placeholder {
+        color: #ccc;
+    }
+}
+
+.formGroup input:not(:placeholder-shown),
+.formGroup select:not([value=""]) {
+    & ~ .inputLabel {
+        top: -20px; /* Move the label above */
+        font-size: 12px; /* Reduce the label size */
+        color: #747474; /* Highlight label color */
+    }
+}
+
+/* Dynamic textarea styling */
+.dynamicTextarea {
+    width: 200%;
+    height: 40px; /* Set a fixed height for the unfocused state */
+    resize: none; /* Disable manual resizing */
+    overflow-y: hidden; /* Initially hide the scroll bar */
+    min-height: 30px; /* Ensure it matches the height for consistency */
+    max-height: 100px; /* Allow a maximum height for 5 rows */
+    line-height: 20px; /* Ensure line-height matches the row height */
+    box-sizing: border-box; /* To prevent padding from affecting the height calculation */
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+    margin: 0px 10px;
+
+    &:focus {
+        border-bottom: 2px solid #747474;
+        outline: none;
+    }
+}
+
+.fullWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.descriptionSuggestion {
+    color: #747474;
+    margin-bottom: 20px;
+}
+
+.attachment {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+}
+
+.recording, .uploadFile {
+    color: #747474;
+    width: 43%;
+    height: 100%;
+    border: 1px dashed #747474;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.uploadFile {
+    display: flex;
+    flex-direction: column; /* Stack the description above the button */
+    align-items: center;    /* Center items horizontally */
+}
+.uploadContainer {
+    display: flex;
+    align-items: center;     /* Center vertically within the container */
+}
+
+.recordButton, .uploadButton {
+    color: $Red;
+    background-color: white;
+    border: 1px solid $Red; /* Defines a solid red border */
+    color: black; /* Optional: ensures text is visible */
+    padding: 10px 20px; /* Optional: adds some padding for better button appearance */
+    cursor: pointer; /* Optional: changes the cursor on hover */
+}
+
+.uploadButton{
+    color: $Red;
+    margin-right: 10px;
+}
+
+.recordButton {
+    color: $Red;
+}
+
+.uploadDetails {
+    border: 1px solid #747474;
+    border-radius: 50%;
+    width: 24px; /* Fixed width */
+    height: 24px; /* Fixed height */
+    display: flex; /* Optional: to center content */
+    align-items: center; /* Optional: vertically center content */
+    justify-content: center; /* Optional: horizontally center content */
+    position: relative; /* Needed for absolute positioning of tooltip */
+}
+
+/* Tooltip style */
+.uploadDetails::after {
+    content: "You can attach up to 1 file of 2MB overall. Valid files: pdf, jpg, jpeg, png";
+    position: absolute; /* Positioning relative to the container */
+    bottom: 150%; /* Position above the circle */
+    left: 50%; /* Center the tooltip horizontally */
+    font-size: $font-size-x-small;
+    transform: translateX(-50%); /* Adjust position to center */
+    width: 200px; /* Fixed width for square */
+    height: 100px; /* Fixed height for square */
+    background-color: #747474; /* Tooltip background color */
+    color: $Red; /* Text color */
+    padding: 10px; /* Padding around the text */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    flex-wrap: wrap; /* Allow text to wrap */
+    text-align: center; /* Center text alignment */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.2s; /* Smooth transition */
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Show tooltip on hover */
+.uploadDetails:hover::after {
+    opacity: 1; /* Make tooltip visible */
+    visibility: visible; /* Make tooltip visible */
+}
+
+.submitBtnContainer {
+    margin-top: 16px;
+    display: flex;
+}
+
+.privacyWarning {
+    color: #747474; /* Set the default text color */
+}
+
+.privacyPolicy {
+    color: black; /* Set the specific color for "Privacy Policy" */
+}
+
+.privacyPolicy:hover{
+    cursor: pointer;
+}
+
+.submitBtn {
+    padding: 8px 32px;
+    background-color: $Red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: $spacing-medium;
+}
+
+.submitBtn:hover {
+    background-color: #0056b3;
+}
