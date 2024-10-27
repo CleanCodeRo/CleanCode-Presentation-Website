@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, ChangeEvent, FormEvent, useRef } from 'react';
 import style from './style.module.scss';
 import { PRIVACY_POLICY_WARNING } from '@constants/constants';
