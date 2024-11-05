@@ -1,0 +1,102 @@
+@import "@style/globalVariables.scss";
+
+.whatNextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; // Keep padding for the content
+    position: relative; // Required for absolute positioning of pseudo-element
+    overflow: visible; // Allow overflow to be visible
+    font-family: $RubikRegular;
+  
+    // Pseudo-element for the dashed border
+    &::before {
+      content: ''; // Required for the pseudo-element
+      position: absolute; // Position absolutely
+      top: 20px; // Move down 20px
+      left: 20px; // Move right 20px
+      right: -20px; // Move border 20px outside to the right
+      bottom: -20px; // Move border 20px outside to the bottom
+      border: 1px dashed rgb(255, 0, 0); // Dashed border
+      z-index: 0; // Ensure it's behind the content
+    }
+  
+    // Inner background color layer
+    .backgroundCover {
+      position: absolute; // Position absolutely within the container
+      top: 0; // Align to the top of the container
+      left: 0; // Align to the left of the container
+      right: 0; // Extend to the right of the container
+      bottom: 0; // Extend to the bottom of the container
+      background-color: #F5F4F6; // Same background color as the container
+      z-index: 1; // Ensure it covers the dashed border inside
+    }
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: $font-size-large; // Use the large font size variable
+    margin-bottom: $spacing-medium; // Use the medium spacing variable
+    margin-top: $spacing-large; // Use the large spacing variable
+    z-index: 2;
+    position: relative;
+}
+  
+  .elementsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-small; // Use the small spacing variable
+}
+  
+  .element {
+    display: flex;
+    align-items: flex-start; // Align items at the start
+    gap: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    z-index: 2;
+    position: relative; // Required for line positioning
+    padding: $spacing-small 0; // Optional: vertical padding for spacing
+}
+  
+  .numberContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 70px;
+}
+  
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid $DarkBlue;
+    color: $DarkBlue;
+    font-size: $font-size-x-small;
+    background-color: transparent;
+    z-index: 2;
+}
+  
+  .line {
+    position: absolute;
+    top: 40px; /* Start just below the circle */
+    width: 0.5px;
+    background-color: black;
+    height: calc(100% - 16px); /* Ensure the line spans the space between circles */
+    z-index: 2;
+  }
+  
+  .text {
+    font-size: $font-size-x-small; // Use the medium font size variable
+    flex-grow: 1; // Allow it to take up remaining space
+    padding-top: 10px; // Space above the text
+    z-index: 2;
+}
+  
