@@ -1,0 +1,47 @@
+@import "@style/globalVariables.scss";
+
+.fullCard {
+    display: flex;                       
+    flex-direction: column;              
+    justify-content: space-between;           
+    height: 100%;                
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
+    font-family: $RubikBold;
+    &:hover {
+        cursor: pointer;
+        border-bottom: 1px solid black;
+
+        .cardName{
+            color: $Red;
+        }
+        .arrow {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+}
+
+.cardName {
+    font-family: $RubikBold;
+    padding-left: 20px;
+}
+
+.cardDescription {
+    font-family: $RubikLight;
+    width: 200px;
+    padding-left: 20px;
+}
+
+.arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 10px;
+    height: 10px;
+    background-color: $Red;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}

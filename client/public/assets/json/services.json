@@ -1,73 +1,91 @@
 [
     {
-        "id":1,
-        "name":"Custom Software Development",
-        "detail":""
+        "id": 1,
+        "name": "Software Development Services",
+        "detail": "",
+        "cards": [
+            {
+                "name": "Product Development",
+                "description": " Full life-cycle digital product development from idea to launch."
+            },
+            {
+                "name": "Custom Software Development",
+                "description": " Customised software solutions tailored to your business."
+            },
+            {
+                "name": "Mobile App Development",
+                "description": "Native and cross-platform app development."
+            },
+            {
+                "name": "Web Development",
+                "description": "End-to-end web application development."
+            },
+            {
+                "name": "MVP Development",
+                "description": "Minimum Viable Product to test and validate ideas."
+            },
+            {
+                "name": "DevOps",
+                "description": "Automation, CI/CD, and infrastructure management."
+            },
+            {
+                "name": "Hosting / Network",
+                "description": "Reliable hosting and network management."
+            }
+        ]
     },
     {
-        "id":2,
-        "name":"Mobile App Development",
-        "detail":""
+        "id": 2,
+        "name": "IT Consulting Services",
+        "detail": "",
+        "cards": [
+            {
+                "name": "Software Consulting Services",
+                "description": "Strategic guidance on software and technology."
+            },
+            {
+                "name": "Application Modernization",
+                "description": "Update legacy systems for better performance."
+            },
+            {
+                "name": "UX / UI Design",
+                "description": "Design services focused on intuitive user experiences."
+            },
+            {
+                "name": "Business Analysis",
+                "description": "Align tech solutions with business goals."
+            },
+            {
+                "name": "Project Management",
+                "description": "Oversee projects from start to finish."
+            },
+            {
+                "name": "Search Engine Optimization",
+                "description": "Improve online presence and drive traffic."
+            },
+            {
+                "name": "Digital Transformation",
+                "description": "Implement strategies to optimise business processes."
+            }
+        ]
     },
     {
-        "id":3,
-        "name":"MVP Development",
-        "detail":""
-    },
-    {
-        "id":4,
-        "name":"Application Modernization",
-        "detail":""
-    },
-    {
-        "id":5,
-        "name":"Offshore Technical Services",
-        "detail":""
-    },
-    {
-        "id":6,
-        "name":"Dedicated Development Team",
-        "detail":""
-    },
-    {
-        "id":7,
-        "name":"Experience Design",
-        "detail":""
-    },    
-    {
-        "id":8,
-        "name":"Product Development",
-        "detail":""
-    },
-    {
-        "id":9,
-        "name":"IT Staff Augmentaion",
-        "detail":""
-    },
-    {
-        "id":10,
-        "name":"Software Consulting Services",
-        "detail":""
-    },
-    {
-        "id":11,
-        "name":"Digital Transformation",
-        "detail":""
-    },
-    {
-        "id":12,
-        "name":"Search Engine Optimization",
-        "detail":""
-    },    
-    {
-        "id":13,
-        "name":"Hosting / Network",
-        "detail":""
-    },
-    {
-        "id":14,
-        "name":"Project Management",
-        "detail":""
-    }    
-    
+        "id": 3,
+        "name": "Outsourcing Models",
+        "detail": "",
+        "cards": [
+            {
+                "name": "Offshore Technical Services",
+                "description": "Offshore teams to reduce costs."
+            },
+            {
+                "name": "Dedicated Development Team",
+                "description": "A team focused on your specific needs."
+            },
+            {
+                "name": "IT Staff Augmentation",
+                "description": "Flexible staffing for skills and project demands."
+            }
+        ]
+    }
 ]
