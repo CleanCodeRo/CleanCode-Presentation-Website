@@ -1,0 +1,41 @@
+@import "@style/globalVariables.scss";
+
+.contactComponent {
+  margin: 20px; // Space around the component
+  padding: 0 15px; // Space inside the component
+  font-family: $RubikRegular;
+}
+
+
+
+.contactSubComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  gap: 60px;
+  margin-top: 50px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.TitleAndDescription {
+  margin-left: 30px;
+  width: 900px;
+}
+
+.contactTitle {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.contactDescription {
+  font-size: 20px;
+  margin-bottom: 50px;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+  
