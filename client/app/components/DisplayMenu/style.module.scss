@@ -12,32 +12,51 @@
     align-items: center;
     margin-bottom: 20px;
 }
+.servicesTitle{
+    font-size: $font-size-x-large;
+    font-family: $RubikLight;
+}
 .bottomSection {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    width: 90%;
 
     .itemsListChild {
+        display: flex;
         cursor: pointer;
-        color:$DarkBlue;
-        &:hover{
-            color:$Blue;
+        color: $DarkBlue;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px; /* Add some padding for better spacing */
+        border-left: 2px solid gray; /* Default thin gray line */
+        transition: border-left 0.3s; /* Smooth transition for the border change */
+
+        &.active {
+            border-left: 4px solid $Red; /* Thicker red line when active */
+        }
+
+        &:hover {
+            color: $Blue;
         }
     }
     .leftSide {
-        background-color: $Aqua;
-        padding: 10px;
+        background-color: white;
+        padding: 30px;
+        font-family: $RubikBold;
     }
 
     .rightSide {
-        background-color: $Teal;
-        padding: 10px;
+        background-color: white;
+        padding: 20px;
         flex-grow: 1;
+        font-family: $RubikRegular;
     }
     .cardContainer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        display: grid;                                 /* Maintain grid layout */
+        grid-template-columns: repeat(2, 1fr);        /* Two columns */
+        gap: 20px;                                     /* Gap between cards */
+        align-items: stretch;                          /* Ensure all cards stretch to the same height */
     }
     .menuItemName {
         color: $Red;
