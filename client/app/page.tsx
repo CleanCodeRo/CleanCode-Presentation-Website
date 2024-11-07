@@ -3,6 +3,7 @@ import Navbar from '@components/Navbar';
 import Landing from '@components/Landing';
 import DisplayMenu from '@components/DisplayMenu';
 import Contact from '@components/Contact';
+import Technologies from '@components/Technologies';
 import { MenuProps } from '@models/menu';
 import { MenuItemProps } from '@models/menuItem';
 
@@ -117,6 +118,7 @@ export default function Home() {
     <>
       <Navbar />
       <Landing />
+      <Technologies />
       <DisplayMenu menuItems={services} />
       <Contact />
     </>
