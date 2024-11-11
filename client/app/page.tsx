@@ -7,6 +7,7 @@ import DisplayMenu from '@components/DisplayMenu';
 import Contact from '@components/Contact';
 import { MenuProps } from '@models/menu';
 import { MenuItemProps } from '@models/menuItem';
+import Footer from '@components/Footer';
 
 export default function Home() {
   const [services, setServices] = useState<MenuItemProps[]>([]);
@@ -43,6 +44,7 @@ export default function Home() {
       <Landing />
       <DisplayMenu menuItems={services} />
       <Contact />
+      <Footer />
     </>
   );
 }
