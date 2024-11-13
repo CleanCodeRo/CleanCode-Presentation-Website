@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { TITLE_CHANGING_WORDS, TITLE_SECOND_CHANGING_WORDS } from '@constants/constants';
+import { TITLE_CHANGING_WORDS, TITLE_SECOND_CHANGING_WORDS, SUB_TITLE_MAIN } from '@constants/constants';
 import style from "./style.module.scss";
 
 const Title=()=> {
@@ -20,27 +20,29 @@ const Title=()=> {
 
         }, 3000);
 
-
-
-
         return () => {clearInterval(interval)}
 
     }, [index]);
     return (
-        <h1 className={style.title}>Leading global partner in <span>
-            {TITLE_CHANGING_WORDS.map((word, wordIndex) => (
-                    <b className={`${style.changingText} ${index===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
-                ))}
-            </span>
-            <br />
-            empowering ambitious businesses (with 500+ experts), 
-            <br />
-            committed to delivering <span>
-            {TITLE_SECOND_CHANGING_WORDS.map((word, wordIndex) => (
-                    <b className={`${style.changingText} ${secondIndex===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
-                ))}
-            </span>
-        </h1>
+        <div className={style.boxTitle}>
+            <h1 className={style.title}>Leading global partner in <span>
+                {TITLE_CHANGING_WORDS.map((word, wordIndex) => (
+                        <b className={`${style.changingText} ${index===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
+                    ))}
+                </span>
+                <br />
+                empowering ambitious businesses, 
+                <br />
+                committed to delivering <span>
+                {TITLE_SECOND_CHANGING_WORDS.map((word, wordIndex) => (
+                        <b className={`${style.changingText} ${secondIndex===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
+                    ))}
+                </span>
+
+            </h1>
+            <div className={style.subTitleMain}>{SUB_TITLE_MAIN}</div>
+            <button className={style.letsTalk}>Let's talk</button>
+        </div>
     );
 };
 
