@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"We analyse the requirements",
+        "detail":"We build your ideal team based on your requirements, selecting members with the right skill sets. If necessary, we sign an NDA to guarantee full confidentiality."
+    },
+    {
+        "id":2,
+        "name":"We set up the team",
+        "detail":"We assemble a dedicated, efficient team for your project, immersing them in your business to bring your idea to life."
+    },
+    {
+        "id":3,
+        "name":"You agree on the working process",
+        "detail":"Review all processes and terms with the team, including reporting and work management, and establish a communication plan to track progress."
+    },
+    {
+        "id":4,
+        "name":"You start the project",
+        "detail":"Start your project and enjoy smooth development. We handle the team's work environment, while you maintain control over management."
+    }
+]
