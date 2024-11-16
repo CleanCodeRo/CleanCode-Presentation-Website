@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "name":"Values",
+        "detail":[
+            "Excellence",
+            "Boldness",
+            "Openness",
+            "Enjoyment"
+        ]
+    },
+    {
+        "id":2,
+        "name":"Mission",
+        "detail":"We help clients boost revenue by using the latest technology to improve efficiency and performance."
+    },
+    {
+        "id":3,
+        "name":"Vision",
+        "detail":"To use today's technologies to optimize your business for tomorrow's challenges."
+    }
+]

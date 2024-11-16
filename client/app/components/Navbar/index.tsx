@@ -11,6 +11,8 @@ import { DropdownData } from '@models/dropdown';
 
 import { ABOUT_JSON_PATH, INDUSTRY_JSON_PATH, NAVBAR_DEFAULT_HEIGHT, SERVICES_JSON_PATH } from '@constants/constants';
 
+import Link from 'next/link';
+
 
 const Navbar = () => {
 
@@ -70,8 +72,10 @@ const Navbar = () => {
                     >Services</a></li>
                     <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
                     >Industries</a></li>
-                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(ABOUT_JSON_PATH)}
-                    >About Us</a></li>
+                    <li className={style.navItem}><Link href="/AboutUs" onMouseLeave={handleMouseLeave}>
+                        About Us
+                        </Link>
+                    </li>
                     <li className={`${style.navItem}`}>
                         <button className={style.button}>Contact us</button>
                     </li>
