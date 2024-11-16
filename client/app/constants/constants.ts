@@ -4,10 +4,6 @@ export const TECHNOLOGIES_JSON_PATH:string="/assets/json/technologies.json";
 export const ABOUT_JSON_PATH:string="/assets/json/about.json";
 export const NAVBAR_DEFAULT_HEIGHT:string="100px";
 
-export const TITLE_CHANGING_WORDS:string[]=["Hosting","Product Development","IT Staff Augmentation"];
-
-export const TITLE_SECOND_CHANGING_WORDS:string[]=["lasting value","data-driven value"];
-
 export const WHAT_NEXT_TITLE:string="What happens next?";
 
 export const WHAT_NEXT_ELEMENTS:string[]=["Having received and processed your request, we will get back to you shortly to detail your project needs and sign an NDA to ensure the confidentiality of information.", 
