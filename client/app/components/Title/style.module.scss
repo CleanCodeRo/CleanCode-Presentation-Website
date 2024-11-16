@@ -1,12 +1,16 @@
 @import "@style/globalVariables.scss";
 
+.boxTitle {
+    width: 1024px;
+    margin: 0 auto;
+}
+
 .title {
-    
     font-family: $RubikBold;
     color:$DarkBlue;
-    margin-left: 5rem;
     font-size: 2.5rem;
     margin-top: 2.5rem;
+    width: 1024px;
 }
 
 .changingText {
@@ -48,4 +52,32 @@
         transform: translateY(100%);
         opacity: 0;
     }
+}
+
+.subTitleMain {
+    font-family: $RubikLight;
+    font-size: 1.5rem;
+    width: 60%;
+    max-width: 600px;
+}
+
+.letsTalk {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: 20rem;
+    margin-top: 2rem;
+    border-radius: 7px;
+    font-family: $RubikBold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: $Red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.letsTalk:hover {
+    background-color: darken($DarkBlue, 10%);
 }
