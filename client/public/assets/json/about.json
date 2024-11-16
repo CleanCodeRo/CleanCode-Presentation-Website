@@ -2,16 +2,19 @@
     {
         "id":1,
         "name":"About",
-        "detail":""
+        "detail":"",
+        "link":"/AboutUs"
     },
     {
         "id":2,
         "name":"Blog",
-        "detail":""
+        "detail":"",
+        "link":"/"
     },
     {
         "id":3,
         "name":"Contact",
-        "detail":""
+        "detail":"",
+        "link":"/"
     }   
 ]
