@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { TITLE_CHANGING_WORDS, TITLE_SECOND_CHANGING_WORDS, SUB_TITLE_MAIN } from '@constants/constants';
+import { TITLE_CHANGING_WORDS, TITLE_SECOND_CHANGING_WORDS, SUB_TITLE_MAIN } from '@constants/hero';
 import style from "./style.module.scss";
 
 const Title=()=> {
