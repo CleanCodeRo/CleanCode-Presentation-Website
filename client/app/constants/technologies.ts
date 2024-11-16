@@ -1,0 +1,25 @@
+export const TECHNOLOGIES:string[]=['android',
+    'angular',
+    'aws',
+    'azure',
+    'c-sharp',
+    'css',
+    'google-cloud',
+    'html',
+    'ios',
+    'java',
+    'javascript',
+    'kotlin',
+    'mongoDB',
+    'mySQL',
+    'node-js',
+    'oracle',
+    'postgreSQL',
+    'python',
+    'react-native',
+    'react',
+    'typescript',
+]
+
+export const TECHLOGIES_PATH:string="/assets/tech-logos/"
+export const TECHLOGIES_FILE_EXTENSION:string=".svg"
