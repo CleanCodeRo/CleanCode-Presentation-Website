@@ -1,12 +1,10 @@
 @import "@style/globalVariables.scss";
 
 .contactComponent {
-  margin: 20px; // Space around the component
-  padding: 0 15px; // Space inside the component
+  margin: 20px;
+  padding: 0 15px;
   font-family: $RubikRegular;
 }
-
-
 
 .contactSubComponent {
   display: flex;
@@ -38,4 +36,3 @@
   display: flex;
   flex-wrap: wrap;
 }
-  
