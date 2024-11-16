@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import style from './style.module.scss';
 import Head from 'next/head';
 import Navbar from '@components/Navbar';
-import { ABOUT_US_SECTION } from '@constants/constants';
+import { ABOUT_US_SECTION } from '@constants/aboutUs';
 
 interface ProcessStep {
   id: number;

@@ -67,12 +67,12 @@ const Navbar = () => {
         <>
             <nav ref={navRef} className={`${style.nav}`} style={{ height: navHeight }} >
                 <ul className={style.navList}>
-                    <li className={style.navItem}><Logo /></li>
-                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
+                    <li className={style.navItem}><Link href="/"><Logo /></Link></li>
+                    <li className={style.navItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
                     >Services</a></li>
-                    <li className={style.navItem}><a onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
+                    <li className={style.navItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
                     >Industries</a></li>
-                    <li className={style.navItem}><Link href="/AboutUs" onMouseLeave={handleMouseLeave}>
+                    <li className={style.navItem}><Link className={style.navLink} href="/AboutUs" onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(ABOUT_JSON_PATH)}>
                         About Us
                         </Link>
                     </li>
