@@ -41,7 +41,7 @@ const Title=()=> {
 
             </h1>
             <div className={style.subTitleMain}>{SUB_TITLE_MAIN}</div>
-            <button className={style.letsTalk}>Let's talk</button>
+            <button className={style.letsTalk}>Let{'\''}s talk</button>
         </div>
     );
 };
