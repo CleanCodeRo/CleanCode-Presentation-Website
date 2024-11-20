@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import style from './style.module.scss';
 import Head from 'next/head';
 import Navbar from '@components/Navbar';
+import Footer from '@components/Footer';
 import { ABOUT_US_SECTION } from '@constants/aboutUs';
 
 interface ProcessStep {
@@ -47,7 +48,7 @@ const AboutUs = () => {
     <>
       <Navbar />
       <Head>
-        <title>About Us | Your Company</title>
+        <title>About Us</title>
         <meta name="description" content="Learn more about our company and values." />
       </Head>
       <div className={style.aboutUsContainer}>
@@ -111,6 +112,7 @@ const AboutUs = () => {
         </div>
 
       </div>
+      <Footer />
     </>
   );
 };

@@ -9,7 +9,7 @@ import Logo from '@components/Logo';
 
 import { DropdownData } from '@models/dropdown';
 
-import { ABOUT_JSON_PATH, INDUSTRY_JSON_PATH, NAVBAR_DEFAULT_HEIGHT, SERVICES_JSON_PATH } from '@constants/constants';
+import { INDUSTRY_JSON_PATH, NAVBAR_DEFAULT_HEIGHT, SERVICES_JSON_PATH } from '@constants/constants';
 
 import Link from 'next/link';
 
@@ -69,15 +69,19 @@ const Navbar = () => {
                 <ul className={style.navList}>
                     <li className={style.navItem}><Link href="/"><Logo /></Link></li>
                     <li className={style.navItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
-                    >Services</a></li>
+                    >Services</a>
+                    </li>
                     <li className={style.navItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
-                    >Industries</a></li>
-                    <li className={style.navItem}><Link className={style.navLink} href="/AboutUs" onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(ABOUT_JSON_PATH)}>
+                    >Industries</a>
+                    </li>
+                    <li className={style.navItem}><Link className={style.navLink} href="/AboutUs" onMouseLeave={handleMouseLeave}>
                         About Us
                         </Link>
                     </li>
                     <li className={`${style.navItem}`}>
-                        <button className={style.button}>Contact us</button>
+                        <Link href="/ContactUs" className={`${style.button} ${style.buttonLink}`}>
+                            Contact us
+                        </Link>
                     </li>
                 </ul>
 

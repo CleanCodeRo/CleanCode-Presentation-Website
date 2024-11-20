@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./style.module.scss";
 import Card from "@components/Card";
-import RedirectButton from "@components/RedirectButton";
 import { MenuProps } from "@models/menu";
 import { MenuItemProps } from "@models/menuItem";
 import { CardProps } from "@models/card";
@@ -26,8 +25,7 @@ const DisplayMenu: React.FC<MenuProps> = ({ menuItems }) => {
   return (
     <section className={style.section}>
       <div className={style.topSection}>
-        <h1 className={style.servicesTitle}>Services</h1>
-        <RedirectButton text={"TEST"} path={"/"} />
+        <h2 className={style.servicesTitle}>Services</h2>
       </div>
 
       <div className={style.bottomSection}>
