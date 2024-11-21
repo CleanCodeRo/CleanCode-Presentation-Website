@@ -1,7 +1,6 @@
 export const INDUSTRY_JSON_PATH:string="/assets/json/industries.json";
 export const SERVICES_JSON_PATH:string="/assets/json/services.json";
 export const TECHNOLOGIES_JSON_PATH:string="/assets/json/technologies.json";
-export const ABOUT_JSON_PATH:string="/assets/json/about.json";
 export const NAVBAR_DEFAULT_HEIGHT:string="100px";
 
 export const WHAT_NEXT_TITLE:string="What happens next?";

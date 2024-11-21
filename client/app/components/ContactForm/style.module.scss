@@ -111,9 +111,10 @@
 .recording,
 .uploadFile {
   color: #747474;
-  width: 43%;
+  width: 42%;
   height: 100%;
   border: 1px dashed #747474;
+  border-radius: $button-radious;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -137,9 +138,15 @@
   color: $Red;
   background-color: white;
   border: 1px solid $Red;
+  border-radius: $button-radious;
   color: black;
   padding: 10px 20px;
   cursor: pointer;
+}
+.recordButton:hover,
+.uploadButton:hover{
+  background-color: $Red;
+  color: white;
 }
 
 .uploadButton {
@@ -172,7 +179,7 @@
   width: 200px;
   height: 100px;
   background-color: #747474;
-  color: $Red;
+  color: white;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -209,13 +216,15 @@
 
 .submitBtn {
   padding: 8px 32px;
-  background-color: $Red;
-  color: white;
-  border: none;
+  background-color: white;
+  border-radius: $button-radious;
+  color: $Red;
+  border: 1px solid $Red;
   cursor: pointer;
   font-size: $spacing-medium;
 }
 
 .submitBtn:hover {
-  background-color: #0056b3;
+  color:white;
+  background-color: $Red;
 }

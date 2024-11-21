@@ -3,6 +3,7 @@
 .boxTitle {
     width: 1024px;
     margin: 0 auto;
+    font-family: $RubikBold;
 }
 
 .title {
@@ -79,5 +80,5 @@
 }
 
 .letsTalk:hover {
-    background-color: darken($DarkBlue, 10%);
+    background-color: $Blue;
 }

@@ -8,7 +8,9 @@ const Footer = () => {
         <div className={style.footer}>
             <div className={style.footerTitle}>
                 <div className={style.footerTitleText}>Ready to get started?</div>
-                <button className={style.contactButton}>Contact Us</button>
+                <button className={style.contactButton} onClick={() => window.location.href = "/ContactUs"}>
+                    Contact Us
+                </button>
             </div>
             <div className={style.footerCenter}>
                 <div className={style.footerCenterLeft}>
