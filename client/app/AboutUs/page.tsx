@@ -5,6 +5,7 @@ import style from './style.module.scss';
 import Head from 'next/head';
 import Navbar from '@components/Navbar';
 import { ABOUT_US_SECTION } from '@constants/aboutUs';
+import AboutUsImage from '@components/AboutUsImage';
 
 interface ProcessStep {
   id: number;
@@ -62,7 +63,8 @@ const AboutUs = () => {
               {secondPart}
             </p>
           </div>
-          <img src="/assets/svg/process.svg" alt="about us" className={style.aboutUsImage} />
+          <AboutUsImage/>
+          {/* <img src="/assets/svg/process.svg" alt="about us" className={style.aboutUsImage} /> */}
         </div>
         <div className={style.ourProcess}>
           <div className={style.ourProcessSubcontainer}>
