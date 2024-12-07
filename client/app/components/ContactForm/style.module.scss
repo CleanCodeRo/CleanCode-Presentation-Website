@@ -135,9 +135,9 @@
 
 .recordButton,
 .uploadButton {
-  color: $Red;
+  color: $RedMedium;
   background-color: white;
-  border: 1px solid $Red;
+  border: 1px solid $RedMedium;
   border-radius: $button-radious;
   color: black;
   padding: 10px 20px;
@@ -145,17 +145,17 @@
 }
 .recordButton:hover,
 .uploadButton:hover{
-  background-color: $Red;
+  background-color: $RedMedium;
   color: white;
 }
 
 .uploadButton {
-  color: $Red;
+  color: $RedMedium;
   margin-right: 10px;
 }
 
 .recordButton {
-  color: $Red;
+  color: $RedMedium;
 }
 
 .uploadDetails {
@@ -218,13 +218,13 @@
   padding: 8px 32px;
   background-color: white;
   border-radius: $button-radious;
-  color: $Red;
-  border: 1px solid $Red;
+  color: $RedMedium;
+  border: 1px solid $RedMedium;
   cursor: pointer;
   font-size: $spacing-medium;
 }
 
 .submitBtn:hover {
   color:white;
-  background-color: $Red;
+  background-color: $RedMedium;
 }

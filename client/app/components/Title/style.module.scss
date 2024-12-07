@@ -2,20 +2,41 @@
 
 .boxTitle {
     width: 1024px;
+    height: 100%;
     margin: 0 auto;
     font-family: $RubikBold;
+    background-color: $BlueDark;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 2fr 2fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title,
+.subTitleMain,
+.letsTalk {
+    grid-column: 1;
+}
+
+.heroImage {
+    grid-column: 2;
+    grid-row: 2;
+    transform: scale(3) translate(50px, -14px);;
+    height: auto;
+    align-self: start;
 }
 
 .title {
+    background-color: $BlueDark;
     font-family: $RubikBold;
-    color:$DarkBlue;
-    font-size: 2.5rem;
-    margin-top: 2.5rem;
-    width: 1024px;
+    color:$White;
+    font-size: $font-size-small;
+    transform: translate(60px, 50px);
 }
 
 .changingText {
-    color: $Red;
+    color: $RedMedium;
     display: inline-block;
     transition:
         transform 0.5s ease,
@@ -57,28 +78,32 @@
 
 .subTitleMain {
     font-family: $RubikLight;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 60%;
     max-width: 600px;
+    color:$White;
+    transform: translate(60px, 0px);
 }
 
 .letsTalk {
     display: flex;
     position: relative;
-    margin-left: auto;
-    margin-right: 20rem;
+    margin-left: 0;
+    margin-right: 0;
+    justify-self: end;
     margin-top: 2rem;
     border-radius: 7px;
     font-family: $RubikBold;
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    background-color: $Red;
+    background-color: $Orange;
     color: white;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    transform: translate(-150px, -90px);
 }
 
 .letsTalk:hover {
-    background-color: $Blue;
+    background-color: $BlueMedium;
 }

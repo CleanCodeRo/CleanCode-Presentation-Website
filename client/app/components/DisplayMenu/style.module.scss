@@ -27,7 +27,7 @@
   .itemsListChild {
     display: flex;
     cursor: pointer;
-    color: $DarkBlue;
+    color: $BlueDark;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -35,11 +35,11 @@
     transition: border-left 0.3s;
 
     &.active {
-      border-left: 4px solid $Red;
+      border-left: 4px solid $RedMedium;
     }
 
     &:hover {
-      color: $Blue;
+      color: $BlueMedium;
     }
   }
   .leftSide {
@@ -61,6 +61,6 @@
     align-items: stretch;
   }
   .menuItemName {
-    color: $Red;
+    color: $RedMedium;
   }
 }

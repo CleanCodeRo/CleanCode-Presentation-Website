@@ -68,15 +68,17 @@ const Navbar = () => {
             <nav ref={navRef} className={`${style.nav}`} style={{ height: navHeight }} >
                 <ul className={style.navList}>
                     <li className={style.navItem}><Link href="/"><Logo /></Link></li>
-                    <li className={style.navItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
-                    >Services</a>
-                    </li>
-                    <li className={style.navItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
-                    >Industries</a>
-                    </li>
-                    <li className={style.navItem}><Link className={style.navLink} href="/AboutUs" onMouseLeave={handleMouseLeave}>
-                        About Us
-                        </Link>
+                    <li className={style.navDrops}>
+                        <li className={style.dropItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
+                        >Services</a>
+                        </li>
+                        <li className={style.dropItem}><a className={style.navLink} onMouseLeave={handleMouseLeave} onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
+                        >Industries</a>
+                        </li>
+                        <li className={style.dropItem}><Link className={style.navLink} href="/AboutUs" onMouseLeave={handleMouseLeave}>
+                            About Us
+                            </Link>
+                        </li>
                     </li>
                     <li className={`${style.navItem}`}>
                         <Link href="/ContactUs" className={`${style.button} ${style.buttonLink}`}>

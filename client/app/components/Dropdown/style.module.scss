@@ -3,10 +3,8 @@
 .dropdown {
   left: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0);
   width: 100%;
   pointer-events: auto;
-  padding: 10px;
   animation: descend 0.3s linear forwards;
   box-sizing: border-box;
 
@@ -22,8 +20,9 @@
 }
 
 .bigItemsList {
+  width: 1024px;
+  background-color: $White;
   list-style-type: none;
-  padding: 10px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 1fr));
@@ -46,7 +45,7 @@
   list-style-type: none;
   padding: 5px;
   position: relative;
-  color: $DarkBlue;
+  color: $BlueDark;
   text-decoration: none;
   transition: color 0.25s ease;
 }
@@ -55,18 +54,18 @@
   position: relative;
   &:hover {
     cursor: pointer;
-    color: $Red;
+    color: $RedMedium;
   }
 }
 
 .element {
   text-decoration: none;
-  color: $DarkBlue;
+  color: $BlueDark;
   cursor: pointer;
   position: relative;
 
   &:hover {
-    color: $Red;
+    color: $RedMedium;
     transition: color 0.25s ease;
   }
 
@@ -75,7 +74,7 @@
     display: block;
     width: 0;
     height: 1.5px;
-    background-color: $Red;
+    background-color: $RedMedium;
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -89,7 +88,7 @@
     display: block;
     width: 2px;
     height: 2px;
-    background-color: $Red;
+    background-color: $RedMedium;
     border-radius: 50%;
     position: absolute;
     bottom: -2px;
@@ -136,7 +135,7 @@
 
 @keyframes descend {
   0% {
-    transform: translateY(-40%);
+    transform: translateY(-1rem);
   }
   100% {
     transform: translateY(0%);

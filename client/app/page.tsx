@@ -43,8 +43,8 @@ export default function Home() {
     <>
       <Navbar />
       <Landing />
-      <Technologies />
       <DisplayMenu menuItems={services} />
+      <Technologies />
       <Contact />
       <Footer />
     </>
