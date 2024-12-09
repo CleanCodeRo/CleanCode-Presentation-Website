@@ -1,5 +1,6 @@
 @import "@style/globalVariables.scss";
 
+
 .boxTitle {
     width: 1024px;
     height: 100%;
@@ -22,9 +23,12 @@
 .heroImage {
     grid-column: 2;
     grid-row: 2;
-    transform: scale(3) translate(50px, -14px);;
+    transform: scale(3.2) translate(40px, -5px);;
     height: auto;
     align-self: start;
+    position: relative;
+    overflow-x: visible;
+    overflow-y: hidden; 
 }
 
 .title {
@@ -35,12 +39,20 @@
     transform: translate(60px, 50px);
 }
 
-.changingText {
-    color: $RedMedium;
+.changingText,
+.secondChangingText {
     display: inline-block;
     transition:
         transform 0.5s ease,
         opacity 0.5s ease;
+}
+
+.changingText{
+    color: $Orange
+}
+
+.secondChangingText{
+    color: $GreenLight
 }
 
 .isHidden {
