@@ -1,7 +1,16 @@
 @import "@style/globalVariables.scss";
 
+.footerWrapper{
+    width: 100%;
+    background-color: $White;
+    display: flex;
+    justify-content: center;
+}
+
+
 .footer {
-    height: 300px;
+    height: 350px;
+    width: 1024px;
     display: flex;
     flex-direction: column;
     margin-top: 24px;
@@ -35,7 +44,7 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
-    padding-top: 30px;
+    padding-top: 50px;
     border-radius: 5px;
     z-index: 1;
 }
@@ -61,6 +70,10 @@
 .footerBottom {
     border-top: 1px solid white;
     background-color: $BlueDark;
+    background-image: url('/assets/svg/footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 60px;
     position: relative;
     z-index: 1;
@@ -168,8 +181,8 @@
 
 .copyright{
     font-size: 16px;
-    color: white;
-    font-family: $RubikLight;
+    color: $BlueDark;
+    font-family: $RubikRegular;
     padding-top: 10px;
 }
 
