@@ -27,7 +27,7 @@ const Title=()=> {
         <div className={style.boxTitle}>
             <h1 className={style.title}>Leading global partner in <span>
                 {TITLE_CHANGING_WORDS.map((word, wordIndex) => (
-                        <b className={`${style.changingText} ${index===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
+                        <b className={`${style.changingTextFirst} ${index===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
                     ))}
                 </span>
                 <br />
@@ -35,13 +35,13 @@ const Title=()=> {
                 <br />
                 committed to delivering <span>
                 {TITLE_SECOND_CHANGING_WORDS.map((word, wordIndex) => (
-                        <b className={`${style.changingText} ${secondIndex===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
+                        <b className={`${style.changingTextSecond} ${secondIndex===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
                     ))}
                 </span>
             </h1>
             <div className={style.subTitleMain}>{SUB_TITLE_MAIN}</div>
             <button className={style.letsTalk} onClick={() => window.location.href = "/ContactUs"}>
-                Let{'\''}s talk
+                START A CONVERSATION
             </button>
             <img src="/assets/svg/hero-section.svg" alt="about us" className={style.heroImage} />
         </div>
