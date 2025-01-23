@@ -1,41 +1,85 @@
 @import "@style/globalVariables.scss";
 
 .technologiesBar {
-    height: 300px;
-    background-color: $BlueMedium;
-    overflow: hidden;
-    position: relative;
+  height: 32rem;
+  background-color: $BlueDark;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.technologiesContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.technologiesTitle,
+.technologiesSubTitle {
+  font-size: 2.5rem;
+  color: white;
+  font-family: $RubikBold;
+}
+
+.technologiesTitle,
+.technologiesSubTitle,
+.technologiesText {
+  width: 54rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
 }
 
 .technologiesTitle {
-    color: white;
-    font-family: $RubikLight;
-    font-size: $font-size-medium;
-    margin-left: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.technologiesSubTitle {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: $Yellow;
+}
+.technologiesText {
+  color: white;
+  font-family: $RubikLight;
+  font-size: $font-size-small;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 3rem;
 }
 
 .logos {
-    display: flex;
-    flex-direction: row;
-    animation: scrollLeft 30s linear infinite;
-    will-change: transform;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  animation: scrollLeft 30s linear infinite;
+  will-change: transform;
 }
 
 .logo {
-    width: 70px;
-    height: 70px;
-    margin-left: 35px;
-    margin-right: 35px;
-    filter: invert(1);
+  width: 70px;
+  height: 70px;
+  margin-left: 35px;
+  margin-right: 35px;
+  filter: invert(1);
 }
 
 @keyframes scrollLeft {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
