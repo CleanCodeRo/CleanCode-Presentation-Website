@@ -73,7 +73,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/facebook.svg"
+                  src="/assets/svg/social-media/facebook.svg"
                   alt="Facebook Icon"
                   className={style.icon}
                 />
@@ -87,7 +87,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/instagram.svg"
+                  src="/assets/svg/social-media/instagram.svg"
                   alt="Instagram Icon"
                   className={style.icon}
                 />
@@ -101,7 +101,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/x.svg"
+                  src="/assets/svg/social-media/x.svg"
                   alt="X Icon"
                   className={style.icon}
                 />
@@ -115,7 +115,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/tik-tok.svg"
+                  src="/assets/svg/social-media/tik-tok.svg"
                   alt="TikTok Icon"
                   className={style.icon}
                 />
@@ -129,7 +129,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/linkedIn.svg"
+                  src="/assets/svg/social-media/linkedIn.svg"
                   alt="LinkedIn Icon"
                   className={style.icon}
                 />
