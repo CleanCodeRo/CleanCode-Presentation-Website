@@ -1,4 +1,10 @@
+@import "@style/globalVariables.scss";
+
 .section{
-    padding-top: 25vh;
-    height: 100vh;
+    padding-top: 80px;
+    height: 450px;
+    width: 100%;
+    display: grid;
+    justify-self: center;
+    background-color: $BlueDark;
 }

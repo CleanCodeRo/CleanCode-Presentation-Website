@@ -8,13 +8,26 @@ $RubikLight: "RubikLight", sans-serif;
   # Color
 \*------------------------------------*/
 
-$DarkBlue:#273155;
 $Teal:#149497;
-$Blue:#1d538f;
 $Aqua:#9bdcde;
-$Red:#fa5456;
-$Orange:#fa8825;
-$Yellow:#fed942;
+$Orange:#FA8825;
+$Yellow:#FED942;
+$White:#FFF9F0;
+
+$RedLight:#FA5456;
+$RedMedium:#DE3E40;
+$RedDark:#8D3F63;
+
+$BlueDark:#273155;
+$BlueMedium:#1D538F;
+$BlueLight:#E9E9F5;
+
+$GreenDark:#137173;
+$GreenMedium:#149497;
+$GreenLight:#9BDCDE;
+
+
+
 
 /*------------------------------------*\
   # Media Queries
@@ -47,3 +60,11 @@ $font-size-medium: 2rem;
 $font-size-large: 3em;
 $font-size-x-large: 4rem;
 $font-size-xx-large: 5rem;
+
+/*------------------------------------*\
+  # borders, padding, radious
+\*------------------------------------*/
+
+$button-padding: 0.5rem 1rem;
+$button-radious: 7px;
+$general-radious: 12px

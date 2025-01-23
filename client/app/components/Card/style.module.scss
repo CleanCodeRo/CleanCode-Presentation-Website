@@ -13,7 +13,7 @@
         border-bottom: 1px solid black;
 
         .cardName{
-            color: $Red;
+            color: $RedMedium;
         }
         .arrow {
             transform: translateX(0);
@@ -42,6 +42,6 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
     width: 10px;
     height: 10px;
-    background-color: $Red;
+    background-color: $RedMedium;
     clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
 }

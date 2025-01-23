@@ -1,0 +1,133 @@
+@import "@style/globalVariables.scss";
+
+.container{
+    width: 100%;
+    height:60vh;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whatWeDo{
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.leftSide{
+    font-family: $RubikLight;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.title{
+    color: $BlueDark;
+    display: inline-block;
+    justify-content: center;
+    font-family: $RubikBold;
+    font-size: $font-size-large;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $Yellow;
+    z-index: -1;
+}
+
+.description{
+    font-family: $RubikRegular;
+    font-size: $font-size-small;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+
+.letsTalk {
+    border-radius: 7px;
+    font-family: $RubikBold;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    background-color: $Yellow;
+    color: $BlueDark;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: auto;
+}
+
+.letsTalk:hover {
+    color: $Yellow;
+    background-color: $BlueDark;
+}
+
+.rightSide{
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.square1,
+.square2,
+.square3,
+.square4{
+    border-radius: $general-radious;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 13rem;
+    height: 8rem
+}
+
+.square1{
+   background-color: $BlueMedium;
+
+}
+.square2{
+    background-color: $GreenMedium;
+
+ }
+.square3{
+    background-color: $GreenDark;
+
+ }
+.square4{
+    background-color: $BlueDark;
+
+ }
+
+.smallImg{
+    width: 3rem;
+    height: 3rem;
+}
+
+.smallTitle{
+    width: 1rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-small;
+    font-family: $RubikLight;
+}

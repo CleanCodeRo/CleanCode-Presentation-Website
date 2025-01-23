@@ -8,6 +8,21 @@
   align-items: center;
   justify-content: center;
   margin: 80px auto 0 auto;
+
+  @media (max-width: $breakpoint-large) {
+    padding: 1.5rem;
+    margin: 40px auto 0 auto;
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 1rem;
+    margin: 40px auto 0 auto;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    padding: 0.5rem;
+    margin: 40px auto 0 auto;
+  }
 }
 
 .aboutUsSection {
@@ -15,6 +30,15 @@
   display: flex;
   flex-direction: row;
   width: 1024px;
+  margin: 40px auto 0 auto;
+
+  @media (max-width: $breakpoint-large) {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto 0 auto;
+  }
 }
 
 .aboutUsText {
@@ -24,14 +48,34 @@
   justify-content: center;
   font-family: $RubikRegular;
   font-size: $font-size-small;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-x-small;
+    text-align: center;
+  }
 }
 .aboutUsImage {
   width: 300px;
   height: 300px;
+
+  @media (max-width: $breakpoint-large) {
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .ourProcess {
-  background-color: $DarkBlue;
+  background-color: $BlueDark;
   width: 100%;
   color: white;
   font-family: $RubikBold;
@@ -41,12 +85,24 @@
   align-items: center;
   border-radius: 10px;
   padding-top: 2rem;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    padding: 1rem;
+  }
 }
 
 .ourProcessSubcontainer {
   width: 1024px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $breakpoint-large) {
+    width: 90%;
+  }
 }
 
 .ourProcessElements {
@@ -55,6 +111,10 @@
   gap: 1rem;
   font-size: $font-size-small;
   font-family: $RubikLight;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-x-small;
+  }
 }
 
 .processCard {
@@ -64,32 +124,54 @@
   justify-content: space-between;
   padding-bottom: 1rem;
   transition: background-color 0.3s ease;
-}
 
-.processCard:hover {
-  background-color: lighten($DarkBlue, 5%);
+  &:hover {
+    background-color: lighten($BlueDark, 5%);
+  }
+
+  @media (max-width: $breakpoint-medium) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .cardTitle {
   flex: 1;
   font-family: $RubikBold;
   font-size: $font-size-small;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-x-small;
+  }
 }
 
 .cardDetail {
   flex: 2;
   text-align: left;
+
+  @media (max-width: $breakpoint-medium) {
+    text-align: justify;
+    font-size: $font-size-x-small;
+  }
 }
 
 .ourProcessTitle {
   font-size: $font-size-medium;
   margin-bottom: 20px;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-small;
+  }
 }
 
 .lineWithDot {
   display: flex;
   align-items: center;
   gap: 5px;
+
+  @media (max-width: $breakpoint-small) {
+    gap: 3px;
+  }
 }
 
 .line {
@@ -97,6 +179,10 @@
   height: 3px;
   background-color: white;
   border-radius: 2px;
+
+  @media (max-width: $breakpoint-small) {
+    width: 150px;
+  }
 }
 
 .dot {
@@ -115,57 +201,70 @@
   align-items: center;
   border-radius: 10px;
   padding-top: 2rem;
+
+  @media (max-width: $breakpoint-medium) {
+    padding: 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    padding: 1rem;
+  }
 }
 
 .missionVisionSubcontainer {
   width: 1024px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $breakpoint-large) {
+    width: 90%;
+  }
 }
 
 .missionVisionTitle {
   font-family: $RubikBold;
   margin-bottom: 10px;
-  color: $DarkBlue;
+  color: $BlueDark;
   font-size: $font-size-medium;
-}
 
-.lineWithDotTwo {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.lineTwo {
-  width: 230px;
-  height: 3px;
-  background-color: $Orange;
-  border-radius: 2px;
-}
-
-.dotTwo {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background-color: $Orange;
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-small;
+  }
 }
 
 .missionVisionElements {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-medium) {
+    margin-top: 15px;
+  }
+
+  @media (max-width: $breakpoint-small) {
+    flex-direction: column;
+  }
 }
 
 .missionVisionCard {
   margin-bottom: 20px;
   padding-bottom: 1rem;
   width: 50%;
+
+  @media (max-width: $breakpoint-medium) {
+    width: 100%;
+  }
 }
 
 .missionVisionCard .missionVisionTitle {
   font-family: $RubikBold;
   font-size: 1.5rem;
-  color:$Blue;
+  color: $BlueMedium;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: 1.2rem;
+  }
 }
 
 .missionVisionCard .missionVisionDescription {
@@ -174,6 +273,10 @@
   padding-right: 20px;
   font-family: $RubikRegular;
   font-size: $font-size-small;
+
+  @media (max-width: $breakpoint-medium) {
+    font-size: $font-size-x-small;
+  }
 }
 
 .missionVisionCard .missionVisionDescription ul {
@@ -184,6 +287,10 @@
 .missionVisionCard .missionVisionDescription ul li {
   position: relative;
   padding-left: 25px;
+
+  @media (max-width: $breakpoint-small) {
+    padding-left: 20px;
+  }
 }
 
 .missionVisionCard .missionVisionDescription ul li::before {
@@ -197,7 +304,9 @@
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   border-left: 8px solid black;
-  
   border-radius: 5px;
-}
 
+  @media (max-width: $breakpoint-small) {
+    border-left: 6px solid black;
+  }
+}

@@ -3,10 +3,8 @@
 .dropdown {
   left: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0);
   width: 100%;
   pointer-events: auto;
-  padding: 10px;
   animation: descend 0.3s linear forwards;
   box-sizing: border-box;
 
@@ -22,8 +20,9 @@
 }
 
 .bigItemsList {
+  width: 1024px;
+  background-color: white;
   list-style-type: none;
-  padding: 10px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(150px, 1fr));
@@ -46,7 +45,7 @@
   list-style-type: none;
   padding: 5px;
   position: relative;
-  color: $DarkBlue;
+  color: $BlueDark;
   text-decoration: none;
   transition: color 0.25s ease;
 }
@@ -55,41 +54,19 @@
   position: relative;
   &:hover {
     cursor: pointer;
-    color: $Red;
+    color: $RedMedium;
   }
 }
 
 .element {
   text-decoration: none;
-  color: $DarkBlue;
+  color: $BlueDark;
   cursor: pointer;
   position: relative;
 
   &:hover {
-    color: $Red;
+    color: $GreenMedium;
     transition: color 0.25s ease;
-  }
-
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 10px;
-    background-image: url("/assets/svg/active-menu.svg");
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.15s;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
   }
 }
 
@@ -107,7 +84,7 @@
 
 @keyframes descend {
   0% {
-    transform: translateY(-40%);
+    transform: translateY(-1rem);
   }
   100% {
     transform: translateY(0%);
