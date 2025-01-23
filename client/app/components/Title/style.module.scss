@@ -25,6 +25,8 @@
     transform: scale(3) translate(50px, -10px);;
     height: auto;
     align-self: start;
+    position: relative;
+    z-index: 1; 
 }
 
 .title {
