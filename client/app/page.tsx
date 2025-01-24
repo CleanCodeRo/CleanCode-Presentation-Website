@@ -45,8 +45,8 @@ export default function Home() {
       <Navbar />
       <Landing />
       <WhatWeDo />
-      {/* <Technologies />
-      <Contact /> */}
+      <Technologies />
+      <Contact />
       <Footer />
     </>
   );
