@@ -10,6 +10,7 @@ import WhatWeDo from '@components/WhatWeDo';
 import { MenuProps } from '@models/menu';
 import { MenuItemProps } from '@models/menuItem';
 import Footer from '@components/Footer';
+import Quote from '@components/Quote';
 
 export default function Home() {
   const [services, setServices] = useState<MenuItemProps[]>([]);
@@ -47,6 +48,7 @@ export default function Home() {
       <WhatWeDo />
       <Technologies />
       <Contact />
+      <Quote  />
       <Footer />
     </>
   );
