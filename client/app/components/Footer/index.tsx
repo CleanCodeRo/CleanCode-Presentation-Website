@@ -44,13 +44,13 @@ const Footer = () => {
                 className={style.icon}
               />
               <a href="tel:+40733311393" className={style.link}>
-                +40733311393
+                +40 733 311 393
               </a>
             </div>
           </div>
         </div>
         <div className={style.footerCenterRight}>
-          <div className={style.footerCenterRightTitle}>Core Services</div>
+          <div className={style.footerCenterRightTitle}>Core services</div>
           <ul className={style.servicesList}>
             <li>Software development</li>
             <li>Web & Email Hosting</li>
@@ -75,6 +75,20 @@ const Footer = () => {
                 <img
                   src="/assets/svg/facebook.svg"
                   alt="Facebook Icon"
+                  className={style.icon}
+                />
+              </a>
+            </div>
+            <div className={style.iconWithText}>
+              <a
+                href="https://www.linkedin.com/company/cleancodero/about/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={style.link}
+              >
+                <img
+                  src="/assets/svg/linkedIn.svg"
+                  alt="LinkedIn Icon"
                   className={style.icon}
                 />
               </a>
@@ -117,20 +131,6 @@ const Footer = () => {
                 <img
                   src="/assets/svg/tik-tok.svg"
                   alt="TikTok Icon"
-                  className={style.icon}
-                />
-              </a>
-            </div>
-            <div className={style.iconWithText}>
-              <a
-                href="https://www.linkedin.com/company/cleancodero/about/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={style.link}
-              >
-                <img
-                  src="/assets/svg/linkedIn.svg"
-                  alt="LinkedIn Icon"
                   className={style.icon}
                 />
               </a>

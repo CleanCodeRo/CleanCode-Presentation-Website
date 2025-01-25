@@ -1,0 +1,52 @@
+@import "@style/globalVariables.scss";
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.RightPartener {
+    max-width: 1024px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: $BlueDark;
+    font-family: $RubikBold;
+    font-size: $font-size-large;
+}
+
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

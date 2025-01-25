@@ -1,4 +1,5 @@
-export interface CardProps{
-    name:string;
-    description:string;
+export interface CardProps {
+    id: number;
+    name: string;
+    description: string;
 }
