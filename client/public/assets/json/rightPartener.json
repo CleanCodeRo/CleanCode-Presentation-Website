@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"High industry standards",
+        "description":"We uphold the highest coding practices and quality assurance standards to ensure our solutions are reliable and highly effective."
+    },
+    {
+        "id":2,
+        "name":"Diverse expertise",
+        "description":"Our developers possess all the necessary skills, knowledge, and expertise to meet even the most challenging requirements."
+    },
+    {
+        "id":3,
+        "name":"Transparency is key",
+        "description":"To lower the risk we are completely transparent about who we are, what we do, and where we have succeeded."
+    },
+    {
+        "id":4,
+        "name":"Fast turnarounds",
+        "description":"Time frames that never sacrifice quality. With expert teams and optimized processes, we meet deadlines with top results every time."
+    },
+    {
+        "id":5,
+        "name":"Reliability & flexibility",
+        "description":"Take full control of your projects with flexible tools and customized processes tailored to your needs - we adapt to you."
+    },
+    {
+        "id":6,
+        "name":"Post-delivery support",
+        "description":"We provide reliable post-delivery support to keep your website running smoothly, even years after completion."
+    }
+]

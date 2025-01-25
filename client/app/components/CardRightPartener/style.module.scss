@@ -1,0 +1,31 @@
+@import "@style/globalVariables.scss";
+
+.card {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cardIcon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.cardTitle {
+    font-family: $RubikBold;
+    font-size: $font-size-small;
+    margin-bottom: 5px;
+    color: $BlueDark;;
+}
+
+.cardDescription {
+    font-family: $RubikLight;
+    font-size: $font-size-x-small;
+    color: black;
+    text-align: left;
+    width: 16rem;
+    line-height: 1.5;
+}
