@@ -68,7 +68,7 @@
   font-size: $font-size-small;
   font-weight: bold;
   position: relative;
-  font-family: $RubikBold;
+  font-family: $PoppinsBold;
   
   &:nth-child(1){
     flex-grow: 1;
@@ -97,7 +97,7 @@
   font-size: $font-size-small;
   color:white;
   border: none;
-  font-family: $RubikBold;
+  font-family: $PoppinsBold;
   cursor: pointer;
   padding:0.5rem;
   border: none;
@@ -109,9 +109,9 @@
   transition:all 0.3s;
 
   &:hover {
-    background-color: $GreenMedium;
+    background-color: $GreenLight;
     text-decoration: none;
-    color: white;
+    color: $BlueDark;
   }
 }
 

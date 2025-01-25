@@ -21,13 +21,13 @@
 .technologiesSubTitle {
   font-size: 2.5rem;
   color: white;
-  font-family: $RubikBold;
+  font-family: $PoppinsBold;
 }
 
 .technologiesTitle,
 .technologiesSubTitle,
 .technologiesText {
-  width: 54rem;
+  width: 55rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,8 @@
 }
 .technologiesText {
   color: white;
-  font-family: $RubikLight;
+  font-family: $MontserratExtraLight;
+  font-weight: 200;
   font-size: $font-size-small;
   height: 30%;
   display: flex;

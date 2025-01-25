@@ -49,7 +49,6 @@ export default function Home() {
       <WhatWeDo />
       <Technologies />
       <RightPartener />
-      <Contact />
       <Quote  />
       <Footer />
     </>
