@@ -18,7 +18,7 @@ const RightPartener = () => {
     return (
         <div className={style.wrapper}>
             <div className={style.RightPartener}>
-                <div className={style.title}>Why we're the right partner</div>
+                <div className={style.title}>Why we're the <span className={style.highlight}>right partner</span></div>
                 <div className={style.gridContainer}>
                     {cards.length > 0 ? (
                         <div className={style.cardContainer}>

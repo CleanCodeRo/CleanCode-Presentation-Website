@@ -22,17 +22,17 @@
 .heroImage {
     grid-column: 2;
     grid-row: 2;
-    transform: scale(3) translate(50px, -10px);;
+    transform: scale(3) translate(50px, -5px);;
     height: auto;
     align-self: start;
 }
 
 .title {
     background-color: $BlueDark;
-    font-family: $RubikBold;
+    font-family: $PoppinsBold;
     color:$White;
     font-size: $font-size-small;
-    transform: translate(60px, 50px);
+    transform: translate(60px, 80px);
 }
 
 .changingTextFirst {
@@ -85,12 +85,12 @@
 }
 
 .subTitleMain {
-    font-family: $RubikLight;
+    font-family: $MontserratLight;
     font-size: 1.2rem;
     width: 60%;
     max-width: 600px;
     color:$White;
-    transform: translate(60px, 0px);
+    transform: translate(60px, 40px);
     line-height: 1.5;
     margin-top: -3rem;
 }
@@ -103,17 +103,18 @@
     justify-self: end;
     margin-top: 2rem;
     border-radius: 7px;
-    font-family: $RubikBold;
-    font-size: 1rem;
+    font-family: $PoppinsBold;
+    font-size: $font-size-small;
     padding: 0.7rem 2rem;
     background-color: $Yellow;
     color: $BlueDark;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    transform: translate(-150px, -90px);
+    transform: translate(-60px, -60px);
 }
 
 .letsTalk:hover {
-    background-color: $BlueMedium;
+    color: $BlueDark;
+    background-color: $GreenLight;
 }

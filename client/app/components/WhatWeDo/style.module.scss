@@ -31,8 +31,8 @@
     color: $BlueDark;
     display: inline-block;
     justify-content: center;
-    font-family: $RubikBold;
-    font-size: $font-size-large;
+    font-family: $PoppinsBold;
+    font-size: 2.5rem;
     margin-top: -2rem;
     margin-bottom: 2rem;
     position: relative;
@@ -41,7 +41,7 @@
 .title::after {
     content: "";
     position: absolute;
-    bottom: 10px;
+    bottom: 13px;
     left: 0;
     width: 100%;
     height: 5px;
@@ -50,7 +50,7 @@
 }
 
 .description{
-    font-family: $RubikRegular;
+    font-family: $MontserratRegular;
     font-size: $font-size-small;
     margin-bottom: 2rem;
     margin-top: 1rem;
@@ -59,8 +59,8 @@
 
 .letsTalk {
     border-radius: 7px;
-    font-family: $RubikBold;
-    font-size: 1rem;
+    font-family: $PoppinsBold;
+    font-size: 1.5rem;
     padding: 1rem 2rem;
     background-color: $Yellow;
     color: $BlueDark;
@@ -71,8 +71,8 @@
 }
 
 .letsTalk:hover {
-    color: $Yellow;
-    background-color: $BlueDark;
+    color: $BlueDark;
+    background-color: $GreenLight;
 }
 
 .rightSide{
@@ -129,5 +129,6 @@
     justify-content: center;
     align-items: center;
     font-size: $font-size-small;
-    font-family: $RubikLight;
+    font-family: $PoppinsLight;
+    line-height: 1.5rem;
 }

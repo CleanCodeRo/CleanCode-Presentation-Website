@@ -11,21 +11,22 @@
 .cardIcon {
     width: 70px;
     height: 70px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .cardTitle {
-    font-family: $RubikBold;
+    font-family: $PoppinsBold;
     font-size: $font-size-small;
-    margin-bottom: 5px;
-    color: $BlueDark;;
+    color: $BlueDark;
+    margin-bottom: 1px;
+    margin-top: 5px;
 }
 
 .cardDescription {
-    font-family: $RubikLight;
-    font-size: $font-size-x-small;
+    font-family: $MontserratLight;
+    font-size: 1.1rem;
     color: black;
     text-align: left;
-    width: 16rem;
+    width: 100%;
     line-height: 1.5;
 }
