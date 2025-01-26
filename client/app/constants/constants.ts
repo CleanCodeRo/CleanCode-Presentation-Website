@@ -10,10 +10,14 @@ export const WHAT_NEXT_ELEMENTS:string[]=["Having received and processed your re
                                           "We arrange a meeting with you to discuss the offer and come to an agreement.", 
                                           "We sign a contract and start working on your project as quickly as possible."];
 
-export const CONTACT_TITLE:string="Contact us!"
+export const CONTACT_TITLE:string="Let's explore how we can work together";
 
-export const CONTACT_DESCRIPTION:string=`Book a call or fill out the form below and we’ll get back to you once we’ve processed your request.`
+export const CONTACT_DESCRIPTION:string=`Our team will work with you to understand your business needs, your goals, and your vision. We'll listen carefully, and then provide you with a detailed plan of action outlining the steps we'll take to bring your project to life.`
 
-export const PRIVACY_POLICY_WARNING:string="Please be informed that when you click the Send button Innowise will process your personal data in accordance with our Privacy Policy for the purpose of providing you with appropriate information."
+export const PRIVACY_POLICY_WARNING:string="Sending the information provided in this form you agree to the processing of your personal data according to cleanCode Privacy Policy and Cookies Policy to handle the request and respond to it."
 
 export const WHAT_WE_DO:string="By offering tailored made solutions and strategic insights, we enable businesses to meet their targets confidently, maintaining a balance between growts, quality and innovation."
+
+export const FORM_TITLE:string="Why wait? Get in touch with  us.";
+
+export const FORM_CONTENT:string="Reach out to us and unlock the power of innovative software solutions for your business. Contact us to discuss your project and take the first step towards success!"
