@@ -1,12 +1,10 @@
 import { CardProps } from '@models/card';
 import React from 'react';
 import style from './style.module.scss';
+import { RIGHT_PARTNER_SVG_BASE_PATH } from '@constants/constants';
 
-interface CardComponentProps extends CardProps {
-    svgBasePath?: string;
-}
 
-const Card: React.FC<CardComponentProps> = ({ name, description, svgBasePath = "/assets/svg/RightPartener/" }) => {
+const Card: React.FC<CardProps> = ({ name, description}) => {
     const normalizeNameForSvg = (name: string) => {
         return name
             .toLowerCase()                        // Convert to lowercase to match the case of the SVG filenames
@@ -17,7 +15,7 @@ const Card: React.FC<CardComponentProps> = ({ name, description, svgBasePath = "
     };
 
     const svgFileName = normalizeNameForSvg(name);
-    const svgPath = `${svgBasePath}${svgFileName}`;
+    const svgPath = `${RIGHT_PARTNER_SVG_BASE_PATH}${svgFileName}`;
 
     return (
         <div className={style.card}>

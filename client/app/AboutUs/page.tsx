@@ -3,7 +3,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import style from "./style.module.scss";
 import Head from "next/head";
 import Navbar from "@components/Navbar";
 import Footer from "@components/Footer";
@@ -11,6 +10,7 @@ import OurProcess from "@components/OurProcess";
 import MissionVision from "@components/MissionVision";
 import AboutUsHero from "@components/AboutUsHero";
 import WeBelieve from "@components/WeBelieve";
+import { MissionStep } from "@models/card";
 
 interface ProcessStep {
   id: number;
@@ -18,11 +18,6 @@ interface ProcessStep {
   detail: string;
 }
 
-interface MissionStep {
-  id: number;
-  name: string;
-  detail: string | string[];
-}
 
 const AboutUs = () => {
   const [processData, setProcessData] = useState<ProcessStep[]>([]);

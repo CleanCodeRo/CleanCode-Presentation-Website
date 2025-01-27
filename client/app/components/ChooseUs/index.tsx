@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import style from "./style.module.scss";
-import CardRightPartener from "@components/CardRightPartener";
+import CardRightPartener from "@components/CardRightPartner";
 import { CardProps } from "@models/card";
 
 const ChooseUs = () => {

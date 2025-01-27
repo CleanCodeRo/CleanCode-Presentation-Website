@@ -2,12 +2,8 @@
 
 import React from 'react';
 import style from './style.module.scss';
+import { MissionStep } from '@models/card';
 
-interface MissionStep {
-  id: number;
-  name: string;
-  detail: string;
-}
 
 interface MissionVisionProps {
   missionData: MissionStep[];
