@@ -1,23 +1,27 @@
 @import "@style/globalVariables.scss";
 
-.wrapper {
+.container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 40px 20px;
-}
-
-.RightPartener {
-    max-width: 1100px;
-    width: 100%;
-    text-align: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .title {
-    margin-bottom: 30px;
+    margin-bottom: 1rem;
     font-size: 2.5rem;
     font-weight: bold;
     color: $BlueDark;
     font-family: $PoppinsBold;
+}
+
+.subTitle {
+    font-size: $font-size-small;
+    color: $BlueDark;
+    font-family: $PoppinsRegular;
+    margin-bottom: 1rem;
 }
 
 .highlight {
@@ -43,7 +47,7 @@
     justify-content: center;
     align-items: stretch;
     gap: 40px;
-    width: 100%;
+    width: 1100px;
 }
 
 .cardContainer {

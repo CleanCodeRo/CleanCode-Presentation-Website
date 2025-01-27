@@ -67,7 +67,7 @@ const Navbar = () => {
                 </li>
                 <li className={style.navDrops}>
                     <li className={style.dropItem}>
-                        <Link href="/Services" className={`${style.navLink} ${pathname === '/services' ? style.active : ''}`}
+                        <Link href="/Services" className={`${style.navLink} ${pathname === '/Services' ? style.active : ''}`}
                             onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
                             onMouseLeave={handleMouseLeave}>
                             SERVICES
