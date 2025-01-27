@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className={style.contactComponent}>
       <div className={style.TitleAndDescription}>
-        <div className={style.contactTitle}>Let's explore how we can <span className={style.highlight}>work together</span></div>
+        <div className={style.contactTitle}>Let&apos;s explore how we can <span className={style.highlight}>work together</span></div>
         <div className={style.contactDescription}>{CONTACT_DESCRIPTION}</div>
       </div>
       <div className={style.contactSubComponent}>
