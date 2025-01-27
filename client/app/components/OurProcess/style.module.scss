@@ -4,13 +4,13 @@
     background-color: $BlueDark;
     width: 100%;
     color: white;
-    font-family: $RubikBold;
     font-size: $font-size-medium;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     padding-top: 2rem;
+    padding-bottom: 2rem;
     cursor: default;
   
     @media (max-width: $breakpoint-medium) {
@@ -23,7 +23,7 @@
   }
   
   .ourProcessSubcontainer {
-    width: 1024px;
+    width: 100%;
     display: flex;
     flex-direction: column;
   
@@ -35,6 +35,8 @@
   .ourProcessElements {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     font-size: $font-size-small;
     font-family: $RubikLight;
@@ -45,15 +47,16 @@
   }
   
   .processCard {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding-bottom: 1rem;
     transition: background-color 0.3s ease;
   
     &:hover {
-      background-color: lighten($BlueDark, 5%);
+      background-color: $BlueMedium;
     }
   
     @media (max-width: $breakpoint-medium) {
@@ -61,11 +64,20 @@
       align-items: flex-start;
     }
   }
+
+  .cardSubcontainer{
+    width: 1024px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   .cardTitle {
     flex: 1;
-    font-family: $RubikBold;
+    font-family: $MontserratBold;
     font-size: $font-size-small;
+    line-height: 1.5;
   
     @media (max-width: $breakpoint-medium) {
       font-size: $font-size-x-small;
@@ -75,6 +87,8 @@
   .cardDetail {
     flex: 2;
     text-align: left;
+    font-family: $MontserratLight;
+    line-height: 1.5;
   
     @media (max-width: $breakpoint-medium) {
       text-align: justify;
@@ -83,8 +97,12 @@
   }
   
   .ourProcessTitle {
-    font-size: $font-size-medium;
+    font-family: $PoppinsBold;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 2;
   
     @media (max-width: $breakpoint-medium) {
       font-size: $font-size-small;

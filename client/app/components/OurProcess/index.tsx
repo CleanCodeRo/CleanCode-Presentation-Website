@@ -17,12 +17,14 @@ const OurProcess = ({ processData }: OurProcessProps) => {
   return (
     <div className={style.ourProcess}>
       <div className={style.ourProcessSubcontainer}>
-        <div className={style.ourProcessTitle}>Our Process</div>
+        <div className={style.ourProcessTitle}>Our Process in a nutshell</div>
         <div className={style.ourProcessElements}>
           {processData.map((step) => (
             <div key={step.id} className={style.processCard}>
-              <div className={style.cardTitle}>{step.name}</div>
-              <div className={style.cardDetail}>{step.detail}</div>
+              <div className={style.cardSubcontainer}>
+                <div className={style.cardTitle}>{step.name}</div>
+                <div className={style.cardDetail}>{step.detail}</div>
+              </div>
             </div>
           ))}
         </div>
