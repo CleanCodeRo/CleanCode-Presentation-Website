@@ -10,6 +10,7 @@ import Footer from "@components/Footer";
 import OurProcess from "@components/OurProcess";
 import MissionVision from "@components/MissionVision";
 import AboutUsHero from "@components/AboutUsHero";
+import WeBelieve from "@components/WeBelieve";
 
 interface ProcessStep {
   id: number;
@@ -57,6 +58,7 @@ const AboutUs = () => {
         <AboutUsHero />
         <OurProcess processData={processData} />
         <MissionVision missionData={missionData} />
+        <WeBelieve />
         <Footer />
     </>
   );
