@@ -22,6 +22,7 @@ const ContactForm = () => {
     subject: "",
     budget: "",
     description: "",
+    nda: false
   });
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -60,148 +61,149 @@ const ContactForm = () => {
   return (
     <div className={style.contactContainer}>
       <form onSubmit={handleSubmit} className={style.form}>
-        <div className={style.formGroup}>
-          {renderInputLabel("name", "Name")}
-          <input
-            className={style.inputField}
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name*"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+        <div className={style.field}>
+          <div className={style.formTitle}>Your name</div>
+          <div className={style.formGroup}>
+            <input
+              className={style.inputField}
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-        <div className={style.formGroup}>
-          {renderInputLabel("company", "Company")}
-          <input
-            className={style.inputField}
-            type="text"
-            id="company"
-            name="company"
-            placeholder="Company*"
-            value={formData.company}
-            onChange={handleChange}
-            required
-          />
+        <div className={style.field}>
+          <div className={style.formTitle}>Your company</div>
+          <div className={style.formGroup}>
+            <input
+              className={style.inputField}
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-        <div className={style.formGroup}>
-          {renderInputLabel("email", "Email")}
-          <input
-            className={style.inputField}
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Corporate Email*"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+        <div className={style.field}>
+          <div className={style.formTitle}>Email address</div>
+          <div className={style.formGroup}>
+            <input
+              className={style.inputField}
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-        <div className={style.formGroup}>
-          {renderInputLabel("phone", "Phone")}
-          <input
-            className={style.inputField}
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Phone*"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
+        <div className={style.field}>
+          <div className={style.formTitle}>Phone</div>
+          <div className={style.formGroup}>
+            <input
+              className={style.inputField}
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-        <div className={style.formGroup}>
-          {renderInputLabel("subject", "Subject")}
-          <select
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            required
-          >
-            <option value="" disabled hidden>
-              Subject*
-            </option>
-            <option value="IT Staff Augmentation">IT Staff Augmentation</option>
-            <option value="Turnkey Product Development">
-              Turnkey Product Development
-            </option>
-            <option value="Support and Enhancement">
-              Support and Enhancement
-            </option>
-            <option value="Careers">Careers</option>
-            <option value="Other">Other</option>
-          </select>
+        <div className={style.field}>
+          <div className={style.formTitle}>Subject</div>
+          <div className={style.formGroup}>
+            <input
+              className={style.inputField}
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-        <div className={style.formGroup}>
-          {renderInputLabel("budget", "Project budget (min.$15K)*")}
-          <select
-            id="budget"
-            name="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            required
-          >
-            <option value="" disabled hidden>
-              Project budget (min.$15K)*
-            </option>
-            <option value="$15k-$30k">$15k-$30k</option>
-            <option value="$30k-$100k">$30k-$100k</option>
-            <option value="$100k-$250k">$100k-$250k</option>
-            <option value="More than $250k">More than $250k</option>
-          </select>
+        <div className={style.field}>
+          <div className={style.formTitle}>Projected budget</div>
+          <div className={style.formGroup}>
+            <input
+              className={style.inputField}
+              type="text"
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              required
+            />
+          </div>
         </div>
-        <div className={style.formGroup + " " + style.fullWidth}>
-          <textarea
-            className={style.dynamicTextarea}
-            name="description"
-            id="description"
-            placeholder="Describe your needs in detail"
-            value={formData.description}
-            onChange={handleTextareaInput}
-            ref={textareaRef}
-            required
-          />
-        </div>
-        <div className={style.descriptionSuggestion}>
-          Please include project details, duration, tech stack, IT professionals
-          needed, and other relevant info
+        <div className={style.textareafield}>
+          <div className={style.textareaTitle}>
+            Describe your challenge / goal
+          </div>
+          <div className={style.formGroup + " " + style.fullWidth}>
+            <textarea
+              className={style.dynamicTextarea}
+              name="description"
+              id="description"
+              value={formData.description}
+              onChange={handleTextareaInput}
+              ref={textareaRef}
+              required
+            />
+          </div>
         </div>
         <div className={style.attachment}>
-          <div className={style.recording}>
-            <div className={style.recordingDescription}>
-              Record a voice message about your
-              <br />
-              project to help us understand it better
-            </div>
+          <div className={style.attachmentSub}>
             <button type="button" className={style.recordButton}>
-              Record
+              <img
+                src="assets/svg/record.svg"
+                alt="Record Voice Message"
+                className={style.icon}
+              />
             </button>
+            <div className={style.attachmentTitle}>Record voice message</div>
           </div>
-          <div className={style.uploadFile}>
-            <div className={style.uploadDescription}>
-              Attach additional documents as needed
-            </div>
+          <div className={style.attachmentSub}>
             <div className={style.uploadContainer}>
               <button type="button" className={style.uploadButton}>
-                Upload file
+                <img
+                  src="assets/svg/attach-file.svg"
+                  alt="Attach File"
+                  className={style.icon}
+                />
               </button>
-              <div className={style.uploadDetails}>?</div>
+              <div className={style.attachmentTitle}>Attach file</div>
             </div>
           </div>
         </div>
-        <div className={style.submitBtnContainer}>
-          <div className={style.privacyWarning}>
-            {PRIVACY_POLICY_WARNING.split("Privacy Policy")[0]}
-            <span className={style.privacyPolicy}>Privacy Policy</span>
-            {PRIVACY_POLICY_WARNING.split("Privacy Policy")[1]}
-          </div>
-          <button type="submit" className={style.submitBtn}>
-            Send
-          </button>
+        <div className={style.checkboxContainer}>
+          <input
+            type="checkbox"
+            id="nda"
+            name="nda"
+            checked={formData.nda}
+            onChange={(e) =>
+              setFormData({ ...formData, nda: e.target.checked })
+            }
+            className={style.checkbox}
+          />
+          <label htmlFor="nda" className={style.checkboxLabel}>
+            Secure data with NDA first
+          </label>
         </div>
+        <button type="submit" className={style.submitBtn}>
+          SEND MESSAGE
+        </button>
+        <div className={style.privacyWarning}>{PRIVACY_POLICY_WARNING}</div>
       </form>
     </div>
   );

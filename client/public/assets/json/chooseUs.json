@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"Software development",
+        "description":"From concept to launch, we build products that meet your business goals. Tailored made code on your unique requirements."
+    },
+    {
+        "id":2,
+        "name":"Web & email hosting",
+        "description":"Reliable web and email hosting with fast, secure, scalable solutions, robust performance, and exceptional customer support."
+    },
+    {
+        "id":3,
+        "name":"Web & mobile apps",
+        "description":"End-to-end web development solutions at your fingertips.  Professional websites that enhance your brand's digital presence."
+    },
+    {
+        "id":4,
+        "name":"Digital transformation",
+        "description":"Transform your business with innovative digital solutions  -whether building the foundation or handling full development."
+    },
+    {
+        "id":5,
+        "name":"Application modernization",
+        "description":"Upgrade your legacy systems to modern, efficient architectures.Expert advice to guide your technology strategy."
+    },
+    {
+        "id":6,
+        "name":"Many more",
+        "description":"MVP, marketing landing pages, alternative CMS integrations, headless implementations, and more."
+    }
+]

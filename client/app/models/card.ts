@@ -3,3 +3,10 @@ export interface CardProps {
     name: string;
     description: string;
 }
+
+
+export interface MissionStep {
+  id: number;
+  name: string;
+  detail: string[];
+}

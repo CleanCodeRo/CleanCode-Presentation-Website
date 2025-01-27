@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import style from './style.module.scss';
 import Head from 'next/head';
 import Navbar from '@components/Navbar';
 import Footer from '@components/Footer';
@@ -15,9 +14,7 @@ const ContactUs = () => {
         <meta name="description" content="Get in touch with us for inquiries, support, or more information about our services." />
       </Head>
       <Navbar />
-      <div className={style.contactUsContainer}>
-        <Contact />
-      </div>
+      <Contact />
       <Footer />
     </>
   );

@@ -1,0 +1,63 @@
+@import "@style/globalVariables.scss";
+
+.wrapper {
+    background: $Yellow;
+    text-align: center;
+    height: 30rem;
+    padding-top: 0.7rem;
+}
+
+.container {
+    max-width: 59rem;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: bold;
+    color: $BlueDark;
+    font-size: 2.5rem;
+    font-family: $PoppinsBold;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 0.8rem;
+}
+
+.tab {
+    background: transparent;
+    border: none;
+    font-size: 1.7rem;
+    font-family: $PoppinsBold;
+    font-weight: bold;
+    color: $BlueDark;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-bottom: 1rem;
+}
+
+.active {
+    background: $BlueDark;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.description {
+    font-size: $font-size-small;
+    font-family: $MontserratRegular;
+    color: $BlueDark;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+}

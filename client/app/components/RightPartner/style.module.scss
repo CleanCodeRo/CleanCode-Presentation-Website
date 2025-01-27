@@ -1,0 +1,67 @@
+@import "@style/globalVariables.scss";
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.RightPartener {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $BlueDark;
+    font-family: $PoppinsBold;
+}
+
+.highlight {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $Yellow;
+    z-index: -1;
+}
+
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
