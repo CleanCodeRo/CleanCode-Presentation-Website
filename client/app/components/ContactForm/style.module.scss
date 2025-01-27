@@ -3,95 +3,89 @@
 
 .contactContainer {
   width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  font-family: $RubikRegular;
+  height: 50rem;
+  padding-top: 4rem;
+  background-color: $Yellow;
+  padding-right: 3rem;
 }
 
 .form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.formGroup {
-  margin-bottom: 40px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-
-.inputLabel {
-  position: absolute;
-  top: -15px;
-  left: 10px;
-  font-size: 12px;
-  color: #747474;
-  transition: all 1s ease;
-  opacity: 1;
-}
-
-.formGroup input,
-.formGroup select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 1rem;
   width: 100%;
-  padding: 10px;
-  margin: 0px 10px;
-  height: 40px;
+}
+
+.field {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+
+.formTitle{
+  font-family: $MontserratRegular;
+  font-size: $font-size-small;
+  margin-bottom: 0.5rem;
+  color: $BlueDark;
+}
+
+.textareaTitle{
+  font-family: $MontserratRegular;
+  font-size: $font-size-small;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input {
+  width: 100%;
+  height: 3.5rem;
+  color: $BlueDark;
+  font-family: $MontserratRegular;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   border: none;
-  border-bottom: 2px solid #ccc;
-  color: #ccc;
-  border-radius: 0;
-  background-color: transparent;
+  border-radius: $general-radious;
+  background-color: white;
   box-sizing: border-box;
 
   &:focus {
+    padding: 0.5rem;
+    font-size: 1.5rem;
     outline: none;
-    border-bottom: 2px solid #747474;
-    color: black;
-    font-family: $RubikRegular;
-  }
-
-  &::placeholder {
-    color: #ccc;
+    color: $BlueDark;
+    font-family: $MontserratRegular;
   }
 }
 
-.formGroup input:not(:placeholder-shown),
-.formGroup select:not([value=""]) {
-  & ~ .inputLabel {
-    top: -20px;
-    font-size: 12px;
-    color: #747474;
-  }
+.textareafield{
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  grid-column: span 2;
 }
 
 .dynamicTextarea {
-  width: 200%;
-  height: 40px;
+  width: 100%;
+  height: 7rem;
+  font-size: 1.5rem;
+  font-family: $MontserratRegular;
+  padding: 0.5rem;
   resize: none;
-  overflow-y: hidden;
-  min-height: 30px;
-  max-height: 100px;
-  line-height: 20px;
+  border-radius: $general-radious;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid #ccc;
-  padding: 10px;
-  margin: 0px 10px;
+  overflow-y: auto;
 
   &:focus {
-    border-bottom: 2px solid #747474;
+    padding: 0.5rem;
+    font-size: 1.5rem;
     outline: none;
+    color: black;
+    font-family: $MontserratRegular;
   }
-}
-
-.fullWidth {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .descriptionSuggestion {
@@ -100,28 +94,15 @@
 }
 
 .attachment {
-  width: 100%;
-  height: 100px;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 50px;
+  grid-column: span 2;
+  align-items: center;
 }
 
-.recording,
-.uploadFile {
-  color: #747474;
-  width: 42%;
-  height: 100%;
-  border: 1px dashed #747474;
-  border-radius: $button-radious;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
-}
 
 .uploadFile {
   display: flex;
@@ -135,96 +116,105 @@
 
 .recordButton,
 .uploadButton {
-  color: $RedMedium;
-  background-color: white;
-  border: 1px solid $RedMedium;
-  border-radius: $button-radious;
-  color: black;
-  padding: 10px 20px;
+  all: unset;
   cursor: pointer;
-}
-.recordButton:hover,
-.uploadButton:hover{
-  background-color: $RedMedium;
-  color: white;
-}
-
-.uploadButton {
-  color: $RedMedium;
-  margin-right: 10px;
-}
-
-.recordButton {
-  color: $RedMedium;
-}
-
-.uploadDetails {
-  border: 1px solid #747474;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  margin: 0;
 }
 
-.uploadDetails::after {
-  content: "You can attach up to 1 file of 2MB overall. Valid files: pdf, jpg, jpeg, png";
-  position: absolute;
-  bottom: 150%;
-  left: 50%;
-  font-size: $font-size-x-small;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 100px;
-  background-color: #747474;
-  color: white;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s;
-  z-index: 10;
+.icon {
+  width: 45px;
+  height: 45px;
+  display: block;
 }
 
-.uploadDetails:hover::after {
-  opacity: 1;
-  visibility: visible;
+.attachmentTitle {
+  margin-left: 1rem;
+  font-family: $MontserratRegular;
+  font-size: 1.3rem;
 }
 
 .submitBtnContainer {
-  margin-top: 16px;
   display: flex;
-}
-
-.privacyWarning {
-  color: #747474;
-}
-
-.privacyPolicy {
-  color: black;
-}
-
-.privacyPolicy:hover {
-  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: span 2;
 }
 
 .submitBtn {
-  padding: 8px 32px;
-  background-color: white;
-  border-radius: $button-radious;
-  color: $RedMedium;
-  border: 1px solid $RedMedium;
+  height: 2.8rem;
+  width: 73%;
+  border-radius: 7px;
+  font-family: $PoppinsBold;
+  font-size: $font-size-small;
+  background-color: $BlueDark;
+  justify-self: end;
+  align-self: center;
+  color: white;
+  border: none;
   cursor: pointer;
-  font-size: $spacing-medium;
+  transition: background-color 0.3s ease;
 }
 
 .submitBtn:hover {
-  color:white;
-  background-color: $RedMedium;
+  color: $BlueDark;
+  background-color: $GreenDark;
+}
+
+.attachmentSub{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkboxContainer {
+  width: 130%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0.7rem;
+}
+
+.checkbox {
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  accent-color: $BlueDark;
+  border-radius: 7px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:checked {
+  background-color: $BlueDark;
+}
+
+.checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.checkboxLabel {
+  color: $BlueDark;
+  font-family: $MontserratRegular;
+  font-size: $font-size-small;
+  cursor: pointer;
+}
+
+.privacyWarning {
+  color: $BlueDark;
+  font-family: $MontserratLight;
+  font-size: $font-size-x-small;
+  margin-top: 1rem;
+  grid-column: span 2;
 }

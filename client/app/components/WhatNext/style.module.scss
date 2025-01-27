@@ -1,99 +1,71 @@
 @import "@style/globalVariables.scss";
 
 .whatNextContainer {
+  height: 50rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
-  position: relative;
-  overflow: visible;
-  font-family: $RubikRegular;
+  background-color: $Yellow;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: -20px;
-    bottom: -20px;
-    border: 1px dashed rgb(255, 0, 0);
-    z-index: 0;
+
+  .title {
+    width: 100%;
+    font-family: $PoppinsBold;
+    font-size: 1.8rem;
+    color: $BlueDark;
+    margin: 0;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
   }
 
-  .backgroundCover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f5f4f6;
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 5rem 17rem;
+    align-items: start;
+    max-width: 800px;
+    width: 100%;
+    padding-top: 1rem;
+  }
+
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 3rem;
+  }
+
+  .number {
+    font-family: $MontserratLight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid $BlueDark;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: $BlueDark;
+    position: relative;
     z-index: 1;
   }
-}
 
-.title {
-  font-weight: bold;
-  font-size: $font-size-large;
-  margin-bottom: $spacing-medium;
-  margin-top: $spacing-large;
-  z-index: 2;
-  position: relative;
-}
+  .line {
+    position: absolute;
+    top: 45px;
+    width: 2px;
+    background-color: $BlueDark;
+    height: 128%;
+  }
 
-.elementsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: $spacing-small;
-}
+  .rightColumn {
+    font-family: $MontserratRegular;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $BlueDark;
+    padding-bottom: 3rem;
+  }
 
-.element {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  text-align: left;
-  width: 100%;
-  max-width: 600px;
-  z-index: 2;
-  position: relative;
-  padding: $spacing-small 0;
-}
-
-.numberContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  min-height: 70px;
-}
-
-.number {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid $BlueDark;
-  color: $BlueDark;
-  font-size: $font-size-x-small;
-  background-color: transparent;
-  z-index: 2;
-}
-
-.line {
-  position: absolute;
-  top: 40px;
-  width: 0.5px;
-  background-color: black;
-  height: calc(100% - 16px);
-  z-index: 2;
-}
-
-.text {
-  font-size: $font-size-x-small;
-  flex-grow: 1;
-  padding-top: 10px;
-  z-index: 2;
 }
