@@ -15,8 +15,6 @@ const ChooseUs = () => {
             .catch(error => console.error("Error loading JSON:", error));
     }, []);
 
-    const svgBasePath = "/assets/svg/Services/"; 
-
     return (
         <div className={style.container}>
             <h2 className={style.title}>Why <span className={style.highlight}>choose us</span></h2>
@@ -25,7 +23,7 @@ const ChooseUs = () => {
                 {cards.length > 0 ? (
                     <div className={style.cardContainer}>
                         {cards.map((card, index) => (
-                            <CardRightPartener key={index} {...card} svgBasePath={svgBasePath} />
+                            <CardRightPartener key={index} {...card} />
                         ))}
                     </div>
                 ) : (
