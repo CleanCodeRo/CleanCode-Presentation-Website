@@ -14,7 +14,7 @@ const Footer = () => {
           <div className={style.footerCenterLeftContent}>
             <div className={style.iconWithText}>
               <img
-                src="/assets/svg/location.svg"
+                src="/assets/svg/Footer/location.svg"
                 alt="Location Icon"
                 className={style.icon}
               />
@@ -29,7 +29,7 @@ const Footer = () => {
             </div>
             <div className={style.iconWithText}>
               <img
-                src="/assets/svg/mail.svg"
+                src="/assets/svg/Footer/mail.svg"
                 alt="Mail Icon"
                 className={style.icon}
               />
@@ -39,7 +39,7 @@ const Footer = () => {
             </div>
             <div className={style.iconWithText}>
               <img
-                src="/assets/svg/phone.svg"
+                src="/assets/svg/Footer/phone.svg"
                 alt="Phone Icon"
                 className={style.icon}
               />
@@ -73,7 +73,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/facebook.svg"
+                  src="/assets/svg/Footer/facebook.svg"
                   alt="Facebook Icon"
                   className={style.icon}
                 />
@@ -87,7 +87,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/linkedIn.svg"
+                  src="/assets/svg/Footer/linkedIn.svg"
                   alt="LinkedIn Icon"
                   className={style.icon}
                 />
@@ -101,7 +101,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/instagram.svg"
+                  src="/assets/svg/Footer/instagram.svg"
                   alt="Instagram Icon"
                   className={style.icon}
                 />
@@ -115,7 +115,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/x.svg"
+                  src="/assets/svg/Footer/x.svg"
                   alt="X Icon"
                   className={style.icon}
                 />
@@ -129,7 +129,7 @@ const Footer = () => {
                 className={style.link}
               >
                 <img
-                  src="/assets/svg/tik-tok.svg"
+                  src="/assets/svg/Footer/tik-tok.svg"
                   alt="TikTok Icon"
                   className={style.icon}
                 />
