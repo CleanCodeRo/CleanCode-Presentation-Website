@@ -76,7 +76,7 @@
   .cardTitle {
     flex: 1;
     font-family: $MontserratBold;
-    font-size: $font-size-small;
+    font-size: 1.5rem;
     line-height: 1.5;
   
     @media (max-width: $breakpoint-medium) {
@@ -88,7 +88,8 @@
     flex: 2;
     text-align: left;
     font-family: $MontserratLight;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 2rem;
   
     @media (max-width: $breakpoint-medium) {
       text-align: justify;

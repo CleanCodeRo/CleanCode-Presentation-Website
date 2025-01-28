@@ -7,7 +7,7 @@
   max-height: 50%;
   z-index: 1000;
   overflow: visible;
-  transition: height 0.25s linear;
+  transition: height 0.3s ease-in-out;
   background-color: white;
   
   &:after {
@@ -65,7 +65,7 @@
   display: flex;
   justify-content: center; 
   list-style: none;
-  font-size: $font-size-small;
+  font-size: 1.2rem;
   font-weight: bold;
   position: relative;
   font-family: $PoppinsBold;
@@ -94,7 +94,7 @@
 }
 
 .buttonLink {
-  font-size: $font-size-small;
+  font-size: 1.2rem;
   color:white;
   border: none;
   font-family: $PoppinsBold;

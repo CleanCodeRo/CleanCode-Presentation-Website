@@ -12,7 +12,7 @@
 
 .container{
     height: 100%;
-    width: 53rem;
+    width: 49rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,10 +35,10 @@
 
 .content{
     font-family: $MontserratRegular;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: $BlueDark;
     text-align: center;
-    line-height: 1.5;
+    line-height: 2rem;
 }
 
 .button{
