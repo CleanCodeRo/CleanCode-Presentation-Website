@@ -29,7 +29,7 @@
 .tab {
     background: transparent;
     border: none;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: $PoppinsBold;
     font-weight: bold;
     color: $BlueDark;
@@ -49,11 +49,11 @@
 }
 
 .description {
-    font-size: $font-size-small;
+    font-size: 1.5rem;
     font-family: $MontserratRegular;
     color: $BlueDark;
     margin-top: 10px;
-    line-height: 1.5;
+    line-height: 2rem;
 }
 
 .icon{
