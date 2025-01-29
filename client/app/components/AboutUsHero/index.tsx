@@ -12,7 +12,7 @@ const AboutUsHero = () => {
           <span className={style.highlight}>Unstoppable together.</span>
         </h1>
         <img
-          src="/assets/svg/about-us-together.svg"
+          src="/assets/svg/AboutUs/about-us-together.svg"
           alt="about us"
           className={style.aboutUsImage}
         />
