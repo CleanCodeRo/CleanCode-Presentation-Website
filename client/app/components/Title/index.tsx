@@ -43,7 +43,7 @@ const Title=()=> {
             <button className={style.letsTalk} onClick={() => window.location.href = "/ContactUs"}>
                 START A CONVERSATION
             </button>
-            <img src="/assets/svg/hero-section.svg" alt="about us" className={style.heroImage} />
+            <img src="/assets/svg/MainPage/hero-section.svg" alt="about us" className={style.heroImage} />
         </div>
     );
 };

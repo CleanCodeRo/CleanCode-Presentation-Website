@@ -22,4 +22,4 @@ export const FORM_TITLE: string = "Why wait? Get in touch with  us.";
 
 export const FORM_CONTENT: string = "Reach out to us and unlock the power of innovative software solutions for your business. Contact us to discuss your project and take the first step towards success!"
 
-export const RIGHT_PARTNER_SVG_BASE_PATH='/assets/svg/RightPartner/'
+export const CARD_SVG_BASE_PATH='/assets/svg/Card/'

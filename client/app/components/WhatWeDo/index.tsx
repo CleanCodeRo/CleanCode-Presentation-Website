@@ -21,7 +21,7 @@ const WhatWeDo = () => {
         <div className={style.rightSide}>
           <div className={style.square1}>
             <img
-              src="/assets/png/innovative-ideas.png"
+              src="/assets/svg/MainPage/innovative-ideas.svg"
               alt="product development"
               className={style.smallImg}
             />
@@ -29,7 +29,7 @@ const WhatWeDo = () => {
           </div>
           <div className={style.square2}>
             <img
-              src="/assets/png/tailored-solutions.png"
+              src="/assets/svg/MainPage/tailored-solutions.svg"
               alt="project development"
               className={style.smallImg}
             />
@@ -37,7 +37,7 @@ const WhatWeDo = () => {
           </div>
           <div className={style.square3}>
             <img
-              src="/assets/png/strategic-insights.png"
+              src="/assets/svg/MainPage/strategic-insights.svg"
               alt="seo"
               className={style.smallImg}
             />
@@ -45,7 +45,7 @@ const WhatWeDo = () => {
           </div>
           <div className={style.square4}>
             <img
-              src="/assets/png/reliable-software.png"
+              src="/assets/svg/MainPage/reliable-software.svg"
               alt="product development"
               className={style.smallImg}
             />

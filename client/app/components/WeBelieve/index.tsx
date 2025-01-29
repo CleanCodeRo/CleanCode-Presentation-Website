@@ -44,7 +44,7 @@ const WeBelieve: React.FC = () => {
                     <div className={styles.content}>
                         <Image 
                             className={styles.icon}
-                            src={`/assets/svg/${selectedBelief.name}.svg`} 
+                            src={`/assets/svg/AboutUs/${selectedBelief.name}.svg`} 
                             alt={selectedBelief.name} 
                             width={50} 
                             height={50} 
