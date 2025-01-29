@@ -3,6 +3,8 @@
 import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
 import style from "./style.module.scss";
 import { PRIVACY_POLICY_WARNING } from "@constants/constants";
+import emailjs from "emailjs-com";
+import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
 
 type FormFields =
   | "name"
@@ -13,7 +15,9 @@ type FormFields =
   | "budget"
   | "description";
 
+
 const ContactForm = () => {
+  const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -24,6 +28,8 @@ const ContactForm = () => {
     description: "",
     nda: false
   });
+
+  const formRef = useRef<HTMLFormElement>(null);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -47,20 +53,45 @@ const ContactForm = () => {
     handleChange(e);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form Data: ", formData);
-  };
-
-  const renderInputLabel = (fieldName: FormFields, label: string) => {
-    return formData[fieldName] ? (
-      <label className={style.inputLabel}>{label}</label>
-    ) : null;
+    console.log(formData);
+    setLoading(true);
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          formRef.current,
+          EMAILJS_API_KEY
+        )
+        .then(
+          (result) => {
+            alert("Message sent successfully!");
+            console.log(formData);
+            setFormData({
+              name: "",
+              company: "",
+              email: "",
+              phone: "",
+              subject: "",
+              budget: "",
+              description: "",
+              nda: false
+            });
+          },
+          (error) => {
+            alert("An error occurred, please try again.");
+          }
+        ).finally(() => {
+          setLoading(false);
+        });
+    }
   };
 
   return (
     <div className={style.contactContainer}>
-      <form onSubmit={handleSubmit} className={style.form}>
+      <form ref={formRef} onSubmit={handleSubmit} className={style.form}>
         <div className={style.field}>
           <div className={style.formTitle}>Your name</div>
           <div className={style.formGroup}>
@@ -205,6 +236,7 @@ const ContactForm = () => {
         </button>
         <div className={style.privacyWarning}>{PRIVACY_POLICY_WARNING}</div>
       </form>
+      {loading && <div className={style.loadingOverlay}>Sending message...</div>}
     </div>
   );
 };
