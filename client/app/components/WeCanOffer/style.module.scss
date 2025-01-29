@@ -68,16 +68,17 @@
 
 .cardTitle{
     font-family: $PoppinsBold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $BlueDark;
     margin-top: 1rem;
 }
 
 .cardContent{
     font-family: $MontserratRegular;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: $BlueDark;
     text-align: center;
     margin-top: 1rem;
     text-align: start;
+    line-height: 2rem;
 }
