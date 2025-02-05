@@ -6,16 +6,6 @@ import { PRIVACY_POLICY_WARNING } from "@constants/constants";
 import emailjs from "emailjs-com";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
 
-type FormFields =
-  | "name"
-  | "company"
-  | "email"
-  | "phone"
-  | "subject"
-  | "budget"
-  | "description";
-
-
 const ContactForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({

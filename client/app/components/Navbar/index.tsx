@@ -36,7 +36,7 @@ const Navbar = () => {
         if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current);
         }
-        fetchData(path);
+        //fetchData(path);
     };
 
     const handleMouseLeave = () => {
