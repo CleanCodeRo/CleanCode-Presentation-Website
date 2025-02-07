@@ -182,11 +182,11 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className={style.attachment}>
+        {/* <div className={style.attachment}>
           <div className={style.attachmentSub}>
             <button type="button" className={style.recordButton}>
               <img
-                src="assets/svg/record.svg"
+                src="/assets/svg/record.svg"
                 alt="Record Voice Message"
                 className={style.icon}
               />
@@ -197,7 +197,7 @@ const ContactForm = () => {
             <div className={style.uploadContainer}>
               <button type="button" className={style.uploadButton}>
                 <img
-                  src="assets/svg/attach-file.svg"
+                  src="/assets/svg/attach-file.svg"
                   alt="Attach File"
                   className={style.icon}
                 />
@@ -205,7 +205,7 @@ const ContactForm = () => {
               <div className={style.attachmentTitle}>Attach file</div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className={style.checkboxContainer}>
           <input
             type="checkbox"

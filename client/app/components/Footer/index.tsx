@@ -63,7 +63,7 @@ const Footer = () => {
       <div className={style.footerBottom}>
         \
         <div className={style.bottomContent}>
-          <div className={style.copyright}>© 2024 CleanCode Solutions</div>
+          <div className={style.copyright}>&copy; {new Date().getFullYear()}  CleanCode Solutions</div>
           <div className={style.mediaLinks}>
             <div className={style.iconWithText}>
               <a
