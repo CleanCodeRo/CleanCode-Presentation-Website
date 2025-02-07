@@ -12,7 +12,9 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "@svgr/webpack": "^8.1.0",
+    "@types/aos": "^3.0.7",
     "@types/react-transition-group": "^4.4.10",
+    "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "gsap": "^3.12.5",
     "motion": "10.18.0",

@@ -3,6 +3,7 @@
 import React from "react";
 import style from "./style.module.scss";
 import { WHAT_WE_DO } from "@constants/constants";
+import InnovativeIdeas from "@components/InnovativeIdeas";
 
 const WhatWeDo = () => {
   return (
@@ -20,11 +21,12 @@ const WhatWeDo = () => {
         </div>
         <div className={style.rightSide}>
           <div className={style.square1}>
-            <img
+            <InnovativeIdeas/>
+            {/* <img
               src="/assets/svg/MainPage/innovative-ideas.svg"
               alt="product development"
               className={style.smallImg}
-            />
+            /> */}
             <div className={style.smallTitle}>Innovative ideas</div>
           </div>
           <div className={style.square2}>
