@@ -1,0 +1,18 @@
+---
+deployment:
+  tasks:
+
+    - export DEPLOYMENT_DIR=${HOME}/CleanCode-Presentation-Website/client
+
+
+    - /bin/bash /opt/cpanel/ea-nodejs16/bin/nodejs select 16 --app CleanCode-Presentation-Website-client
+
+
+    - cd ${DEPLOYMENT_DIR}
+
+
+    - yarn install --production
+
+    - yarn build
+
+    - yarn start

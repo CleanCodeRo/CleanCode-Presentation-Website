@@ -1,0 +1,50 @@
+@import "@style/globalVariables.scss";
+
+.heroContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+    padding-top: 1rem;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.aboutUsSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1024px;
+    height: 100%;
+}
+
+.aboutUsTitle{
+    font-size: 2.5rem;
+    font-family: $PoppinsBold;
+    display: inline-block;
+    justify-content: center;
+}
+
+.highlight {
+    position: relative;
+    z-index: 1;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: $Yellow;
+    z-index: -1;
+}
+
+.aboutUsImage{
+    width: 80%;
+    height: 80vh;
+}

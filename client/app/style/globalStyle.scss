@@ -1,0 +1,35 @@
+@import "globalVariables";
+
+.dark_blue_fill {
+    fill: $BlueDark;
+    fill-rule: nonzero;
+}
+.teal_fill {
+    fill: $Teal;
+    fill-rule: nonzero;
+}
+.blue_fill {
+    fill: $BlueMedium;
+    fill-rule: nonzero;
+}
+.aqua_fill {
+    fill: $Aqua;
+    fill-rule: nonzero;
+}
+.red_fill{
+    fill: $RedMedium;
+    fill-rule: nonzero;
+}
+.orange_fill {
+    fill: $Orange;
+    fill-rule: nonzero;
+}
+.yellow_fill {
+    fill: $Yellow;
+    fill-rule: nonzero;
+}
+
+.font-test{
+    color:red;
+    font-family: $RubikLight;
+}

@@ -1,0 +1,227 @@
+/* components/Contact/style.module.scss */
+@import "@style/globalVariables.scss";
+
+.contactContainer {
+  width: 900px;
+  height: 50rem;
+  padding-top: 4rem;
+  background-color: $Yellow;
+  padding-right: 3rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 1rem;
+  width: 100%;
+}
+
+.field {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+
+.formTitle{
+  font-family: $MontserratRegular;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: $BlueDark;
+}
+
+.formContent{
+  font-family: $MontserratRegular;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: $BlueDark;
+}
+
+.textareaTitle{
+  font-family: $MontserratRegular;
+  font-size: $font-size-small;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input {
+  width: 100%;
+  height: 3.5rem;
+  color: $BlueDark;
+  font-family: $MontserratRegular;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: $general-radious;
+  background-color: white;
+  box-sizing: border-box;
+
+  &:focus {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    outline: none;
+    color: $BlueDark;
+    font-family: $MontserratRegular;
+  }
+}
+
+.textareafield{
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  grid-column: span 2;
+}
+
+.dynamicTextarea {
+  width: 100%;
+  height: 7rem;
+  font-size: 1.5rem;
+  font-family: $MontserratRegular;
+  padding: 0.5rem;
+  resize: none;
+  border-radius: $general-radious;
+  box-sizing: border-box;
+  border: none;
+  overflow-y: auto;
+
+  &:focus {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    outline: none;
+    color: black;
+    font-family: $MontserratRegular;
+  }
+}
+
+.descriptionSuggestion {
+  color: #747474;
+  margin-bottom: 20px;
+}
+
+.attachment {
+  padding-left: 1rem;
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  grid-column: span 2;
+  align-items: center;
+}
+
+
+.uploadFile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uploadContainer {
+  display: flex;
+  align-items: center;
+}
+
+.recordButton,
+.uploadButton {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+
+.attachmentTitle {
+  margin-left: 1rem;
+  font-family: $MontserratRegular;
+  font-size: 1.3rem;
+}
+
+.submitBtnContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: span 2;
+}
+
+.submitBtn {
+  height: 2.8rem;
+  width: 73%;
+  border-radius: 7px;
+  font-family: $PoppinsBold;
+  font-size: $font-size-small;
+  background-color: $BlueDark;
+  justify-self: end;
+  align-self: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+  color: $BlueDark;
+  background-color: $GreenDark;
+}
+
+.attachmentSub{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkboxContainer {
+  width: 130%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0.7rem;
+}
+
+.checkbox {
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  accent-color: $BlueDark;
+  border-radius: 7px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:checked {
+  background-color: $BlueDark;
+}
+
+.checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+}
+
+.checkboxLabel {
+  color: $BlueDark;
+  font-family: $MontserratRegular;
+  font-size: $font-size-small;
+  cursor: pointer;
+}
+
+.privacyWarning {
+  color: $BlueDark;
+  font-family: $MontserratLight;
+  font-size: $font-size-x-small;
+  margin-top: 1rem;
+  grid-column: span 2;
+}

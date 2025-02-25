@@ -1,0 +1,79 @@
+@use "fonts";
+
+$RubikRegular: "RubikRegular", sans-serif;
+$RubikBold: "RubikBold", sans-serif;
+$RubikLight: "RubikLight", sans-serif;
+
+$MontserratRegular: "MontserratRegular", sans-serif;
+$MontserratBold: "MontserratBold", sans-serif;
+$MontserratLight: "MontserratLight", sans-serif;
+$MontserratExtraLight: "MontserratExtraLight", sans-serif;
+
+$PoppinsRegular: "PoppinsRegular", sans-serif;
+$PoppinsBold: "PoppinsBold", sans-serif;
+$PoppinsLight: "PoppinsLight", sans-serif;
+
+/*------------------------------------*\
+  # Color
+\*------------------------------------*/
+
+$Teal:#149497;
+$Aqua:#9bdcde;
+$Orange:#FA8825;
+$Yellow:#FED942;
+$White:#FFF9F0;
+
+$RedLight:#FA5456;
+$RedMedium:#DE3E40;
+$RedDark:#8D3F63;
+
+$BlueDark:#273155;
+$BlueMedium:#1D538F;
+$BlueLight:#E9E9F5;
+
+$GreenDark:#137173;
+$GreenMedium:#149497;
+$GreenLight:#4DCDC3;
+
+
+
+
+/*------------------------------------*\
+  # Media Queries
+\*------------------------------------*/
+$breakpoint-xsmall: 400px;
+$breakpoint-small: 600px;
+$breakpoint-medium: 800px;
+$breakpoint-large: 1000px;
+$breakpoint-xlarge: 1300px;
+
+/*------------------------------------*\
+  # Transitions
+\*------------------------------------*/
+
+$ease-in-out: 0.3s ease-in-out;
+
+/*------------------------------------*\
+  # Spacing
+\*------------------------------------*/
+
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+
+$bottomSpacing: 5rem;
+
+$font-size-x-small: 1rem;
+$font-size-small: 1.5rem;
+$font-size-medium: 2rem;
+$font-size-large: 3em;
+$font-size-x-large: 4rem;
+$font-size-xx-large: 5rem;
+
+/*------------------------------------*\
+  # borders, padding, radious
+\*------------------------------------*/
+
+$button-padding: 0.5rem 1rem;
+$button-radious: 7px;
+$general-radious: 12px

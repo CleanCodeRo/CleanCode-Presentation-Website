@@ -1,0 +1,36 @@
+.svg {
+    width: 200px;
+    height: 80px;
+
+    &:hover {
+        cursor: pointer;
+
+        #clean {
+            path:nth-child(1) {
+                animation: logoHover 1s linear;
+                animation-delay: 0s;
+            }
+            polygon:nth-child(2) {
+                animation: logoHover 1s linear;
+                animation-delay: 0.1s;
+            }
+            polygon:nth-child(3) {
+                animation: logoHover 1s linear;
+                animation-delay: 0.2s;
+            }
+            polygon:nth-child(4) {
+                animation: logoHover 1s linear;
+                animation-delay: 0.3s;
+            }
+            polygon:nth-child(5) {
+                animation: logoHover 1s linear;
+                animation-delay: 0.4s;
+            }
+        }
+    }
+}
+@keyframes logoHover {
+    50% {
+        transform: translateY(-10%);
+    }
+}

@@ -1,0 +1,53 @@
+[
+    {
+        "id":1,
+        "name":"Front-end",
+        "detail":[
+            "React",
+            "Angular",
+            "Javascript",
+            "Typescript"
+        ]
+    },
+    {
+        "id":2,
+        "name":"Back-end",
+        "detail":[
+            "Java",
+            ".Net",
+            "Python",
+            "PHP",
+            "Node.js",
+            "Typescript"
+        ]
+    },
+    {
+        "id":3,
+        "name":"Mobile",
+        "detail":[
+            "iOS",
+            "Android",
+            "React Native",
+            "Kotlin"
+        ]
+    },
+    {
+        "id":4,
+        "name":"Cloud",
+        "detail":[
+            "AWS",
+            "Azure",
+            "Google Cloud"
+        ]
+    },
+    {
+        "id":5,
+        "name":"Databases",
+        "detail":[
+            "PostgresSQL",
+            "Oracle",
+            "MongoDB",
+            "MySQL"
+        ]
+    }
+]

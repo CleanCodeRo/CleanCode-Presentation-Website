@@ -1,0 +1,73 @@
+[
+    {
+        "id":1,
+        "name":"Banking",
+        "detail":""
+    },
+    {
+        "id":2,
+        "name":"Trading",
+        "detail":""
+    },
+    {
+        "id":3,
+        "name":"eCommerce",
+        "detail":""
+    },
+    {
+        "id":4,
+        "name":"ERP & CRM",
+        "detail":""
+    },
+    {
+        "id":5,
+        "name":"Education",
+        "detail":""
+    },
+    {
+        "id":6,
+        "name":"Research & Development",
+        "detail":""
+    },
+    {
+        "id":7,
+        "name":"Internet of Things",
+        "detail":""
+    },    
+    {
+        "id":8,
+        "name":"Enterprise",
+        "detail":""
+    },
+    {
+        "id":9,
+        "name":"Property Management",
+        "detail":""
+    },
+    {
+        "id":10,
+        "name":"Marketing",
+        "detail":""
+    },
+    {
+        "id":11,
+        "name":"Travel",
+        "detail":""
+    },
+    {
+        "id":12,
+        "name":"Retail",
+        "detail":""
+    },    
+    {
+        "id":13,
+        "name":"Gaming",
+        "detail":""
+    },
+    {
+        "id":14,
+        "name":"Smart cities",
+        "detail":""
+    }    
+    
+]

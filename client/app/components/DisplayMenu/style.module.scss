@@ -1,0 +1,66 @@
+@import "@style/globalVariables.scss";
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: $breakpoint-xlarge;
+}
+.servicesTitle {
+  font-size: $font-size-x-large;
+  font-family: $RubikLight;
+}
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: $breakpoint-xlarge;;
+
+  .itemsListChild {
+    display: flex;
+    cursor: pointer;
+    color: $BlueDark;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-left: 2px solid gray;
+    transition: border-left 0.3s;
+
+    &.active {
+      border-left: 4px solid $RedMedium;
+    }
+
+    &:hover {
+      color: $BlueMedium;
+    }
+  }
+  .leftSide {
+    background-color: white;
+    padding: 30px;
+    font-family: $RubikBold;
+  }
+
+  .rightSide {
+    background-color: white;
+    padding: 20px;
+    flex-grow: 1;
+    font-family: $RubikRegular;
+  }
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: stretch;
+  }
+  .menuItemName {
+    color: $RedMedium;
+  }
+}

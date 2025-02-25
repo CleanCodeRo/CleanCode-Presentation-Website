@@ -1,11 +1,24 @@
+
 import React from 'react';
-import MyLogo from '@/public/logo_color.svg';
-import styles from '@/app/page.module.css';
+import Navbar from '@components/Navbar';
+import Landing from '@components/Landing';
+import Technologies from '@components/Technologies';
+import WhatWeDo from '@components/WhatWeDo';
+import Footer from '@components/Footer';
+import RightPartener from '@components/RightPartner';
+import Quote from '@components/Quote';
 
 export default function Home() {
+
   return (
-    <>  
-      <MyLogo className={styles.svg}/>
+    <>
+      <Navbar />
+      <Landing />
+      <WhatWeDo />
+      <Technologies />
+      <RightPartener/>
+      <Quote  />
+      <Footer />
     </>
   );
-};
+}
