@@ -7,6 +7,17 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 2rem;
+
+  @media (max-width: 1024px) {
+    min-height: 28rem;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 24rem;
+    padding: 1rem;
+  }
 }
 
 .technologiesContent {
@@ -15,6 +26,12 @@
   align-items: center;
   justify-content: center;
   height: 50%;
+
+  @media (max-width: 768px) {
+    min-height: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .technologiesTitle,
@@ -27,6 +44,7 @@
 .technologiesTitle,
 .technologiesSubTitle,
 .technologiesText {
+  max-width: 100%;
   width: 55rem;
   display: flex;
   justify-content: center;
@@ -38,13 +56,28 @@
   padding-top: 10rem;
   margin-top: 1rem;
   margin-bottom: 0rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    padding: 1rem;
+    margin-top: 0;
+  }
 }
 
 .technologiesSubTitle {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   color: $Yellow;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    padding: 2rem;
+    margin-top: 0;
+  }
 }
+
 .technologiesText {
   color: white;
   font-family: $MontserratExtraLight;
@@ -57,6 +90,16 @@
   align-items: center;
   text-align: center;
   padding-bottom: 3rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
 }
 
 .logos {
@@ -67,6 +110,10 @@
   align-items: center;
   animation: scrollLeft 30s linear infinite;
   will-change: transform;
+
+  @media (max-width: 768px) {
+    animation: scrollLeft 10s linear infinite;
+  }
 }
 
 .logo {
@@ -75,6 +122,18 @@
   margin-left: 35px;
   margin-right: 35px;
   filter: invert(1);
+
+  @media (max-width: 1024px) {
+    width: 70px;
+    height: 70px;
+    margin: 0 15px;
+  }
+
+  @media (max-width: 768px) {
+    width: 70px;
+    height: 70px;
+    margin: 0 10px;
+  }
 }
 
 @keyframes scrollLeft {

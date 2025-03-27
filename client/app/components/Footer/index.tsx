@@ -61,7 +61,6 @@ const Footer = () => {
         </div>
       </div>
       <div className={style.footerBottom}>
-        \
         <div className={style.bottomContent}>
           <div className={style.copyright}>&copy; {new Date().getFullYear()}  CleanCode Solutions</div>
           <div className={style.mediaLinks}>
