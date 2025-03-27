@@ -94,7 +94,7 @@ const ProjectForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Your project's name *</div>
+          <div className={style.formTitle}>Your project&apos;s name *</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}

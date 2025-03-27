@@ -16,7 +16,7 @@ const Quote = () => {
         <div className={style.wrapper}>
         <div className={style.container}>
             <div className={style.title}>Let&apos;s explore the opportunity to collaborate on your upcoming project.</div>
-            <div className={style.content}>We are committed to understanding your business vision. We'll listen closely to your ideas and then develop a detailed plan outlining the steps to bring your project to fruition.
+            <div className={style.content}>We are committed to understanding your business vision. We&apos;ll listen closely to your ideas and then develop a detailed plan outlining the steps to bring your project to fruition.
             </div>
             <button className={style.button} onClick={() => window.location.href = "/ShareIdeas"}>Share your ideas</button>
         </div>
