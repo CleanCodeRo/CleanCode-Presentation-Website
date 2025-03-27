@@ -2,7 +2,7 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import {TITLE, SUBTITLE, CONTENT} from "@constants/needSomething";
+import { TITLE, SUBTITLE, CONTENT } from "@constants/needSomething";
 
 const NeedSomething = () => {
     return (
@@ -11,7 +11,7 @@ const NeedSomething = () => {
                 <div className={style.title}>{TITLE}</div>
                 <div className={style.subTitle}>{SUBTITLE}</div>
                 <div className={style.content}>{CONTENT}</div>
-                <button className={style.button}>JUST CONTACT US</button>
+                <button className={style.button} onClick={() => window.location.href = "/ContactUs"}>JUST CONTACT US</button>
             </div>
         </div>
     )

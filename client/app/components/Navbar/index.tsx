@@ -36,7 +36,7 @@ const Navbar = () => {
         if (hoverTimeoutRef.current) {
             clearTimeout(hoverTimeoutRef.current);
         }
-        fetchData(path);
+        //fetchData(path);
     };
 
     const handleMouseLeave = () => {
@@ -74,7 +74,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className={style.dropItem}>
-                        <Link href="/Industries" className={`${style.navLink} ${pathname === '/industries' ? style.active : ''}`}
+                        <Link href="/" className={`${style.navLink} ${pathname === '/industries' ? style.active : ''}`}
                             onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
                             onMouseLeave={handleMouseLeave}>
                             INDUSTRIES

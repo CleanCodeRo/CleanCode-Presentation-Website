@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
+  //   gap: 20px;
   padding-top: 2rem;
 
 
@@ -53,10 +54,8 @@
     }
   }
 
-  .footerCenterLeftContent {
-    }
-    .link {
-      font-family: $MontserratLight;
+  .link {
+    font-family: $MontserratLight;
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
@@ -94,6 +93,7 @@
       font-size: 1.1rem;
     }
   }
+
   .servicesList {
     list-style-type: none;
     padding: 0;

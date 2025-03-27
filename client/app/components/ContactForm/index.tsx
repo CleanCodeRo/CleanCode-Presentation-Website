@@ -6,16 +6,6 @@ import { PRIVACY_POLICY_WARNING } from "@constants/constants";
 import emailjs from "emailjs-com";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
 
-type FormFields =
-  | "name"
-  | "company"
-  | "email"
-  | "phone"
-  | "subject"
-  | "budget"
-  | "description";
-
-
 const ContactForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({
@@ -193,10 +183,11 @@ const ContactForm = () => {
           </div>
         </div>
         {/* <div className={style.attachment}>
+        {/* <div className={style.attachment}>
           <div className={style.attachmentSub}>
             <button type="button" className={style.recordButton}>
               <img
-                src="assets/svg/record.svg"
+                src="/assets/svg/record.svg"
                 alt="Record Voice Message"
                 className={style.icon}
               />
@@ -207,7 +198,7 @@ const ContactForm = () => {
             <div className={style.uploadContainer}>
               <button type="button" className={style.uploadButton}>
                 <img
-                  src="assets/svg/attach-file.svg"
+                  src="/assets/svg/attach-file.svg"
                   alt="Attach File"
                   className={style.icon}
                 />

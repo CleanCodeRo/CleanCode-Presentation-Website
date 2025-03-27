@@ -18,7 +18,6 @@ interface ProcessStep {
   detail: string;
 }
 
-
 const AboutUs = () => {
   const [processData, setProcessData] = useState<ProcessStep[]>([]);
   const [missionData, setMissionData] = useState<MissionStep[]>([]);
