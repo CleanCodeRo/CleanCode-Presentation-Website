@@ -1,111 +1,186 @@
 @import "@style/globalVariables.scss";
 
 .ourProcess {
-    background-color: $BlueDark;
-    width: 100%;
-    color: white;
-    font-size: $font-size-medium;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    cursor: default;
+  background-color: $BlueDark;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+}
+
+.ourProcessSubcontainer {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ourProcessTitle {
+  font-family: $PoppinsBold;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6rem;
+    height: 4px;
+    background-color: $Yellow;
+  }
+}
+
+.ourProcessElements {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.processCard {
+  width: 100%;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
   }
   
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cardSubcontainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.cardTitle {
+  flex: 1;
+  font-family: $MontserratBold;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  
+  &:before {
+    content: attr(data-number);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    background-color: $Yellow;
+    color: $BlueDark;
+    border-radius: 50%;
+    font-family: $PoppinsBold;
+    font-size: 1.2rem;
+  }
+}
+
+.cardDetail {
+  flex: 2;
+  text-align: left;
+  font-family: $MontserratLight;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
   .ourProcessSubcontainer {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+  }
   
-    @media (max-width: 1024px) {
-      width: 90%;
-      justify-content: center;
-      align-items: center;
+  .cardSubcontainer {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .ourProcessTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    
+    &:after {
+      width: 4rem;
     }
   }
   
-  .ourProcessElements {
-    display: flex;
+  .cardSubcontainer {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    font-size: $font-size-small;
-    font-family: $RubikLight;
-  
-    @media (max-width: 800px) {
-      font-size: $font-size-x-small;
-    }
-  }
-  
-  .processCard {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 1rem;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: $BlueMedium;
-    }
-  
-    @media (max-width: 800px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  .cardSubcontainer{
-    width: 1024px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    @media (max-width: 800px) {
-      flex-direction: column;
-      width: 80%;
-    }
-
+    padding: 0 1rem;
   }
   
   .cardTitle {
-    flex: 1;
-    font-family: $MontserratBold;
-    font-size: 1.5rem;
-    line-height: 1.5;
-  
-    @media (max-width: 800px) {
-      font-size: $font-size-x-small;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    
+    &:before {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1rem;
     }
   }
   
   .cardDetail {
-    flex: 2;
-    text-align: left;
-    font-family: $MontserratLight;
-    font-size: 1.2rem;
-    line-height: 2rem;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
   
-    @media (max-width: 800px) {
-      text-align: justify;
-      font-size: $font-size-x-small;
+  .processCard {
+    padding: 1.2rem 0;
+    
+    &:hover {
+      transform: none;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .ourProcess {
+    padding: 3rem 1rem;
   }
   
   .ourProcessTitle {
-    font-family: $PoppinsBold;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    line-height: 2;
-  
-    @media (max-width: 800px) {
-      font-size: $font-size-small;
+    font-size: 1.8rem;
+    
+    &:after {
+      width: 3rem;
     }
   }
+  
+  .cardTitle {
+    font-size: 1.2rem;
+    
+    &:before {
+      width: 2rem;
+      height: 2rem;
+      font-size: 0.9rem;
+      margin-right: 0.8rem;
+    }
+  }
+  
+  .cardDetail {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+}

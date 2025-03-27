@@ -13,31 +13,35 @@ import {
 
 const Technologies = () => {
   return (
-    <div className={style.technologiesBar}>
+    <section className={style.technologiesBar}>
       <div className={style.technologiesContent}>
         <h2 className={style.technologiesTitle}>{TECHNOLOGIES_TITLE}</h2>
-        <h2 className={style.technologiesSubTitle}>{TECHNOLOGIES_SUBTITLE}</h2>
-        <h2 className={style.technologiesText}>{TECHNOLOGIES_TEXT}</h2>
+        <h3 className={style.technologiesSubTitle}>{TECHNOLOGIES_SUBTITLE}</h3>
+        <p className={style.technologiesText}>{TECHNOLOGIES_TEXT}</p>
       </div>
-      <div className={style.logos}>
-        {TECHNOLOGIES.map((tech, index) => (
-          <img
-            key={index}
-            src={`${TECHNOLOGIES_PATH}${tech}${TECHNOLOGIES_FILE_EXTENSION}`}
-            alt={`${tech} Logo`}
-            className={style.logo}
-          />
-        ))}
-        {TECHNOLOGIES.map((tech, index) => (
-          <img
-            key={`duplicate-${index}`}
-            src={`${TECHNOLOGIES_PATH}${tech}${TECHNOLOGIES_FILE_EXTENSION}`}
-            alt={`${tech} Logo`}
-            className={style.logo}
-          />
-        ))}
+      <div className={style.logosContainer}>
+        <div className={style.logos}>
+          {TECHNOLOGIES.map((tech, index) => (
+            <img
+              key={index}
+              src={`${TECHNOLOGIES_PATH}${tech}${TECHNOLOGIES_FILE_EXTENSION}`}
+              alt={`${tech} Logo`}
+              className={style.logo}
+              loading="lazy"
+            />
+          ))}
+          {TECHNOLOGIES.map((tech, index) => (
+            <img
+              key={`duplicate-${index}`}
+              src={`${TECHNOLOGIES_PATH}${tech}${TECHNOLOGIES_FILE_EXTENSION}`}
+              alt={`${tech} Logo`}
+              className={style.logo}
+              loading="lazy"
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

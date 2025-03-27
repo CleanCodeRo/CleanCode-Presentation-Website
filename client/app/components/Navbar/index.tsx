@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation';
 const Navbar = () => {
     const [activeDropdown, setActiveDropdown] = useState<DropdownData[]>([]);
     const [navHeight, setNavHeight] = useState<string>(NAVBAR_DEFAULT_HEIGHT);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
     const navRef = useRef<HTMLDivElement>(null);
     const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -19,18 +20,18 @@ const Navbar = () => {
 
     const pathname = usePathname();
 
-    const fetchData = async (path: string) => {
-        try {
-            const response = await fetch(path);
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            const data: DropdownData[] = await response.json();
-            setActiveDropdown(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
+    // const fetchData = async (path: string) => {
+    //     try {
+    //         const response = await fetch(path);
+    //         if (!response.ok) {
+    //             throw new Error(`HTTP error! Status: ${response.status}`);
+    //         }
+    //         const data: DropdownData[] = await response.json();
+    //         setActiveDropdown(data);
+    //     } catch (error) {
+    //         console.error('Error fetching data:', error);
+    //     }
+    // };
 
     const handleMouseEnter = (path: string) => {
         if (hoverTimeoutRef.current) {
@@ -46,9 +47,25 @@ const Navbar = () => {
         }, 100);
     };
 
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+        setActiveDropdown([]);
+    };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768 && mobileMenuOpen) {
+                setMobileMenuOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [mobileMenuOpen]);
+
     useEffect(() => {
         if (dropdownRef.current && navRef.current) {
-            if (activeDropdown) {
+            if (activeDropdown.length > 0) {
                 const dropdownHeight = dropdownRef.current.offsetHeight;
                 setNavHeight(`${parseInt(NAVBAR_DEFAULT_HEIGHT) + dropdownHeight}px`);
             } else {
@@ -56,6 +73,11 @@ const Navbar = () => {
             }
         }
     }, [activeDropdown]);
+
+    // Reset mobile menu state when navigating to a new page
+    useEffect(() => {
+        setMobileMenuOpen(false);
+    }, [pathname]);
 
     return (
         <nav ref={navRef} className={`${style.nav}`} style={{ height: navHeight }}>
@@ -65,40 +87,73 @@ const Navbar = () => {
                         <Logo />
                     </Link>
                 </li>
-                <li className={style.navDrops}>
+                
+                <button 
+                    className={style.mobileMenuButton} 
+                    onClick={toggleMobileMenu}
+                    aria-label="Toggle mobile menu"
+                >
+                    {mobileMenuOpen ? '✕' : '☰'}
+                </button>
+                
+                <ul className={`${style.navDrops} ${mobileMenuOpen ? style.mobileOpen : ''}`}>
                     <li className={style.dropItem}>
-                        <Link href="/Services" className={`${style.navLink} ${pathname === '/Services' ? style.active : ''}`}
-                            onMouseEnter={() => handleMouseEnter(SERVICES_JSON_PATH)}
-                            onMouseLeave={handleMouseLeave}>
+                        <Link 
+                            href="/Services" 
+                            className={`${style.navLink} ${pathname === '/Services' ? style.active : ''}`}
+                            // onMouseEnter={() => !mobileMenuOpen && handleMouseEnter(SERVICES_JSON_PATH)}
+                            // onMouseLeave={() => !mobileMenuOpen && handleMouseLeave}
+                            onClick={() => mobileMenuOpen && handleMouseEnter(SERVICES_JSON_PATH)}
+                        >
                             SERVICES
                         </Link>
                     </li>
                     <li className={style.dropItem}>
-                        <Link href="/" className={`${style.navLink} ${pathname === '/industries' ? style.active : ''}`}
-                            onMouseEnter={() => handleMouseEnter(INDUSTRY_JSON_PATH)}
-                            onMouseLeave={handleMouseLeave}>
+                        <Link 
+                            href="/" 
+                            className={`${style.navLink} ${pathname === '/industries' ? style.active : ''}`}
+                            // onMouseEnter={() => !mobileMenuOpen && handleMouseEnter(INDUSTRY_JSON_PATH)}
+                            // onMouseLeave={() => !mobileMenuOpen && handleMouseLeave}
+                            onClick={() => mobileMenuOpen && handleMouseEnter(INDUSTRY_JSON_PATH)}
+                        >
                             INDUSTRIES
                         </Link>
                     </li>
                     <li className={style.dropItem}>
-                        <Link href="/AboutUs" className={`${style.navLink} ${pathname === '/AboutUs' ? style.active : ''}`}
-                            onMouseLeave={handleMouseLeave}>
+                        <Link 
+                            href="/AboutUs" 
+                            className={`${style.navLink} ${pathname === '/AboutUs' ? style.active : ''}`}
+                            onMouseLeave={() => !mobileMenuOpen && handleMouseLeave}
+                        >
                             ABOUT US
                         </Link>
                     </li>
-                </li>
-                <li className={`${style.navItem}`}>
-                    <Link href="/ContactUs" className={`${style.button} ${style.buttonLink} ${pathname === '/ContactUs' ? style.activeBtn : ''}`}>
+{mobileMenuOpen&&                    <li className={`${style.dropItem} ${style.mobileContactItem}`}>
+                        <Link 
+                            href="/ContactUs" 
+                            className={`${style.navLink} ${style.mobileContactLink} ${pathname === '/ContactUs' ? style.active : ''}`}
+                        >
+                            CONTACT US
+                        </Link>
+                    </li>}
+                </ul>
+                
+                <li className={`${style.navItem} ${style.desktopContactItem}`}>
+                    <Link 
+                        href="/ContactUs" 
+                        className={`${style.buttonLink} ${pathname === '/ContactUs' ? style.activeBtn : ''}`}
+                    >
                         CONTACT US
                     </Link>
                 </li>
             </ul>
 
             {activeDropdown.length > 0 && (
-                <div ref={dropdownRef}
+                <div 
+                    ref={dropdownRef}
                     className={style.dropdownContainer}
-                    onMouseEnter={() => hoverTimeoutRef.current && clearTimeout(hoverTimeoutRef.current)}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={() => !mobileMenuOpen && hoverTimeoutRef.current && clearTimeout(hoverTimeoutRef.current)}
+                    onMouseLeave={() => !mobileMenuOpen && handleMouseLeave()}
                 >
                     <Dropdown category={activeDropdown} />
                 </div>
