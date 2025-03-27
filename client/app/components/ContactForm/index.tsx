@@ -192,7 +192,7 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className={style.attachment}>
+        {/* <div className={style.attachment}>
           <div className={style.attachmentSub}>
             <button type="button" className={style.recordButton}>
               <img
@@ -215,8 +215,8 @@ const ContactForm = () => {
               <div className={style.attachmentTitle}>Attach file</div>
             </div>
           </div>
-        </div>
-        <div className={style.checkboxContainer}>
+        </div> */}
+        {/* <div className={style.checkboxContainer}>
           <input
             type="checkbox"
             id="nda"
@@ -230,7 +230,7 @@ const ContactForm = () => {
           <label htmlFor="nda" className={style.checkboxLabel}>
             Secure data with NDA first
           </label>
-        </div>
+        </div> */}
         <button type="submit" className={style.submitBtn}>
           SEND MESSAGE
         </button>
