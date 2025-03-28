@@ -43,6 +43,10 @@
     align-items: center;
     position: relative;
     padding-bottom: 3rem;
+
+    @media (max-width: 1000px) {
+      padding-bottom: 1rem;
+    }
   }
 
   .number {
@@ -68,15 +72,23 @@
     width: 2px;
     background-color: $BlueDark;
     height: 128%;
+    @media (max-width: 1000px) {
+      height: 128%;
+    }
   }
 
   .rightColumn {
     font-family: $MontserratRegular;
-    font-size: 1rem;
+    font-size: $font-size-x-small;
     line-height: 1.5;
     color: $BlueDark;
     text-wrap:wrap;
     padding-bottom: 3rem;
+
+        
+    @media (max-width: 1000px) {
+      padding-bottom: 1rem;
+    }
   }
 
 }

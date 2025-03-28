@@ -108,7 +108,7 @@ const Navbar = () => {
                             SERVICES
                         </Link>
                     </li>
-                    <li className={style.dropItem}>
+                    {/* <li className={style.dropItem}>
                         <Link 
                             href="/" 
                             className={`${style.navLink} ${pathname === '/industries' ? style.active : ''}`}
@@ -118,7 +118,7 @@ const Navbar = () => {
                         >
                             INDUSTRIES
                         </Link>
-                    </li>
+                    </li> */}
                     <li className={style.dropItem}>
                         <Link 
                             href="/AboutUs" 

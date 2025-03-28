@@ -1,6 +1,7 @@
 @import "@style/globalVariables.scss";
 
 .boxTitle {
+    display: grid;
     width: 90%;
     max-width: 1024px;
     height: auto;
@@ -8,10 +9,9 @@
     padding: 2rem 1rem;
     font-family: $RubikBold;
     background-color: $BlueDark;
-    display: grid;
+
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    text-align: center;
     align-items: center;
     gap: 1rem;
 
@@ -33,12 +33,14 @@
     max-width: 100%;
     height: auto;
     transform: scale(1) translate(0, 0);
-    align-self: center;
+    align-self: start;
 
     @media (max-width: 900px) {
-        display: none;
-    }
 
+        transform: scale(2) translate(50px, -5px);
+        padding-top:5rem;
+        padding-bottom:5rem;
+    }
     @media (min-width: 900px) {
         grid-column: 2;
         grid-row: 2;
@@ -51,6 +53,7 @@
     color: $White;
     font-size: 1.5rem;
     transform: none;
+    z-index:1;
 
     @media (min-width: 900px) {
         font-size: $font-size-small;
@@ -78,21 +81,22 @@
 
 .letsTalk {
     display: inline-block;
-    margin: 1.5rem auto;
+    margin: 1.5rem 0;
     border-radius: 7px;
     font-family: $PoppinsBold;
-    font-size: 1rem;
+    font-size: $font-size-x-small;
     padding: 0.7rem 2rem;
     background-color: $Yellow;
     color: $BlueDark;
     border: none;
+    align-self: start;
+    text-align: left;
     cursor: pointer;
     transition: background-color 0.3s ease;
     transform: none;
-
     @media (min-width: 900px) {
-        transform: translate(50px, -40px);
-        justify-self: end;
+        transform: translate(30px, -40px);
+        justify-self: start;
     }
 }
 

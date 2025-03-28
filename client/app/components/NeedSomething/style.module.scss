@@ -50,7 +50,7 @@
 
 .content{
     font-family: $MontserratRegular;
-    font-size: 1.2rem;
+    font-size: $font-size-x-small;
     color: $BlueDark;
     text-align: center;
     line-height: 2rem;
@@ -69,7 +69,7 @@
 .button{
     border-radius: 7px;
     font-family: $PoppinsBold;
-    font-size: $font-size-small;
+    font-size: $font-size-x-small;
     padding: 0.6rem 1.8rem;
     background-color: $BlueDark;
     color: white;

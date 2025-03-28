@@ -24,7 +24,6 @@
 .technologiesSubTitle, 
 .technologiesText {
   width: 100%;
-  max-width: 55rem;
   text-align: center;
   margin: 0 auto;
   padding: 0 1rem;
@@ -47,10 +46,12 @@
 
 .technologiesText {
   color: white;
-  font-family: $MontserratExtraLight;
+  font-family: $MontserratLight;
   font-weight: 200;
   font-size: 1.2rem;
   line-height: 2rem;
+  width: 80%;
+  text-align: center;
 }
 
 .logosContainer {
