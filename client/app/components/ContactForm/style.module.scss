@@ -2,7 +2,7 @@
 @import "@style/globalVariables.scss";
 
 .contactContainer {
-  width: 100%;
+  width: 60%;
   height: 40rem;
   padding-right: 3rem;
   padding-left: 3rem;
@@ -193,12 +193,12 @@
   font-size: 1.3rem;
 }
 
-.submitBtnContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-column: span 2;
-}
+// .submitBtnContainer {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   grid-column: 2;
+// }
 
 .submitBtn {
   height: 2.8rem;
@@ -207,12 +207,12 @@
   font-family: $PoppinsBold;
   font-size: $font-size-x-small;
   background-color: $BlueDark;
-  justify-self: end;
-  align-self: center;
+  justify-self: center;
   color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  grid-column: 2;
 }
 
 .submitBtn:hover {
