@@ -6,7 +6,7 @@ import { PRIVACY_POLICY_WARNING } from "@constants/constants";
 import emailjs from "emailjs-com";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
 
-const ContactForm = () => {
+const ProjectForm = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -57,7 +57,6 @@ const ContactForm = () => {
         .then(
           (result) => {
             alert("Message sent successfully!");
-            console.log(formData);
             setFormData({
               name: "",
               company: "",
@@ -95,7 +94,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Your company *</div>
+          <div className={style.formTitle}>Your project&apos;s name *</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -137,22 +136,8 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={style.textareafield}>
-          <div className={style.formTitle}>Subject *</div>
-          <div className={style.formGroup}>
-            <input
-              className={style.inputField}
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
-          </div>
-        </div>
-        <div className={style.textareafield}>
           <div className={style.textareaTitle}>
-            Describe your challenge / goal *
+            Describe your project *
           </div>
           <div className={style.formGroup + " " + style.fullWidth}>
             <textarea
@@ -166,46 +151,6 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        {/* <div className={style.attachment}>
-        {/* <div className={style.attachment}>
-          <div className={style.attachmentSub}>
-            <button type="button" className={style.recordButton}>
-              <img
-                src="/assets/svg/record.svg"
-                alt="Record Voice Message"
-                className={style.icon}
-              />
-            </button>
-            <div className={style.attachmentTitle}>Record voice message</div>
-          </div>
-          <div className={style.attachmentSub}>
-            <div className={style.uploadContainer}>
-              <button type="button" className={style.uploadButton}>
-                <img
-                  src="/assets/svg/attach-file.svg"
-                  alt="Attach File"
-                  className={style.icon}
-                />
-              </button>
-              <div className={style.attachmentTitle}>Attach file</div>
-            </div>
-          </div>
-        </div> */}
-        {/* <div className={style.checkboxContainer}>
-          <input
-            type="checkbox"
-            id="nda"
-            name="nda"
-            checked={formData.nda}
-            onChange={(e) =>
-              setFormData({ ...formData, nda: e.target.checked })
-            }
-            className={style.checkbox}
-          />
-          <label htmlFor="nda" className={style.checkboxLabel}>
-            Secure data with NDA first
-          </label>
-        </div> */}
         <button type="submit" className={style.submitBtn}>
           SEND MESSAGE
         </button>
@@ -216,4 +161,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ProjectForm;

@@ -53,7 +53,7 @@ const Footer = () => {
           <div className={style.footerCenterRightTitle}>Core services</div>
           <ul className={style.servicesList}>
             <li>Software development</li>
-            <li>Web & Email Hosting</li>
+            <li>Web & email hosting</li>
             <li>Web & mobile apps</li>
             <li>Digital transformation</li>
             <li>Application modernization</li>

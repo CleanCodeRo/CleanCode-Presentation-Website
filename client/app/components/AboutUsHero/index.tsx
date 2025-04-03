@@ -5,7 +5,7 @@ import style from "./style.module.scss";
 
 const AboutUsHero = () => {
   return (
-    <div className={style.heroContainer}>
+    <section className={style.heroContainer}>
       <div className={style.aboutUsSection}>
         <h1 className={style.aboutUsTitle}>
           Outstanding individually.{" "}
@@ -13,11 +13,11 @@ const AboutUsHero = () => {
         </h1>
         <img
           src="/assets/svg/AboutUs/about-us-together.svg"
-          alt="about us"
+          alt="Team collaboration illustration"
           className={style.aboutUsImage}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

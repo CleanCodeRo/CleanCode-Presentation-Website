@@ -39,7 +39,7 @@ const RightPartner = () => {
       <div className={style.RightPartner}>
         <div className={style.gridContainer}>
           <div className={style.title}>
-            Why we're the{" "}
+            Why we&apos;re the{" "}
             <span className={style.highlight}>right partener</span>
           </div>
           {loading ? (
