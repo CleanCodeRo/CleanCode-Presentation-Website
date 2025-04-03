@@ -33,8 +33,8 @@ const Footer = () => {
                 alt="Mail Icon"
                 className={style.icon}
               />
-              <a href="mailto:contact@cleancode.ro" className={style.link}>
-                contact@cleancode.ro
+              <a href="mailto:contact@cleancodeit.ro" className={style.link}>
+                contact@cleancodeIT.ro
               </a>
             </div>
             <div className={style.iconWithText}>

@@ -118,7 +118,13 @@
   overflow: hidden;
 }
 
-/* Responsive styles */
+.logo{
+  width: 100%;
+  max-width: 130px;
+  padding-top: 1rem;
+  display: block;
+}
+
 @media (max-width: 1024px) {
   .navList {
     padding: 10px 15px;

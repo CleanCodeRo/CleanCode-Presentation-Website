@@ -84,7 +84,12 @@ const Navbar = () => {
             <ul className={style.navList}>
                 <li className={style.navItem}>
                     <Link href="/" className={pathname === '/' ? style.active : ''}>
-                        <Logo />
+                        {/* Replace with the SVG logo */}
+                        <img 
+                            src="/assets/svg/logo-clean-code-it-vf.svg" 
+                            alt="Clean Code IT Logo" 
+                            className={style.logo}
+                        />
                     </Link>
                 </li>
                 
