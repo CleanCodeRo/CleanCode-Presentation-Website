@@ -2,7 +2,7 @@
 
 import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
 import style from "./style.module.scss";
-import { PRIVACY_POLICY_WARNING } from "@constants/constants";
+import { PRIVACY_POLICY_WARNING } from "@constants/form";
 import emailjs from "emailjs-com";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
 
