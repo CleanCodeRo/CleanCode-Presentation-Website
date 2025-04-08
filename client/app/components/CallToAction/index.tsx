@@ -12,7 +12,7 @@ interface CallToActionProps {
 
 const CallToAction: React.FC<CallToActionProps> = ({ title, subtitle, content, buttonText }) => {
   return (
-    <div className={style.wrapper}>
+    <section className={style.wrapper}>
       <div className={style.container}>
         <div className={style.fullTitle}>
         <div className={style.title}>{title}</div>
@@ -21,7 +21,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ title, subtitle, content, b
         <div className={style.content}>{content}</div>
         <button className={style.button} onClick={() => window.location.href = "/ContactUs"}>{buttonText}</button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -11,7 +11,7 @@ const Contact = () => {
   const [beforeHighlight, highlight] = CONTACT_TITLE.split("work together");
 
   return (
-    <div className={style.contactComponent}>
+    <section className={style.contactComponent}>
       <div className={style.TitleAndDescription}>
       <div className={style.contactTitle}>
         {beforeHighlight}
@@ -27,7 +27,7 @@ const Contact = () => {
           <WhatNext />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Contact;

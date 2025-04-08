@@ -25,7 +25,7 @@ const WeBelieve: React.FC = () => {
     }, []);
 
     return (
-        <div className={styles.wrapper}>
+        <section className={styles.wrapper}>
             <div className={styles.container}>
                 <h2 className={styles.title}>What we believe in</h2>
                 <div className={styles.tabs}>
@@ -53,7 +53,7 @@ const WeBelieve: React.FC = () => {
                     </div>
                 )}
             </div>
-        </div>
+        </section>
     );
 };
 

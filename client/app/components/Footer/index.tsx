@@ -6,7 +6,7 @@ import { ADDRESS, MAIL, PHONE, TITLE, SUB_TITLE, SERVICES } from "@constants/con
 
 const Footer = () => {
   return (
-    <div className={style.footerWrapper}>
+    <footer className={style.footerWrapper}>
       <div className={style.footerCenter}>
         <div className={style.footerCenterLeft}>
           <div className={style.footerCenterLeftTitle}>
@@ -138,7 +138,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

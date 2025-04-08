@@ -6,7 +6,7 @@ import {CONTENT, TITLE_AGILE, TITLE_PER_PROJECT, CONTENT_AGILE, CONTENT_PER_PRJE
 
 const WeCanOffer = () => {
     return (
-        <div className={style.wrapper}>
+        <section className={style.wrapper}>
             <div className={style.container}>
                 <div className={style.title}>What <span className={style.highlight}>we can offer</span> you</div>
                 <div className={style.content}>{CONTENT}</div>
@@ -21,7 +21,7 @@ const WeCanOffer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 };
 

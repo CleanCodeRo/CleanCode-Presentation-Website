@@ -1,6 +1,7 @@
 @import "@style/globalVariables.scss";
 
 .container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +26,13 @@
     }
   }
   
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
 .title {
     margin-bottom: 1rem;
@@ -65,7 +73,11 @@
     justify-content: center;
     align-items: stretch;
     gap: 40px;
-    max-width: 1100px;
+    max-width: 80%;
+
+    @media (min-width: 1798px){
+        max-width: 70%;
+    }
 
     @media (max-width: 900px) {
         display: grid;

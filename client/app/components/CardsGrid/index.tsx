@@ -33,7 +33,8 @@ const CardsGrid: React.FC<CardsGridProps> = ({
   const [before, after] = title.split(highlightedWord);
 
   return (
-    <div className={`${style.container} ${style[containerClass]}`}>
+    <section className={`${style.container} ${style[containerClass]}`}>
+      <div className={style.subContainer}>
       <h2 className={style.title}>
         {before}
         <span className={style.highlight}>{highlightedWord}</span>
@@ -51,7 +52,8 @@ const CardsGrid: React.FC<CardsGridProps> = ({
           <p>Loading...</p>
         )}
       </div>
-    </div>
+      </div>
+    </section>
   );
 };
 

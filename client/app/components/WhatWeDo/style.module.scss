@@ -17,7 +17,7 @@
 }
 
 .whatWeDo{
-    width:75%;
+    width:70%;
 
     height: auto;
     margin: 0 auto;
@@ -103,13 +103,13 @@
 }
 
 .rightSide{
-    width: 90%;
+    width: 100%;
     grid-column: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 0 2rem;
+    // padding: 0 2rem;
 
     @media (max-width: 1083px) {
         width: 100%;

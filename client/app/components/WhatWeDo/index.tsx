@@ -6,7 +6,7 @@ import { DESCRIPTION, TITLE, IDEAS, SOLUTIONS, INSIGHTS, SOFTWARE, BUTTON } from
 
 const WhatWeDo = () => {
   return (
-    <div className={style.container}>
+    <section className={style.container}>
       <div className={style.title}>{TITLE}</div>
       <div className={style.whatWeDo}>
         <div className={style.leftSide}>
@@ -53,7 +53,7 @@ const WhatWeDo = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

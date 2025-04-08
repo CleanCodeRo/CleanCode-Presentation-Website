@@ -7,7 +7,7 @@ import { TITLE, CONTENT } from "../../constants/developerTeam";
 const DeveloperTeam = () => {
 
   return (
-    <div className={style.wrapper}>
+    <section className={style.wrapper}>
       <div className={style.container}>
         <div className={style.title}>{TITLE}</div>
         <div className={style.content}>{CONTENT}</div>
@@ -15,7 +15,7 @@ const DeveloperTeam = () => {
           START A CONVERSATION
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
