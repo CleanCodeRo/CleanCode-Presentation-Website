@@ -1,3 +1,5 @@
-export const TITLE:string[]=["Let's get started now!"];
+export const TITLE:string="Let's explore the opportunity to collaborate on your upcoming project.";
 
-export const CONTENT:string[]=["Ready to bring your project to life? Our team of experts is here to help. Request a quote today to get started or begin a conversation to learn more about our services. We pride ourselves on delivering high-quality work at a reasonable cost. Don't wait – let's get started!"];
+export const CONTENT:string="We are committed to understanding your business vision. We'll listen closely to your ideas and then develop a detailed plan outlining the steps to bring your project to fruition.";
+
+export const BUTTON:string="SHARE YOUR IDEAS";

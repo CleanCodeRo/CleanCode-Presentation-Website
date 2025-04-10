@@ -1,3 +1,5 @@
+"use client";
+
 import { CardProps } from '@models/card';
 import React from 'react';
 import style from './style.module.scss';

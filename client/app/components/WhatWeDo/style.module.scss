@@ -11,13 +11,13 @@
 
     @media (max-width: 768px) {
         padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
     }
 
 }
 
 .whatWeDo{
-    width:75%;
+    width:70%;
 
     height: auto;
     margin: 0 auto;
@@ -27,6 +27,7 @@
     gap: 2rem;
 
     @media (max-width: 1083px) {
+        width: 100%;
         grid-template-columns: 1fr;
         margin-bottom: 3rem;
     }
@@ -51,6 +52,7 @@
 
     @media (max-width: 768px) {
         font-size: 2rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -77,6 +79,7 @@
     text-align: start;
     @media (max-width: 768px) {
         line-height: 1.5rem;
+        text-align: center;
     }
 }
 
@@ -103,13 +106,13 @@
 }
 
 .rightSide{
-    width: 90%;
+    width: 100%;
     grid-column: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    padding: 0 2rem;
+    // padding: 0 2rem;
 
     @media (max-width: 1083px) {
         width: 100%;

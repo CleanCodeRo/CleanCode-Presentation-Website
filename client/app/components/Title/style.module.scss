@@ -2,8 +2,7 @@
 
 .boxTitle {
     display: grid;
-    width: 90%;
-    max-width: 1024px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -16,7 +15,7 @@
     gap: 1rem;
 
     @media (min-width: 900px) {
-        grid-template-columns: 6fr 4fr;
+        grid-template-columns: 5fr 4fr;
         text-align: left;
     }
 }
@@ -38,6 +37,7 @@
     @media (max-width: 900px) {
 
         transform: scale(2) translate(50px, -5px);
+        align-self: center;
         padding-top:5rem;
         padding-bottom:5rem;
     }
@@ -54,6 +54,7 @@
     font-size: 1.5rem;
     transform: none;
     z-index:1;
+    text-align: center;
 
     @media (min-width: 900px) {
         font-size: $font-size-small;
@@ -70,6 +71,7 @@
     color: $White;
     transform: none;
     line-height: 1.5;
+    text-align: center;
 
     @media (min-width: 900px) {
         font-size: 1.2rem;
@@ -90,13 +92,18 @@
     color: $BlueDark;
     border: none;
     align-self: start;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
     transform: none;
+    
     @media (min-width: 900px) {
         transform: translate(30px, -40px);
         justify-self: start;
+    }
+    @media (max-width: 370px){
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
     }
 }
 

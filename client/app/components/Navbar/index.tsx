@@ -74,7 +74,6 @@ const Navbar = () => {
         }
     }, [activeDropdown]);
 
-    // Reset mobile menu state when navigating to a new page
     useEffect(() => {
         setMobileMenuOpen(false);
     }, [pathname]);
@@ -84,7 +83,6 @@ const Navbar = () => {
             <ul className={style.navList}>
                 <li className={style.navItem}>
                     <Link href="/" className={pathname === '/' ? style.active : ''}>
-                        {/* Replace with the SVG logo */}
                         <img 
                             src="/assets/svg/logo-clean-code-it-vf.svg" 
                             alt="Clean Code IT Logo" 

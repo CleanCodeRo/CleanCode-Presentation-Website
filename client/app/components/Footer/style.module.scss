@@ -7,17 +7,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0 1.5rem;
+  padding: 2rem 0 1.5rem;
 }
 
 .footerCenter {
   width: 70%;
   display: flex;
-
   justify-content: space-between;
   align-items: start;
   padding: 0 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   box-sizing: border-box;
 }
 
@@ -78,7 +77,6 @@
 .footerBottom {
   display: flex;
   width: 100%;
-  padding-top: 1.5rem;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -163,7 +161,7 @@
   }
   
   .footerCenter {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2rem;
     padding: 0 2rem;
   }

@@ -2,7 +2,7 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import { WHAT_NEXT_TITLE, WHAT_NEXT_ELEMENTS } from "@constants/constants";
+import { WHAT_NEXT_TITLE, WHAT_NEXT_ELEMENTS } from "@constants/whatNext";
 
 const WhatNext = () => {
   return (

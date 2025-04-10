@@ -2,14 +2,15 @@
 
 import React from "react";
 import style from "./style.module.scss";
+import { ADDRESS, MAIL, PHONE, TITLE, SUB_TITLE, SERVICES } from "@constants/contact";
 
 const Footer = () => {
   return (
-    <div className={style.footerWrapper}>
+    <footer className={style.footerWrapper}>
       <div className={style.footerCenter}>
         <div className={style.footerCenterLeft}>
           <div className={style.footerCenterLeftTitle}>
-            Say hello to our friendly team at
+            {TITLE}
           </div>
           <div className={style.footerCenterLeftContent}>
             <div className={style.iconWithText}>
@@ -24,7 +25,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                103-105 Calea Victoriei, District 1, Bucharest
+                {ADDRESS}
               </a>
             </div>
             <div className={style.iconWithText}>
@@ -33,8 +34,8 @@ const Footer = () => {
                 alt="Mail Icon"
                 className={style.icon}
               />
-              <a href="mailto:contact@cleancodeit.ro" className={style.link}>
-                contact@cleancodeIT.ro
+              <a href={`mailto:${MAIL}`} className={style.link}>
+                {MAIL}
               </a>
             </div>
             <div className={style.iconWithText}>
@@ -43,26 +44,26 @@ const Footer = () => {
                 alt="Phone Icon"
                 className={style.icon}
               />
-              <a href="tel:+40733311393" className={style.link}>
-                +40 733 311 393
+              <a href={`tel:${PHONE}`} className={style.link}>
+                {PHONE}
               </a>
             </div>
           </div>
         </div>
         <div className={style.footerCenterRight}>
-          <div className={style.footerCenterRightTitle}>Core services</div>
+          <div className={style.footerCenterRightTitle}>{SUB_TITLE}</div>
           <ul className={style.servicesList}>
-            <li>Software development</li>
-            <li>Web & email hosting</li>
-            <li>Web & mobile apps</li>
-            <li>Digital transformation</li>
-            <li>Application modernization</li>
+            {SERVICES.map((service, index) => (
+              <li key={index}>{service}</li>
+            ))}
           </ul>
         </div>
       </div>
       <div className={style.footerBottom}>
         <div className={style.bottomContent}>
-          <div className={style.copyright}>&copy; {new Date().getFullYear()}  CleanCode Solutions</div>
+          <div className={style.copyright}>
+            &copy; {new Date().getFullYear()} CleanCode Solutions
+          </div>
           <div className={style.mediaLinks}>
             <div className={style.iconWithText}>
               <a
@@ -137,7 +138,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

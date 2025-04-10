@@ -2,20 +2,20 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import { WHAT_WE_DO } from "@constants/constants";
+import { DESCRIPTION, TITLE, IDEAS, SOLUTIONS, INSIGHTS, SOFTWARE, BUTTON } from "@constants/whatWeDo";
 
 const WhatWeDo = () => {
   return (
-    <div className={style.container}>
-      <div className={style.title}>What we do</div>
+    <section className={style.container}>
+      <div className={style.title}>{TITLE}</div>
       <div className={style.whatWeDo}>
         <div className={style.leftSide}>
-          <div className={style.description}>{WHAT_WE_DO}</div>
+          <div className={style.description}>{DESCRIPTION}</div>
           <button
             className={style.letsTalk}
             onClick={() => (window.location.href = "/ContactUs")}
           >
-            GET A QUOTE
+            {BUTTON}
           </button>
         </div>
         <div className={style.rightSide}>
@@ -25,7 +25,7 @@ const WhatWeDo = () => {
               alt="product development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Innovative ideas</div>
+            <div className={style.smallTitle}>{IDEAS}</div>
           </div>
           <div className={style.square2}>
             <img
@@ -33,7 +33,7 @@ const WhatWeDo = () => {
               alt="project development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Tailored Solutions</div>
+            <div className={style.smallTitle}>{SOLUTIONS}</div>
           </div>
           <div className={style.square3}>
             <img
@@ -41,7 +41,7 @@ const WhatWeDo = () => {
               alt="seo"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Strategic Insights</div>
+            <div className={style.smallTitle}>{INSIGHTS}</div>
           </div>
           <div className={style.square4}>
             <img
@@ -49,11 +49,11 @@ const WhatWeDo = () => {
               alt="product development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Reliable Software</div>
+            <div className={style.smallTitle}>{SOFTWARE}</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

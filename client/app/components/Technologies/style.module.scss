@@ -5,10 +5,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 4rem 2rem;
   box-sizing: border-box;
   width: 100%;
-  overflow-x: hidden; /* Contain horizontal overflow */
+  overflow-x: hidden;
 }
 
 .technologiesContent {
@@ -17,7 +18,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
-  width: 100%;
+  width: 90%;
 }
 
 .technologiesTitle, 
@@ -25,7 +26,7 @@
 .technologiesText {
   width: 100%;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -67,7 +68,7 @@
   align-items: center;
   animation: scrollLeft 30s linear infinite;
   will-change: transform;
-  width: fit-content; /* Allow content to determine width */
+  width: fit-content;
 }
 
 .logo {
@@ -118,6 +119,7 @@
   
   .technologiesContent {
     margin-bottom: 2rem;
+    width: 100%;
   }
   
   .technologiesTitle,
@@ -128,6 +130,7 @@
   .technologiesText {
     font-size: 1rem;
     line-height: 1.6rem;
+    width: 100%;
   }
   
   .logo {
