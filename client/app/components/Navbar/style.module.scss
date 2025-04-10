@@ -9,6 +9,7 @@
   overflow: visible;
   transition: height 0.3s ease-in-out;
   background-color: white;
+  border-bottom: 5px solid $BlueDark;
   
   &:after {
     content: '';
@@ -22,7 +23,7 @@
 
 .navList {
   background-color: white;
-  padding: 20px 20px;
+  padding: 10px 10px;
   width: 70%;
   max-width: 100%;
   display: grid;

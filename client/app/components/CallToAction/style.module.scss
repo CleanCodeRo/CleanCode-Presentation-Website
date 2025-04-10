@@ -58,13 +58,9 @@
   &:hover {
     color: white;
     background-color: $GreenDark;
-    // transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  // &:active {
-  //   transform: translateY(0);
-  // }
 }
 
 /* Responsive styles */
@@ -78,6 +74,10 @@
   }
   
   .title {
+    font-size: 2rem;
+  }
+
+  .subTitle {
     font-size: 2rem;
   }
   
@@ -104,6 +104,10 @@
   }
   
   .title {
+    font-size: 1.6rem;
+  }
+
+  .subTitle {
     font-size: 1.6rem;
   }
   
