@@ -10,6 +10,7 @@ const Quote = () => {
       title={TITLE} 
       content={CONTENT} 
       buttonText={BUTTON} 
+      buttonLink={"/ShareIdeas"}
     />
   );
 };

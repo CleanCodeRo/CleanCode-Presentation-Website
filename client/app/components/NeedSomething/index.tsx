@@ -10,7 +10,8 @@ const NeedSomething = () => {
       title={TITLE} 
       subtitle={SUBTITLE} 
       content={CONTENT} 
-      buttonText="JUST CONTACT US" 
+      buttonText="JUST CONTACT US"
+      buttonLink="/ContactUs"
     />
   );
 };
