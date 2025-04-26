@@ -2,10 +2,10 @@
 @import "@style/globalVariables.scss";
 
 .contactContainer {
-  width: 60%;
+  width: 50%;
   height: 40rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   background-color: $Yellow;
 
   @media (max-width: 1100px) {
@@ -14,7 +14,7 @@
     padding-left: 1rem;
     
   }
-  @media (max-width: 900px) {
+  @media (max-width: 1050px) {
     width: 100%;
     height: auto;
     display: flex;
@@ -53,12 +53,14 @@
 
   .field {
     width: 100%;
+    padding-left: 0;
   }
 
   .textareafield,
   .attachment,
   .submitBtnContainer {
     width: 100%;
+    padding-left: 0;
   }
 }
 
@@ -67,6 +69,9 @@
   font-size: $font-size-x-small;
   margin-bottom: 0.5rem;
   color: $BlueDark;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .formContent{
@@ -120,6 +125,7 @@
 @media (max-width: 900px) {
   .textareafield {
     width: 100%;
+    padding-left: 0;
   }
 }
 
@@ -193,16 +199,9 @@
   font-size: 1.3rem;
 }
 
-// .submitBtnContainer {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   grid-column: 2;
-// }
-
 .submitBtn {
   height: 2.8rem;
-  width: 73%;
+  width: 80%;
   border-radius: 7px;
   font-family: $PoppinsBold;
   font-size: $font-size-x-small;
@@ -227,46 +226,46 @@
   align-items: center;
 }
 
-.checkboxContainer {
-  width: 130%;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-left: 0.7rem;
-}
+// .checkboxContainer {
+//   width: 130%;
+//   display: flex;
+//   align-items: center;
+//   gap: 10px;
+//   padding-left: 0.7rem;
+// }
 
-.checkbox {
-  appearance: none;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  accent-color: $BlueDark;
-  border-radius: 7px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .checkbox {
+//   appearance: none;
+//   width: 45px;
+//   height: 45px;
+//   cursor: pointer;
+//   accent-color: $BlueDark;
+//   border-radius: 7px;
+//   background-color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-.checkbox:checked {
-  background-color: $BlueDark;
-}
+// .checkbox:checked {
+//   background-color: $BlueDark;
+// }
 
-.checkbox:checked::after {
-  content: "✔";
-  color: white;
-  font-size: $font-size-x-small;
-  font-weight: bold;
-  display: block;
-  text-align: center;
-}
+// .checkbox:checked::after {
+//   content: "✔";
+//   color: white;
+//   font-size: $font-size-x-small;
+//   font-weight: bold;
+//   display: block;
+//   text-align: center;
+// }
 
-.checkboxLabel {
-  color: $BlueDark;
-  font-family: $MontserratRegular;
-  font-size: $font-size-x-small;
-  cursor: pointer;
-}
+// .checkboxLabel {
+//   color: $BlueDark;
+//   font-family: $MontserratRegular;
+//   font-size: $font-size-x-small;
+//   cursor: pointer;
+// }
 
 .privacyWarning {
   color: $BlueDark;
