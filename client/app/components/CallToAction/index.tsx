@@ -2,13 +2,14 @@
 
 import React from 'react';
 import style from './style.module.scss';
+import Link from 'next/link';
 
 interface CallToActionProps {
   title: string;
   subtitle?: string;
   content: string;
   buttonText: string;
-  buttonLink: string; // Optional prop for the button link
+  buttonLink: string;
 }
 
 const CallToAction: React.FC<CallToActionProps> = ({ title, subtitle, content, buttonText, buttonLink }) => {
@@ -20,7 +21,9 @@ const CallToAction: React.FC<CallToActionProps> = ({ title, subtitle, content, b
         {subtitle && <div className={style.subTitle}>{subtitle}</div>}
         </div>
         <div className={style.content}>{content}</div>
-        <button className={style.button} onClick={() => window.location.href = `${buttonLink}`}>{buttonText}</button>
+        <Link href={buttonLink} className={style.button}>
+          {buttonText}
+        </Link>
       </div>
     </section>
   );

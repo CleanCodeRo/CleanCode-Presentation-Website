@@ -2,13 +2,17 @@
 
 import React from 'react';
 import style from './style.module.scss';
-import { MissionStep } from '@models/card';
+import { useTranslation } from 'react-i18next';
 
-interface MissionVisionProps {
-  missionData: MissionStep[];
-}
+const MissionVision = () => {
+  const { t } = useTranslation('translation');
 
-const MissionVision = ({ missionData }: MissionVisionProps) => {
+  const missionData = t('mission.steps', { returnObjects: true }) as {
+    id: number;
+    name: string;
+    detail: string;
+  }[];
+
   return (
     <section className={style.missionVision}>
       <div className={style.missionVisionSubcontainer}>

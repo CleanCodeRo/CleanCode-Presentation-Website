@@ -2,22 +2,19 @@
 
 import React from 'react';
 import style from './style.module.scss';
+import { useTranslation } from 'react-i18next';
 
-interface ProcessStep {
-  id: number;
-  name: string;
-  detail: string;
-}
+const OurProcess = () => {
 
-interface OurProcessProps {
-  processData: ProcessStep[];
-}
+  const { t } = useTranslation();
 
-const OurProcess = ({ processData }: OurProcessProps) => {
+  const processData = t('ourProcess.steps', { returnObjects: true }) as { id: number, name: string, detail: string }[];
+  const title = t('ourProcess.title');
+
   return (
     <section className={style.ourProcess}>
       <div className={style.ourProcessSubcontainer}>
-        <h2 className={style.ourProcessTitle}>Our Process in a nutshell</h2>
+        <h2 className={style.ourProcessTitle}>{title}</h2>
         <div className={style.ourProcessElements}>
           {processData.map((step) => (
             <article key={step.id} className={style.processCard}>

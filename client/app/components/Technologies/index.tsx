@@ -6,18 +6,17 @@ import {
   TECHNOLOGIES,
   TECHNOLOGIES_PATH,
   TECHNOLOGIES_FILE_EXTENSION,
-  TECHNOLOGIES_TITLE,
-  TECHNOLOGIES_SUBTITLE,
-  TECHNOLOGIES_TEXT,
 } from "@constants/technologies";
+import { useTranslation } from "react-i18next";
 
 const Technologies = () => {
+  const { t } = useTranslation();
   return (
     <section className={style.technologiesBar}>
       <div className={style.technologiesContent}>
-        <h2 className={style.technologiesTitle}>{TECHNOLOGIES_TITLE}</h2>
-        <h3 className={style.technologiesSubTitle}>{TECHNOLOGIES_SUBTITLE}</h3>
-        <p className={style.technologiesText}>{TECHNOLOGIES_TEXT}</p>
+        <h2 className={style.technologiesTitle}>{t('technologies.title')}</h2>
+        <h3 className={style.technologiesSubTitle}>{t('technologies.subtitle')}</h3>
+        <p className={style.technologiesText}>{t('technologies.text')}</p>
       </div>
       <div className={style.logosContainer}>
         <div className={style.logos}>

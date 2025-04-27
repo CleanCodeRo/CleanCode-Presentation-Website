@@ -1,51 +1,60 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { TITLE_CHANGING_WORDS, TITLE_SECOND_CHANGING_WORDS, SUB_TITLE_MAIN } from '@constants/hero';
+import { useTranslation } from 'react-i18next';
 import style from "./style.module.scss";
+import Link from 'next/link';
 
-const Title=()=> {
+const Title = () => {
+  const { t } = useTranslation();
+  const changingWords = t('hero.changingWords', { returnObjects: true }) as string[];
+  const secondChangingWords = t('hero.secondChangingWords', { returnObjects: true }) as string[];
+  const [index, setIndex] = useState<number>(0);
+  const [secondIndex, setSecondIndex] = useState<number>(0);
 
-    const [index, setIndex] = useState<number>(0);
-    const [secondIndex, setSecondIndex] = useState<number>(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % changingWords.length);
+      setSecondIndex((prev) => (prev + 1) % secondChangingWords.length);
+    }, 3000);
 
-    useEffect(() => {
+    return () => clearInterval(interval);
+  }, [changingWords.length, secondChangingWords.length]);
 
-        const interval = setInterval(() => {
-
-            const nextIndex = (index + 1) % TITLE_CHANGING_WORDS.length;
-            const nextSecondIndex = (secondIndex + 1) % TITLE_SECOND_CHANGING_WORDS.length;
-            setSecondIndex(nextSecondIndex);
-            setIndex(nextIndex);
-
-        }, 3000);
-
-        return () => {clearInterval(interval)}
-
-    }, [index]);
-    return (
-        <div className={style.boxTitle}>
-            <h1 className={style.title}>Leading global partner in <span>
-                {TITLE_CHANGING_WORDS.map((word, wordIndex) => (
-                        <b className={`${style.changingTextFirst} ${index===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
-                    ))}
-                </span>
-                <br />
-                empowering ambitious businesses, 
-                <br />
-                committed to delivering <span>
-                {TITLE_SECOND_CHANGING_WORDS.map((word, wordIndex) => (
-                        <b className={`${style.changingTextSecond} ${secondIndex===wordIndex?style.isVisible:style.isHidden}`} key={wordIndex}>{word}</b>
-                    ))}
-                </span>
-            </h1>
-            <div className={style.subTitleMain}>{SUB_TITLE_MAIN}</div>
-            <button className={style.letsTalk} onClick={() => window.location.href = "/ContactUs"}>
-                START A CONVERSATION
-            </button>
-            <img src="/assets/svg/MainPage/hero-section.svg" alt="about us" className={style.heroImage} />
-        </div>
-    );
+  return (
+    <div className={style.boxTitle}>
+      <h1 className={style.title}>
+        {t('hero.staticTitleStart')} <span>
+          {changingWords.map((word, wordIndex) => (
+            <b
+              className={`${style.changingTextFirst} ${index === wordIndex ? style.isVisible : style.isHidden}`}
+              key={wordIndex}
+            >
+              {word}
+            </b>
+          ))}
+        </span>
+        <br />
+        {t('hero.staticTitleMiddle')}
+        <br />
+        {t('hero.staticTitleEnd')} <span>
+          {secondChangingWords.map((word, wordIndex) => (
+            <b
+              className={`${style.changingTextSecond} ${secondIndex === wordIndex ? style.isVisible : style.isHidden}`}
+              key={wordIndex}
+            >
+              {word}
+            </b>
+          ))}
+        </span>
+      </h1>
+      <div className={style.subTitleMain}>{t('hero.subTitle')}</div>
+      <Link href="/ContactUs" className={style.letsTalk}>
+        {t('hero.button')}
+      </Link>
+      <img src="/assets/svg/MainPage/hero-section.svg" alt="about us" className={style.heroImage} />
+    </div>
+  );
 };
 
 export default Title;
