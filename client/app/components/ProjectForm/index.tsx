@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
+import React, { useState, ChangeEvent, useRef } from "react";
 import style from "./style.module.scss";
-import { PRIVACY_POLICY_WARNING } from "@constants/form";
 import emailjs from "emailjs-com";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
+import { useTranslation } from "react-i18next";
 
 const ProjectForm = () => {
+
+  const { t } = useTranslation();
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -80,7 +82,7 @@ const ProjectForm = () => {
     <div className={style.contactContainer}>
       <form ref={formRef} onSubmit={handleSubmit} className={style.form}>
         <div className={style.field}>
-          <div className={style.formTitle}>Your name *</div>
+          <div className={style.formTitle}>{t("form.name")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -94,7 +96,7 @@ const ProjectForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Your project&apos;s name *</div>
+          <div className={style.formTitle}>{t("form.projectName")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -108,7 +110,7 @@ const ProjectForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Email address *</div>
+          <div className={style.formTitle}>{t("form.email")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -122,7 +124,7 @@ const ProjectForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Phone *</div>
+          <div className={style.formTitle}>{t("form.phone")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -137,7 +139,7 @@ const ProjectForm = () => {
         </div>
         <div className={style.textareafield}>
           <div className={style.textareaTitle}>
-            Describe your project *
+          {t("form.describe")}
           </div>
           <div className={style.formGroup + " " + style.fullWidth}>
             <textarea
@@ -152,9 +154,9 @@ const ProjectForm = () => {
           </div>
         </div>
         <button type="submit" className={style.submitBtn}>
-          SEND MESSAGE
+        {t("form.send")}
         </button>
-        <div className={style.privacyWarning}>{PRIVACY_POLICY_WARNING}</div>
+        <div className={style.privacyWarning}>{t("form.privacy")}</div>
       </form>
       {loading && <div className={style.loadingOverlay}>Sending message...</div>}
     </div>

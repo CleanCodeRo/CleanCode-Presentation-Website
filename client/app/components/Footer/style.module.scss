@@ -162,6 +162,7 @@
   
   .footerCenter {
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     padding: 0 2rem;
   }
@@ -169,10 +170,21 @@
   .footerCenterLeft {
     padding-right: 0;
     width: 100%;
+    align-items: center;
+  }
+
+  .footerCenterLeftTitle{
+    text-align: center;
+  }
+
+  .footerCenterLeftContent{
+    align-items: center;
   }
   
   .footerCenterRight {
     width: 100%;
+    align-items: center;
+    text-align: center;
   }
   
   .bottomContent {

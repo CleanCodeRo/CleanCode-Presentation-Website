@@ -3,14 +3,18 @@
 import React from "react";
 import CardsGrid from "@components/CardsGrid";
 import Card from "@components/Card";
-import { TITLE, HIGHLIGHTED_WORD, JSON_PATH } from "@constants/rightPartner";
+import { useTranslation } from "react-i18next";
 
 const RightPartner = () => {
+  const { t } = useTranslation();
+
+  const content = t('rightPartner.content', { returnObjects: true });
+
   return (
     <CardsGrid
-      title={TITLE}
-      highlightedWord={HIGHLIGHTED_WORD}
-      jsonPath={JSON_PATH}
+      title={t('rightPartner.title')}
+      highlightedWord={t('rightPartner.highlightedWord')}
+      jsonPath={JSON.stringify(content)}
       containerClass="rightPartnerContainer"
       CardComponent={Card}
     />

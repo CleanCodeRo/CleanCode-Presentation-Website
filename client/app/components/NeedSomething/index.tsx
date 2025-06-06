@@ -1,16 +1,18 @@
 'use client';
 
 import React from "react";
-import { TITLE, SUBTITLE, CONTENT } from "@constants/needSomething";
+import { useTranslation } from "react-i18next";
 import CallToAction from "@components/CallToAction";
 
 const NeedSomething = () => {
+  const { t } = useTranslation();
+
   return (
     <CallToAction 
-      title={TITLE} 
-      subtitle={SUBTITLE} 
-      content={CONTENT} 
-      buttonText="JUST CONTACT US"
+      title={t('needSomethingElse.title')} 
+      subtitle={t('needSomethingElse.subtitle')} 
+      content={t('needSomethingElse.content')}
+      buttonText={t('needSomethingElse.button')}
       buttonLink="/ContactUs"
     />
   );

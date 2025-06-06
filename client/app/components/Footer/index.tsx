@@ -2,15 +2,19 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import { ADDRESS, MAIL, PHONE, TITLE, SUB_TITLE, SERVICES } from "@constants/contact";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation('translation'); 
+
+  const services= t('services.list', { returnObjects: true }) as string[];
+
   return (
     <footer className={style.footerWrapper}>
       <div className={style.footerCenter}>
         <div className={style.footerCenterLeft}>
           <div className={style.footerCenterLeftTitle}>
-            {TITLE}
+          {t('contact.title')}
           </div>
           <div className={style.footerCenterLeftContent}>
             <div className={style.iconWithText}>
@@ -25,7 +29,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                {ADDRESS}
+                {t('contact.address')}
               </a>
             </div>
             <div className={style.iconWithText}>
@@ -34,8 +38,8 @@ const Footer = () => {
                 alt="Mail Icon"
                 className={style.icon}
               />
-              <a href={`mailto:${MAIL}`} className={style.link}>
-                {MAIL}
+              <a href={`mailto:${t('contact.mail')}`} className={style.link}>
+              {t('contact.mail')}
               </a>
             </div>
             <div className={style.iconWithText}>
@@ -44,18 +48,18 @@ const Footer = () => {
                 alt="Phone Icon"
                 className={style.icon}
               />
-              <a href={`tel:${PHONE}`} className={style.link}>
-                {PHONE}
+              <a href={`tel:${t('contact.phone')}`} className={style.link}>
+              {t('contact.phone')}
               </a>
             </div>
           </div>
         </div>
         <div className={style.footerCenterRight}>
-          <div className={style.footerCenterRightTitle}>{SUB_TITLE}</div>
+          <div className={style.footerCenterRightTitle}>{t('services.subtitle')}</div>
           <ul className={style.servicesList}>
-            {SERVICES.map((service, index) => (
-              <li key={index}>{service}</li>
-            ))}
+          {Array.isArray(services) && services.map((service, index) => (
+            <li key={index}>{service}</li>
+          ))}
           </ul>
         </div>
       </div>

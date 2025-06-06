@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
@@ -27,16 +27,16 @@
   position: relative;
   z-index: 2;
   
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0.8rem;
-    left: 0;
-    width: 100%;
-    height: 0.5rem;
-    background-color: $Yellow;
-    z-index: -1;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0.8rem;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 0.5rem;
+  //   background-color: $Yellow;
+  //   z-index: -1;
+  // }
 }
 
 .ourProcessElements {
@@ -77,21 +77,22 @@
   line-height: 1.5;
   display: flex;
   align-items: center;
+  padding-left: 1rem;
   
-  &:before {
-    content: attr(data-number);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-    background-color: $Yellow;
-    color: $BlueDark;
-    border-radius: 50%;
-    font-family: $PoppinsBold;
-    font-size: 1.2rem;
-  }
+  // &:before {
+  //   content: attr(data-number);
+  //   display: inline-flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 3rem;
+  //   height: 3rem;
+  //   margin-right: 1rem;
+  //   background-color: $Yellow;
+  //   color: $BlueDark;
+  //   border-radius: 50%;
+  //   font-family: $PoppinsBold;
+  //   font-size: 1.2rem;
+  // }
 }
 
 .cardDetail {
@@ -133,6 +134,7 @@
     width: 100%;
     margin-bottom: 0.5rem;
     font-size: 1.3rem;
+    justify-content: center;
     
     &:before {
       width: 2.5rem;
@@ -145,6 +147,7 @@
     width: 100%;
     font-size: 1rem;
     line-height: 1.6rem;
+    text-align: center;
   }
   
   .processCard {
@@ -171,6 +174,7 @@
   
   .cardTitle {
     font-size: 1.2rem;
+    text-align: center;
     
     &:before {
       width: 2rem;

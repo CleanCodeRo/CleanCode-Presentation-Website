@@ -2,21 +2,20 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import { DESCRIPTION, TITLE, IDEAS, SOLUTIONS, INSIGHTS, SOFTWARE, BUTTON } from "@constants/whatWeDo";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const WhatWeDo = () => {
+  const { t } = useTranslation();
   return (
     <section className={style.container}>
-      <div className={style.title}>{TITLE}</div>
+      <div className={style.title}>{t("whatWeDo.title")}</div>
       <div className={style.whatWeDo}>
         <div className={style.leftSide}>
-          <div className={style.description}>{DESCRIPTION}</div>
-          <button
-            className={style.letsTalk}
-            onClick={() => (window.location.href = "/ContactUs")}
-          >
-            {BUTTON}
-          </button>
+          <div className={style.description}>{t("whatWeDo.description")}</div>
+          <Link href="/ContactUs" className={style.letsTalk}>
+            {t("whatWeDo.button")}
+          </Link>
         </div>
         <div className={style.rightSide}>
           <div className={style.square1}>
@@ -25,7 +24,7 @@ const WhatWeDo = () => {
               alt="product development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>{IDEAS}</div>
+            <div className={style.smallTitle}>{t("whatWeDo.ideas")}</div>
           </div>
           <div className={style.square2}>
             <img
@@ -33,7 +32,7 @@ const WhatWeDo = () => {
               alt="project development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>{SOLUTIONS}</div>
+            <div className={style.smallTitle}>{t("whatWeDo.solutions")}</div>
           </div>
           <div className={style.square3}>
             <img
@@ -41,7 +40,7 @@ const WhatWeDo = () => {
               alt="seo"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>{INSIGHTS}</div>
+            <div className={style.smallTitle}>{t("whatWeDo.insights")}</div>
           </div>
           <div className={style.square4}>
             <img
@@ -49,7 +48,7 @@ const WhatWeDo = () => {
               alt="product development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>{SOFTWARE}</div>
+            <div className={style.smallTitle}>{t("whatWeDo.software")}</div>
           </div>
         </div>
       </div>
