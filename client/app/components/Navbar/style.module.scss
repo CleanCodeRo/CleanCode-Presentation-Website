@@ -23,7 +23,6 @@
 
 .navList {
   background-color: white;
-  padding: 10px 10px;
   width: 70%;
   max-width: 100%;
   display: grid;
@@ -126,9 +125,7 @@
 }
 
 @media (max-width: 1024px) {
-  .navList {
-    padding: 10px 15px;
-  }
+
   
   .dropItem {
     padding: 1rem 0.5rem;
@@ -192,7 +189,6 @@
 
 @media (max-width: 480px) {
   .navList {
-    padding: 10px;
     grid-template-columns: 1fr auto;
   }
   

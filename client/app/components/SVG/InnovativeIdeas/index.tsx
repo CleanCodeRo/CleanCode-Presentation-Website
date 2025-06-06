@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { SVGProps, useEffect, useRef, useState } from "react"
 
 const InnovativeIdeas = (props: SVGProps<SVGSVGElement>) => {
-
     const svgRef = useRef<SVGSVGElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -20,9 +19,21 @@ const InnovativeIdeas = (props: SVGProps<SVGSVGElement>) => {
                 { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
             )
             .fromTo(
-                "#codeIcon",
+                "#browserControls",
                 { opacity: 0, x: -30 },
                 { opacity: 1, x: 0, duration: 1, ease: "power2.out" },
+                "+=0.15"
+            )
+            .fromTo(
+                "#browserTabs",
+                { opacity: 0, y: 10 },
+                { opacity: 1, y: 0, duration: 0.6 },
+                "+=0.15"
+            )
+            .fromTo(
+                "#codeIcon",
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.6 },
                 "+=0.15"
             )
             .fromTo(
@@ -33,15 +44,14 @@ const InnovativeIdeas = (props: SVGProps<SVGSVGElement>) => {
             )
             .fromTo(
                 "#bulbLights",
-                { opacity: 0, y: 10 },
+                { opacity: 0, y: 20 },
                 { opacity: 1, y: 0, duration: 0.6 },
                 "+=0.15"
             );
 
-        const handleAOS = (event: any) => {
 
+        const handleAOS = (event: any) => {
             if (event.detail === svgRef.current && !isVisible) {
-                console.log("here")
                 setIsVisible(true);
                 timeline.play();
             }
@@ -79,8 +89,12 @@ const InnovativeIdeas = (props: SVGProps<SVGSVGElement>) => {
                         d="M113.72 3.96H9.11c-1.42 0-2.71.58-3.64 1.51a5.14 5.14 0 0 0-1.51 3.64v104.61c0 1.42.58 2.71 1.51 3.64a5.14 5.14 0 0 0 3.64 1.51h104.61c1.42 0 2.71-.58 3.64-1.51a5.14 5.14 0 0 0 1.51-3.64V9.11c0-1.42-.58-2.71-1.51-3.64a5.14 5.14 0 0 0-3.64-1.51zM9.11 0h104.61c2.51 0 4.79 1.02 6.44 2.67a9.085 9.085 0 0 1 2.67 6.44v104.61c0 2.51-1.02 4.79-2.67 6.44a9.085 9.085 0 0 1-6.44 2.67H9.11c-2.51 0-4.79-1.02-6.44-2.67A9.085 9.085 0 0 1 0 113.72V9.11C0 6.6 1.02 4.32 2.67 2.67A9.085 9.085 0 0 1 9.11 0z"
                         className="fil0"
                     />
-                    <path id="browserFrame"
-                        d="M2.03 27.22c37.98.96 118.57 0 118.8 0l.05 3.95c-.23 0-80.92.97-118.94 0l.09-3.95zM13.87 17.43h2.38a2.38 2.38 0 1 0 0-4.76h-2.38a2.38 2.38 0 1 0 0 4.76zM25.75 17.43h2.38a2.38 2.38 0 1 0 0-4.76h-2.38a2.38 2.38 0 1 0 0 4.76zM37.64 17.43h2.38a2.38 2.38 0 1 0 0-4.76h-2.38a2.38 2.38 0 1 0 0 4.76zM80.44 17.43h28.53a2.38 2.38 0 1 0 0-4.76H80.44a2.38 2.38 0 1 0 0 4.76z"
+                    <path id="browserTabs"
+                        d="M2.03 27.22c37.98.96 118.57 0 118.8 0l.05 3.95c-.23 0-80.92.97-118.94 0l.09-3.95z"
+                        className="fil1"
+                    />
+                    <path id="browserControls"
+                        d="M13.87 17.43h2.38a2.38 2.38 0 1 0 0-4.76h-2.38a2.38 2.38 0 1 0 0 4.76zM25.75 17.43h2.38a2.38 2.38 0 1 0 0-4.76h-2.38a2.38 2.38 0 1 0 0 4.76zM37.64 17.43h2.38a2.38 2.38 0 1 0 0-4.76h-2.38a2.38 2.38 0 1 0 0 4.76zM80.44 17.43h28.53a2.38 2.38 0 1 0 0-4.76H80.44a2.38 2.38 0 1 0 0 4.76z"
                         className="fil1"
                     />
                     <path id="lightBulb"
@@ -100,4 +114,5 @@ const InnovativeIdeas = (props: SVGProps<SVGSVGElement>) => {
         </svg>
     )
 };
+
 export default InnovativeIdeas

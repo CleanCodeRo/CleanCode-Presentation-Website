@@ -4,7 +4,8 @@ import React from "react";
 import style from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
-import InnovativeIdeas from "@components/InnovativeIdeas";
+import InnovativeIdeas from "@components/SVG/InnovativeIdeas";
+import TailoredSolutions from "@components/SVG/TailoredSolutions";
 
 const WhatWeDo = () => {
   const { t } = useTranslation();
@@ -24,11 +25,7 @@ const WhatWeDo = () => {
             <div className={style.smallTitle}>{t("whatWeDo.ideas")}</div>
           </div>
           <div className={style.square2}>
-            <img
-              src="/assets/svg/MainPage/tailored-solutions.svg"
-              alt="project development"
-              className={style.smallImg}
-            />
+            <TailoredSolutions/>
             <div className={style.smallTitle}>{t("whatWeDo.solutions")}</div>
           </div>
           <div className={style.square3}>

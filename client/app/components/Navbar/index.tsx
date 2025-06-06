@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
+import Logo from "@components/SVG/Logo";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -88,11 +89,7 @@ const Navbar = () => {
       <ul className={style.navList}>
         <li className={style.navItem}>
           <Link href="/" className={pathname === "/" ? style.active : ""}>
-            <img
-              src="/assets/svg/logo-clean-code-it-vf.svg"
-              alt="Clean Code IT Logo"
-              className={style.logo}
-            />
+            <Logo/>
           </Link>
         </li>
 
@@ -124,17 +121,7 @@ const Navbar = () => {
               {t("navbar.services")}
             </Link>
           </li>
-          {/* <li className={style.dropItem}>
-                        <Link 
-                            href="/" 
-                            className={`${style.navLink} ${pathname === '/industries' ? style.active : ''}`}
-                            // onMouseEnter={() => !mobileMenuOpen && handleMouseEnter(INDUSTRY_JSON_PATH)}
-                            // onMouseLeave={() => !mobileMenuOpen && handleMouseLeave}
-                            onClick={() => mobileMenuOpen && handleMouseEnter(INDUSTRY_JSON_PATH)}
-                        >
-                            INDUSTRIES
-                        </Link>
-                    </li> */}
+
           <li className={style.dropItem}>
             <Link
               href="/AboutUs"
