@@ -2,32 +2,26 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import { WHAT_WE_DO } from "@constants/constants";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 import InnovativeIdeas from "@components/InnovativeIdeas";
 
 const WhatWeDo = () => {
+  const { t } = useTranslation();
   return (
-    <div className={style.container}>
-      <div className={style.title}>What we do</div>
+    <section className={style.container}>
+      <div className={style.title}>{t("whatWeDo.title")}</div>
       <div className={style.whatWeDo}>
         <div className={style.leftSide}>
-          <div className={style.description}>{WHAT_WE_DO}</div>
-          <button
-            className={style.letsTalk}
-            onClick={() => (window.location.href = "/ContactUs")}
-          >
-            GET A QUOTE
-          </button>
+          <div className={style.description}>{t("whatWeDo.description")}</div>
+          <Link href="/ContactUs" className={style.letsTalk}>
+            {t("whatWeDo.button")}
+          </Link>
         </div>
         <div className={style.rightSide}>
           <div className={style.square1}>
             <InnovativeIdeas/>
-            {/* <img
-              src="/assets/svg/MainPage/innovative-ideas.svg"
-              alt="product development"
-              className={style.smallImg}
-            /> */}
-            <div className={style.smallTitle}>Innovative ideas</div>
+            <div className={style.smallTitle}>{t("whatWeDo.ideas")}</div>
           </div>
           <div className={style.square2}>
             <img
@@ -35,7 +29,7 @@ const WhatWeDo = () => {
               alt="project development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Tailored Solutions</div>
+            <div className={style.smallTitle}>{t("whatWeDo.solutions")}</div>
           </div>
           <div className={style.square3}>
             <img
@@ -43,7 +37,7 @@ const WhatWeDo = () => {
               alt="seo"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Strategic Insights</div>
+            <div className={style.smallTitle}>{t("whatWeDo.insights")}</div>
           </div>
           <div className={style.square4}>
             <img
@@ -51,11 +45,11 @@ const WhatWeDo = () => {
               alt="product development"
               className={style.smallImg}
             />
-            <div className={style.smallTitle}>Reliable Software</div>
+            <div className={style.smallTitle}>{t("whatWeDo.software")}</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

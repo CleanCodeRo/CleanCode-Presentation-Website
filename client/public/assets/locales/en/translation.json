@@ -1,0 +1,204 @@
+{
+  "chooseUs": {
+    "title": "Why choose us",
+    "highlightedWord": "choose us",
+    "subtitle": "We are working to make cleanCode Solutions the best coding service"
+  },
+  "contact": {
+    "address": "103-105 Calea Victoriei, District 1, Bucharest",
+    "mail": "hello@cleancodeit.com",
+    "phone": "+40733311393",
+    "title": "Say hello to our friendly team at"
+  },
+  "services": {
+    "subtitle": "Core services",
+    "list": [
+      "Software development",
+      "Web & email hosting",
+      "Web & mobile apps",
+      "Digital transformation",
+      "Application modernization"
+    ]
+  },
+  "dedicated": {
+    "title": "Dedicated developer or team?",
+    "content": "Hire skilled developers or an entire team dedicated exclusively to your projects, ensuring a high level of expertise, commitment, and on-time project completion.",
+    "button": "START A CONVERSATION"
+  },
+  "aboutUsHero": {
+    "titlePart1": "Outstanding individually.",
+    "titlePart2": "Unstoppable together.",
+    "imageAlt": "Team collaboration illustration"
+  },
+  "contactUs": {
+    "title": "Let's explore how we can work together",
+    "highlightedWord": "work together",
+    "description": "Our team will work with you to understand your business needs, your goals, and your vision. We'll listen carefully, and then provide you with a detailed plan of action outlining the steps we'll take to bring your project to life.",
+    "formTitle": "Why wait? Get in touch with  us.",
+    "formContent": "Reach out to us and unlock the power of innovative software solutions for your business. Contact us to discuss your project and take the first step towards success!"
+  },
+  "form": {
+    "name": "Your name *",
+    "company": "Your company *",
+    "email": "Email address *",
+    "phone": "Phone *",
+    "subject": "Subject *",
+    "projectName": "Your project's name *",
+    "message": "Describe your challenge / goal *",
+    "describe": "Describe your project *",
+    "send": "Send message",
+    "privacy": "Sending the information provided in this form you agree to the processing of your personal data according to cleanCode Privacy Policy and Cookies Policy to handle the request and respond to it."
+  },
+  "mission": {
+    "steps": [
+      {
+        "id": 1,
+        "name": "Mission",
+        "detail": "We help clients boost revenue by using the latest technology to improve efficiency and performance."
+      },
+      {
+        "id": 2,
+        "name": "Vision",
+        "detail": "Harness today’s technologies to effectively optimize your business and prepare it for tomorrow’s challenges."
+      }
+    ]
+  },
+  "navbar": {
+    "aboutUs": "ABOUT US",
+    "contact": "CONTACT US",
+    "services": "SERVICES"
+  },
+  "needSomethingElse": {
+    "title": "Need something else?",
+    "subtitle": "Sure we can help.",
+    "content": "Although we focus on the services listed above, we also have experience with MVP development, marketing landing pages, alternative CMS integrations, headless implementations, and more. Don’t hesitate to get in touch with us to check our availability.",
+    "button": "JUST CONTACT US"
+  },
+  "ourProcess": {
+    "title": "Our Process in a nutshell",
+    "steps": [
+      {
+        "id": 1,
+        "name": "We analyse the requirements",
+        "detail": "We build your ideal team based on your requirements, selecting members with the right skill sets. If necessary, we sign an NDA to guarantee full confidentiality."
+      },
+      {
+        "id": 2,
+        "name": "We set up the team",
+        "detail": "We assemble a dedicated and highly efficient team tailored to your project, immersing them fully in your business to transform your idea into reality."
+      },
+      {
+        "id": 3,
+        "name": "You agree on the working process",
+        "detail": "Review all processes and terms with the team, including reporting and work management, and establish a communication plan to track progress."
+      },
+      {
+        "id": 4,
+        "name": "You start the project",
+        "detail": "Start your project and enjoy smooth development. We handle the team's work environment, while you maintain control over management."
+      }
+    ]
+  },
+  "quote": {
+    "title": "Let's explore the opportunity to collaborate on your upcoming project.",
+    "content": "We are committed to understanding your business vision. We'll listen closely to your ideas and then develop a detailed plan outlining the steps to bring your project to fruition.",
+    "button": "SHARE YOUR IDEAS"
+  },
+  "rightPartner": {
+    "title": "Why we're the right partner",
+    "highlight": "right partner",
+    "content": [
+      {
+        "name": "High industry standards",
+        "description": "We uphold the highest coding practices and quality assurance standards to ensure our solutions are reliable and highly effective."
+      },
+      {
+        "name": "Diverse expertise",
+        "description": "Our developers possess all the necessary skills, knowledge, and expertise to meet even the most challenging requirements."
+      },
+      {
+        "name": "Transparency is key",
+        "description": "To lower the risk we are completely transparent about who we are, what we do, and where we have succeeded."
+      },
+      {
+        "name": "Fast turnarounds",
+        "description": "Time frames that never sacrifice quality. With expert teams and optimized processes, we meet deadlines with top results every time."
+      },
+      {
+        "name": "Reliability & flexibility",
+        "description": "Take full control of your projects with flexible tools and customized processes tailored to your needs - we adapt to you."
+      },
+      {
+        "name": "Post-delivery support",
+        "description": "We provide reliable post-delivery support to keep your website running smoothly, even years after completion."
+      }
+    ]
+  },
+  "technologies": {
+    "title": "Unlocking business success by integrating",
+    "subtitle": "Agile technology",
+    "text": "We leverage industry-leading programming languages, frameworks, and tools, and we’ll assist you in implementing a strategically aligned tech stack for optimal reliability, flexibility, and scalability."
+  },
+  "hero": {
+    "changingWords": ["Hosting", "Product Development", "IT Staff Augmentation"],
+    "secondChangingWords": ["lasting value", "data-driven value"],
+    "staticTitleStart": "Leading global partner in",
+    "staticTitleMiddle": "empowering ambitious businesses,",
+    "staticTitleEnd": "committed to delivering",
+    "subTitle": "All the expertise you need is just a click away, guiding your success with 70+ seasoned professionals.",
+    "button": "START A CONVERSATION"
+  },
+  "weBelieve": {
+    "title": "What we believe in",
+    "tabs": [
+      {
+        "name": "Win-Win",
+        "description": "A partnership thrives in the long term when both parties make balanced and meaningful contributions, fostering mutual growth and ensuring lasting benefits for both sides."
+      },
+      {
+        "name": "Trust",
+        "description": "A successful partnership goes beyond a mere contract. It requires a solid foundation, willingly established by both parties, and built upon mutual trust, respect, and loyalty."
+      },
+      {
+        "name": "Quality",
+        "description": "Providing top-quality service is non-negotiable for us. Every partnership holds significant value, and we believe it deserves nothing less than our absolute best effort, dedication, and attention to detail in every aspect."
+      },
+      {
+        "name": "Transparency",
+        "description": "We believe transparency is a crucial element for building successful long-term partnerships. That’s why we are committed to always being open, honest, and transparent with our partners in every aspect of our collaboration."
+      },
+      {
+        "name": "Collaboration",
+        "description": "A prosperous partnership requires a deep collaborative process between both sides. Despite being a part of different organizations, we keep our partners closely involved."
+      }
+    ]
+  },
+  "offer":{
+    "title": "What <span class=\"highlight\">we can offer</span> you",
+    "content":
+      "Our flexible and effective approaches ensure that we can deliver customized solutions that meet our client's specific needs and exceed their expectations."
+    ,
+    "titleProject": "Per Project",
+     "contentProject": "Ideal for projects with a clear scope and goals, this approach works well with a waterfall methodology, ensuring a fixed budget and timeline.",
+    "titleAgile": "Agile Approach",
+     "contentAgile": "Have a long-term project with evolving goals and a shifting scope? Let our expert team craft a custom agile approach tailored to suit your needs."
+  },
+  "whatNext": {
+    "title": "What happens next?",
+    "steps": [
+      "Having received and processed your request, we will get back to you shortly to detail your project needs and sign an NDA to ensure the confidentiality of information.",
+      "After examining requirements, our analysts and developers devise a project proposal with the scope of works, team size, time and cost estimates.",
+      "We arrange a meeting with you to discuss the offer and come to an agreement.",
+      "We sign a contract and start working on your project as quickly as possible."
+    ]
+  },
+  "whatWeDo": {
+    "title": "What we do",
+    "description": "By offering tailored made solutions and strategic insights, we enable businesses to meet their targets confidently, maintaining a balance between growth, quality and innovation.",
+    "ideas": "Innovative ideas",
+    "solutions": "Tailored Solutions",
+    "insights": "Strategic Insights",
+    "software": "Reliable Software",
+    "button": "GET A QUOTE"
+  }
+}

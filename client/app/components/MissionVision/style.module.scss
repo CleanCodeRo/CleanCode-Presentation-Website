@@ -1,60 +1,142 @@
 @import "@style/globalVariables.scss";
 
-.mission-vision {
+.missionVision {
   background-color: white;
   color: $BlueDark;
   width: 100%;
-  height: 34rem;
-  padding: 3rem;
+  min-height: 34rem;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 
-.missionVisionSubcontainer{
-    display: flex;
+.missionVisionSubcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.missionVisionElements {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.missionVisionCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.missionVisionIcon {
+  margin-bottom: 1rem;
+}
+
+.missionIcon {
+  width: 5rem;
+  height: 5rem;
+  transition: transform 0.3s ease;
+  
+  .missionVisionCard:hover & {
+    transform: scale(1.1);
+  }
+}
+
+.missionVisionSubTitle {
+  font-size: 1.5rem;
+  font-family: $PoppinsBold;
+  color: $BlueDark;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.missionVisionDescription {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-family: $MontserratRegular;
+  color: $BlueDark;
+  text-align: center;
+  
+  p {
+    margin: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .missionVisionElements {
+    gap: 3rem;
+  }
+  
+  .missionVisionCard {
+    max-width: 26rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .missionVision {
+    padding: 3rem 1rem;
+  }
+  
+  .missionVisionElements {
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
+    gap: 3rem;
+  }
+  
+  .missionVisionCard {
+    max-width: 90%;
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  
+  .missionVisionSubTitle {
+    font-size: 1.4rem;
+  }
+  
+  .missionVisionDescription {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
 }
 
-.missionVisionElements{
-    width: 1024px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    gap: 5rem;
-}
-
-.missionVisionCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30rem;
-}
-
-.missionVisionSubTitle{
-    font-size: 1.5rem;
-    font-family: $PoppinsBold;
-    color: $BlueDark;
-}
-
-.missionIcon{
-    width: 5rem;
-    height: 5rem;
-}
-
-.missionVisionDescription{
-    font-size: 1.2rem;
-    line-height: 2rem;
-    font-family: $MontserratRegular;
-    color: $BlueDark;
-    margin-top: 1rem;
-    text-align: center;
+@media (max-width: 480px) {
+  .missionVision {
+    padding: 2.5rem 1rem;
+  }
+  
+  .missionIcon {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .missionVisionSubTitle {
+    font-size: 1.3rem;
+  }
+  
+  .missionVisionDescription {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
 }

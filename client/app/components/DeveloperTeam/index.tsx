@@ -2,17 +2,23 @@
 
 import React from "react";
 import style from "./style.module.scss";
-import { TITLE, CONTENT } from "../../constants/developerTeam";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const DeveloperTeam = () => {
+
+  const { t } = useTranslation();
+
   return (
-    <div className={style.wrapper}>
-    <div className={style.container}>
-        <div className={style.title}>{TITLE}</div>
-        <div className={style.content}>{CONTENT}</div>
-        <button className={style.button}>START A CONVERSATION</button>
-    </div>
-</div>
+    <section className={style.wrapper}>
+      <div className={style.container}>
+        <div className={style.title}>{t('dedicated.title')}</div>
+        <div className={style.content}>{t('dedicated.content')}</div>
+          <Link href="/ContactUs" className={style.button}>
+          {t('dedicated.button')}
+          </Link>
+      </div>
+    </section>
   );
 };
 

@@ -1,16 +1,23 @@
 @import "@style/globalVariables.scss";
 
 .boxTitle {
-    width: 1024px;
-    height: 450px;
+    display: grid;
+    max-width: 100%;
+    height: auto;
     margin: 0 auto;
+    padding: 2rem 1rem;
     font-family: $RubikBold;
     background-color: $BlueDark;
-    display: grid;
-    grid-template-columns: 6fr 4fr;
-    grid-template-rows: 2fr 2fr 1fr;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
     align-items: center;
     gap: 1rem;
+
+    @media (min-width: 900px) {
+        grid-template-columns: 5fr 4fr;
+        text-align: left;
+    }
 }
 
 .title,
@@ -20,19 +27,88 @@
 }
 
 .heroImage {
-    grid-column: 2;
-    grid-row: 2;
-    transform: scale(3) translate(50px, -5px);;
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 100%;
     height: auto;
+    transform: scale(1) translate(0, 0);
     align-self: start;
+
+    @media (max-width: 900px) {
+
+        transform: scale(2) translate(50px, -5px);
+        align-self: center;
+        padding-top:5rem;
+        padding-bottom:5rem;
+    }
+    @media (min-width: 900px) {
+        grid-column: 2;
+        grid-row: 2;
+        transform: scale(3.5) translate(50px, -5px);
+    }
 }
 
 .title {
-    background-color: $BlueDark;
     font-family: $PoppinsBold;
-    color:$White;
-    font-size: $font-size-small;
-    transform: translate(60px, 80px);
+    color: $White;
+    font-size: 1.5rem;
+    transform: none;
+    z-index:1;
+    text-align: center;
+
+    @media (min-width: 900px) {
+        font-size: $font-size-small;
+        transform: translate(30px, 80px);
+        text-align: left;
+    }
+}
+
+.subTitleMain {
+    font-family: $MontserratLight;
+    font-size: 1.2rem;
+    width: 90%;
+    max-width: 600px;
+    color: $White;
+    transform: none;
+    line-height: 1.5;
+    text-align: center;
+
+    @media (min-width: 900px) {
+        font-size: 1.2rem;
+        transform: translate(30px, 40px);
+        margin-top: -3rem;
+        text-align: left;
+    }
+}
+
+.letsTalk {
+    display: inline-block;
+    margin: 1.5rem 0;
+    border-radius: 7px;
+    font-family: $PoppinsBold;
+    font-size: $font-size-x-small;
+    padding: 0.7rem 2rem;
+    background-color: $Yellow;
+    color: $BlueDark;
+    border: none;
+    align-self: start;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: none;
+    
+    @media (min-width: 900px) {
+        transform: translate(30px, -40px);
+        justify-self: start;
+    }
+    @media (max-width: 370px){
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+.letsTalk:hover {
+    background-color: $GreenLight;
 }
 
 .changingTextFirst {
@@ -60,61 +136,13 @@
     animation: pushIn 0.5s forwards;
 }
 
+/* Keyframes */
 @keyframes pushIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes pushOut {
-    0% {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-}
-
-.subTitleMain {
-    font-family: $MontserratLight;
-    font-size: 1.2rem;
-    width: 60%;
-    max-width: 600px;
-    color:$White;
-    transform: translate(60px, 40px);
-    line-height: 1.5;
-    margin-top: -3rem;
-}
-
-.letsTalk {
-    display: flex;
-    position: relative;
-    margin-left: 0;
-    margin-right: 0;
-    justify-self: end;
-    margin-top: 2rem;
-    border-radius: 7px;
-    font-family: $PoppinsBold;
-    font-size: $font-size-small;
-    padding: 0.7rem 2rem;
-    background-color: $Yellow;
-    color: $BlueDark;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    transform: translate(-60px, -40px);
-}
-
-.letsTalk:hover {
-    color: $BlueDark;
-    background-color: $GreenLight;
+    0% { transform: translateY(0%); opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
 }

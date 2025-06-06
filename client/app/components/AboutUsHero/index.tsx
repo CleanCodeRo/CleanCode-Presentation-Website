@@ -1,23 +1,28 @@
 "use client";
 
 import React from "react";
+import { useTranslation } from "react-i18next";
 import style from "./style.module.scss";
 
 const AboutUsHero = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className={style.heroContainer}>
+    <section className={style.heroContainer}>
       <div className={style.aboutUsSection}>
         <h1 className={style.aboutUsTitle}>
-          Outstanding individually.{" "}
-          <span className={style.highlight}>Unstoppable together.</span>
+          {t('aboutUsHero.titlePart1')}{" "}
+          <span className={style.highlight}>
+            {t('aboutUsHero.titlePart2')}
+          </span>
         </h1>
         <img
           src="/assets/svg/AboutUs/about-us-together.svg"
-          alt="about us"
+          alt={t('aboutUsHero.imageAlt')}
           className={style.aboutUsImage}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

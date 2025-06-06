@@ -1,19 +1,20 @@
-'use client'
+'use client';
 
 import React from "react";
-import style from "./style.module.scss";
-import {TITLE, CONTENT} from "@constants/quote";
+import CallToAction from "@components/CallToAction";
+import { useTranslation } from "react-i18next";
 
 const Quote = () => {
-    return (
-        <div className={style.wrapper}>
-            <div className={style.container}>
-                <div className={style.title}>{TITLE}</div>
-                <div className={style.content}>{CONTENT}</div>
-                <button className={style.button}>GET A QUOTE FOR YOUR PROJECT</button>
-            </div>
-        </div>
-    )
-}
+  const { t } = useTranslation();
+
+  return (
+    <CallToAction 
+      title={t("quote.title")}
+      content={t("quote.content")} 
+      buttonText={t("quote.button")} 
+      buttonLink={"/ShareIdeas"}
+    />
+  );
+};
 
 export default Quote;

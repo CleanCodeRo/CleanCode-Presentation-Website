@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
+import React, { useState, ChangeEvent, useRef } from "react";
 import style from "./style.module.scss";
-import { PRIVACY_POLICY_WARNING } from "@constants/constants";
 import emailjs from "emailjs-com";
 import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_API_KEY } from "@constants/emailjs";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   const [loading, setLoading] = useState<boolean>(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -14,7 +16,6 @@ const ContactForm = () => {
     email: "",
     phone: "",
     subject: "",
-    budget: "",
     description: "",
     nda: false
   });
@@ -65,7 +66,6 @@ const ContactForm = () => {
               email: "",
               phone: "",
               subject: "",
-              budget: "",
               description: "",
               nda: false
             });
@@ -83,7 +83,7 @@ const ContactForm = () => {
     <div className={style.contactContainer}>
       <form ref={formRef} onSubmit={handleSubmit} className={style.form}>
         <div className={style.field}>
-          <div className={style.formTitle}>Your name</div>
+          <div className={style.formTitle}>{t("form.name")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -97,7 +97,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Your company</div>
+          <div className={style.formTitle}>{t("form.company")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -111,7 +111,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Email address</div>
+          <div className={style.formTitle}>{t("form.email")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -125,7 +125,7 @@ const ContactForm = () => {
           </div>
         </div>
         <div className={style.field}>
-          <div className={style.formTitle}>Phone</div>
+          <div className={style.formTitle}>{t("form.phone")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -138,8 +138,8 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className={style.field}>
-          <div className={style.formTitle}>Subject</div>
+        <div className={style.textareafield}>
+          <div className={style.formTitle}>{t("form.subject")}</div>
           <div className={style.formGroup}>
             <input
               className={style.inputField}
@@ -152,23 +152,9 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className={style.field}>
-          <div className={style.formTitle}>Projected budget</div>
-          <div className={style.formGroup}>
-            <input
-              className={style.inputField}
-              type="text"
-              id="budget"
-              name="budget"
-              value={formData.budget}
-              onChange={handleChange}
-              required
-            />
-          </div>
-        </div>
         <div className={style.textareafield}>
           <div className={style.textareaTitle}>
-            Describe your challenge / goal
+            {t("form.message")}
           </div>
           <div className={style.formGroup + " " + style.fullWidth}>
             <textarea
@@ -182,11 +168,12 @@ const ContactForm = () => {
             />
           </div>
         </div>
-        <div className={style.attachment}>
+        {/* <div className={style.attachment}>
+        {/* <div className={style.attachment}>
           <div className={style.attachmentSub}>
             <button type="button" className={style.recordButton}>
               <img
-                src="assets/svg/record.svg"
+                src="/assets/svg/record.svg"
                 alt="Record Voice Message"
                 className={style.icon}
               />
@@ -197,7 +184,7 @@ const ContactForm = () => {
             <div className={style.uploadContainer}>
               <button type="button" className={style.uploadButton}>
                 <img
-                  src="assets/svg/attach-file.svg"
+                  src="/assets/svg/attach-file.svg"
                   alt="Attach File"
                   className={style.icon}
                 />
@@ -205,8 +192,8 @@ const ContactForm = () => {
               <div className={style.attachmentTitle}>Attach file</div>
             </div>
           </div>
-        </div>
-        <div className={style.checkboxContainer}>
+        </div> */}
+        {/* <div className={style.checkboxContainer}>
           <input
             type="checkbox"
             id="nda"
@@ -220,11 +207,11 @@ const ContactForm = () => {
           <label htmlFor="nda" className={style.checkboxLabel}>
             Secure data with NDA first
           </label>
-        </div>
+        </div> */}
         <button type="submit" className={style.submitBtn}>
-          SEND MESSAGE
+        {t("form.send")}
         </button>
-        <div className={style.privacyWarning}>{PRIVACY_POLICY_WARNING}</div>
+        <div className={style.privacyWarning}>{t("form.privacy")}</div>
       </form>
       {loading && <div className={style.loadingOverlay}>Sending message...</div>}
     </div>

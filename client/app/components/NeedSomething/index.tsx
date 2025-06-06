@@ -1,20 +1,21 @@
-"use client";
+'use client';
 
 import React from "react";
-import style from "./style.module.scss";
-import {TITLE, SUBTITLE, CONTENT} from "@constants/needSomething";
+import { useTranslation } from "react-i18next";
+import CallToAction from "@components/CallToAction";
 
 const NeedSomething = () => {
-    return (
-        <div className={style.wrapper}>
-            <div className={style.container}>
-                <div className={style.title}>{TITLE}</div>
-                <div className={style.subTitle}>{SUBTITLE}</div>
-                <div className={style.content}>{CONTENT}</div>
-                <button className={style.button}>JUST CONTACT US</button>
-            </div>
-        </div>
-    )
+  const { t } = useTranslation();
+
+  return (
+    <CallToAction 
+      title={t('needSomethingElse.title')} 
+      subtitle={t('needSomethingElse.subtitle')} 
+      content={t('needSomethingElse.content')}
+      buttonText={t('needSomethingElse.button')}
+      buttonLink="/ContactUs"
+    />
+  );
 };
 
 export default NeedSomething;

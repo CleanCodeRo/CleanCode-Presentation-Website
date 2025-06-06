@@ -13,7 +13,7 @@ const Dropdown: React.FC<DropdownProps> = ({ category }) => {
       <CSSTransition
         in={activeMenu === "main"}
         unmountOnExit
-        timeout={500}
+        timeout={100}
         classNames={`${style.menuPrimary}`}
       >
         <ul className={`${style.bigItemsList}`}>

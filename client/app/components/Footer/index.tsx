@@ -2,14 +2,19 @@
 
 import React from "react";
 import style from "./style.module.scss";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation('translation'); 
+
+  const services= t('services.list', { returnObjects: true }) as string[];
+
   return (
-    <div className={style.footerWrapper}>
+    <footer className={style.footerWrapper}>
       <div className={style.footerCenter}>
         <div className={style.footerCenterLeft}>
           <div className={style.footerCenterLeftTitle}>
-            Say hello to our friendly team at
+          {t('contact.title')}
           </div>
           <div className={style.footerCenterLeftContent}>
             <div className={style.iconWithText}>
@@ -24,7 +29,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                103-105 Calea Victoriei, District 1, Bucharest
+                {t('contact.address')}
               </a>
             </div>
             <div className={style.iconWithText}>
@@ -33,8 +38,8 @@ const Footer = () => {
                 alt="Mail Icon"
                 className={style.icon}
               />
-              <a href="mailto:contact@cleancode.ro" className={style.link}>
-                contact@cleancode.ro
+              <a href={`mailto:${t('contact.mail')}`} className={style.link}>
+              {t('contact.mail')}
               </a>
             </div>
             <div className={style.iconWithText}>
@@ -43,27 +48,26 @@ const Footer = () => {
                 alt="Phone Icon"
                 className={style.icon}
               />
-              <a href="tel:+40733311393" className={style.link}>
-                +40 733 311 393
+              <a href={`tel:${t('contact.phone')}`} className={style.link}>
+              {t('contact.phone')}
               </a>
             </div>
           </div>
         </div>
         <div className={style.footerCenterRight}>
-          <div className={style.footerCenterRightTitle}>Core services</div>
+          <div className={style.footerCenterRightTitle}>{t('services.subtitle')}</div>
           <ul className={style.servicesList}>
-            <li>Software development</li>
-            <li>Web & Email Hosting</li>
-            <li>Web & mobile apps</li>
-            <li>Digital transformation</li>
-            <li>Application modernization</li>
+          {Array.isArray(services) && services.map((service, index) => (
+            <li key={index}>{service}</li>
+          ))}
           </ul>
         </div>
       </div>
       <div className={style.footerBottom}>
-        \
         <div className={style.bottomContent}>
-          <div className={style.copyright}>© 2024 CleanCode Solutions</div>
+          <div className={style.copyright}>
+            &copy; {new Date().getFullYear()} CleanCode Solutions
+          </div>
           <div className={style.mediaLinks}>
             <div className={style.iconWithText}>
               <a
@@ -138,7 +142,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

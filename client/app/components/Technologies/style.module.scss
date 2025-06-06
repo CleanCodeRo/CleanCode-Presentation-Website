@@ -1,12 +1,15 @@
 @import "@style/globalVariables.scss";
 
 .technologiesBar {
-  height: 32rem;
   background-color: $BlueDark;
-  overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .technologiesContent {
@@ -14,67 +17,67 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  margin-bottom: 3rem;
+  width: 90%;
 }
 
-.technologiesTitle,
-.technologiesSubTitle {
-  font-size: 2.5rem;
-  color: white;
-  font-family: $PoppinsBold;
-}
-
-.technologiesTitle,
-.technologiesSubTitle,
+.technologiesTitle, 
+.technologiesSubTitle, 
 .technologiesText {
-  width: 55rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .technologiesTitle {
-  padding-top: 10rem;
-  margin-top: 1rem;
-  margin-bottom: 0rem;
+  font-size: 2.5rem;
+  color: white;
+  font-family: $PoppinsBold;
+  margin-bottom: 0.5rem;
 }
 
 .technologiesSubTitle {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
   color: $Yellow;
+  font-family: $PoppinsBold;
+  margin-bottom: 1.5rem;
 }
+
 .technologiesText {
   color: white;
-  font-family: $MontserratExtraLight;
+  font-family: $MontserratLight;
   font-weight: 200;
   font-size: 1.2rem;
   line-height: 2rem;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 80%;
   text-align: center;
-  padding-bottom: 3rem;
+}
+
+.logosContainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .logos {
-  height: 50%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   animation: scrollLeft 30s linear infinite;
   will-change: transform;
+  width: fit-content;
 }
 
 .logo {
   width: 70px;
   height: 70px;
-  margin-left: 35px;
-  margin-right: 35px;
+  margin: 0 35px;
   filter: invert(1);
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 @keyframes scrollLeft {
@@ -82,6 +85,87 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .technologiesBar {
+    padding: 3rem 1.5rem;
+  }
+  
+  .technologiesTitle,
+  .technologiesSubTitle {
+    font-size: 2.2rem;
+  }
+  
+  .technologiesText {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .technologiesBar {
+    padding: 2.5rem 1rem;
+  }
+  
+  .technologiesContent {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .technologiesTitle,
+  .technologiesSubTitle {
+    font-size: 1.8rem;
+  }
+  
+  .technologiesText {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    width: 100%;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px;
+  }
+  
+  .logos {
+    animation-duration: 20s;
+  }
+}
+
+@media (max-width: 480px) {
+  .technologiesBar {
+    padding: 2rem 0.5rem;
+  }
+  
+  .technologiesTitle,
+  .technologiesSubTitle {
+    font-size: 1.5rem;
+  }
+  
+  .technologiesText {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
+  
+  .logos {
+    animation-duration: 15s;
   }
 }

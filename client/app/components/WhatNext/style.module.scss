@@ -1,12 +1,26 @@
 @import "@style/globalVariables.scss";
 
 .whatNextContainer {
-  height: 50rem;
+  max-height: 50rem;
   display: flex;
+  padding-top:2rem;
   flex-direction: column;
   align-items: center;
   background-color: $Yellow;
 
+  @media (max-width: 1050px) {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  @media (max-width: 500px) {
+    align-items: start;
+    margin-right: 2rem;
+  }
 
   .title {
     width: 100%;
@@ -16,6 +30,13 @@
     margin: 0;
     margin-top: -1rem;
     margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  @media (max-width: 1050px) {
+    .title {
+      padding-top: 2rem;
+    }
   }
 
   .gridContainer {
@@ -25,6 +46,10 @@
     max-width: 800px;
     width: 100%;
     padding-top: 1rem;
+
+    @media (max-width: 1050px) {
+      max-width: 80%;
+    }
   }
 
   .leftColumn {
@@ -32,7 +57,11 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding-bottom: 3rem;
+    height: 100%;
+
+    @media (max-width: 1050px) {
+      padding-bottom: 1rem;
+    }
   }
 
   .number {
@@ -57,15 +86,38 @@
     top: 45px;
     width: 2px;
     background-color: $BlueDark;
-    height: 128%;
+    height: 100%;
   }
 
   .rightColumn {
     font-family: $MontserratRegular;
-    font-size: 1rem;
+    font-size: $font-size-x-small;
     line-height: 1.5;
     color: $BlueDark;
+    text-wrap:wrap;
     padding-bottom: 3rem;
+
+    @media (max-width: 1050px) {
+      font-size: 1.2rem;
+      line-height: 1.8rem;   
+      width: 200%;
+    }
+
+    @media (max-width: 900px) {
+      padding-bottom: 1rem;
+      width: 150%;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+        
+    @media (max-width: 1050px) {
+      padding-bottom: 1rem;
+    }
   }
 
 }
