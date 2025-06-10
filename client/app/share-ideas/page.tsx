@@ -2,10 +2,11 @@
 
 import React from "react";
 import Head from "next/head";
-import Navbar from "../common/components/Navbar";
-import Footer from "../common/components/Footer";
-import style from "../common/components/Contact/style.module.scss";
-import ProjectForm from "../common/components/ProjectForm";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
+import style from "@components/Contact/style.module.scss";
+import ProjectForm from "@components/ProjectForm";
+
 const ShareIdeas = () => {
   return (
     <>

@@ -1,10 +1,9 @@
 "use client";
 
-import React from 'react';
 import Head from 'next/head';
-import Navbar from '../common/components/Navbar';
-import Footer from '../common/components/Footer';
-import Contact from '../common/components/Contact';
+import Navbar from '@components/Navbar';
+import Footer from '@components/Footer';
+import Contact from '@components/Contact';
 
 const ContactUs = () => {
   return (

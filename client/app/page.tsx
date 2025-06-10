@@ -1,4 +1,3 @@
-import React from 'react';
 import Navbar from './common/components/Navbar';
 import Landing from './common/components/Landing';
 import Technologies from './common/components/Technologies';

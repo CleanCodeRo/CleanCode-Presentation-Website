@@ -2,14 +2,14 @@
 
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
-import Navbar from "../common/components/Navbar";
-import Footer from "../common/components/Footer";
-import OurProcess from "../common/components/OurProcess";
-import MissionVision from "../common/components/MissionVision";
-import AboutUsHero from "../common/components/AboutUsHero";
-import WeBelieve from "../common/components/WeBelieve";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
+import OurProcess from "@components/OurProcess";
+import MissionVision from "@components/MissionVision";
+import AboutUsHero from "@components/AboutUsHero";
+import WeBelieve from "@components/WeBelieve";
 import { MissionStep } from "@models/card";
 
 interface ProcessStep {

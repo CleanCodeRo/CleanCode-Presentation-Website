@@ -2,12 +2,12 @@
 
 import React from "react";
 import Head from "next/head";
-import Navbar from "../common/components/Navbar";
-import Footer from "../common/components/Footer";
-import ChooseUs from "../common/components/ChooseUs";
-import NeedSomething from "../common/components/NeedSomething";
-import WeCanOffer from "../common/components/WeCanOffer";
-import DeveloperTeam from "../common/components/DeveloperTeam";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
+import ChooseUs from "@components/ChooseUs";
+import NeedSomething from "@components/NeedSomething";
+import WeCanOffer from "@components/WeCanOffer";
+import DeveloperTeam from "@components/DeveloperTeam";
 
 const Services = () => {
   return (
