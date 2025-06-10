@@ -19,10 +19,10 @@
     ],
     "paths": {
       "@public/*": ["./public/*"],
-      "@style/*": ["./app/style/*"],
-      "@constants/*": ["./app/constants/*"],
-      "@models/*": ["./app/models/*"],
-      "@components/*": ["./app/components/*"],
+      "@style/*": ["./app/common/style/*"],
+      "@constants/*": ["./app/common/constants/*"],
+      "@models/*": ["./app/common/models/*"],
+      "@components/*": ["./app/common/components/*"],
       "@assets/*": ["./public/assets/*"],
     }
   },
