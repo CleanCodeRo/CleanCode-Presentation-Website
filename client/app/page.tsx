@@ -1,11 +1,11 @@
-import Navbar from './common/components/Navbar';
-import Landing from './common/components/Landing';
-import Technologies from './common/components/Technologies';
-import WhatWeDo from './common/components/WhatWeDo';
-import Footer from './common/components/Footer';
-import CardsGrid from "./common/components/CardsGrid";
-import Card from "./common/components/Card";
-import Quote from './common/components/Quote';
+import Navbar from '@components/Navbar';
+import Landing from '@components/Landing';
+import Technologies from '@components/Technologies';
+import WhatWeDo from '@components/WhatWeDo';
+import Footer from '@components/Footer';
+import CardsGrid from "@components/CardsGrid";
+import Card from "@components/Card";
+import Quote from '@components/Quote';
 
 export default function Home() {
   return (
