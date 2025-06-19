@@ -12,6 +12,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -87,9 +88,9 @@ const Navbar = () => {
     <nav ref={navRef} className={`${style.nav}`} style={{ height: navHeight }}>
       <ul className={style.navList}>
         <li className={style.navItem}>
-          <Link href="/client/public" className={pathname === "/" ? style.active : ""}>
+          <Link href="/" className={pathname === "/" ? style.active : ""}>
             <img
-              src="/assets/svg/logo-clean-code-it-vf.svg"
+              src="/assets/svg/logo-clean-code-solution-vf.svg"
               alt="Clean Code IT Logo"
               className={style.logo}
             />

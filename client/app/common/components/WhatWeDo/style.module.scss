@@ -18,7 +18,6 @@
 
 .whatWeDo{
     width:70%;
-
     height: auto;
     margin: 0 auto;
     display: grid;
@@ -95,7 +94,7 @@
     align-self: start;
     transition: background-color 0.3s ease;
 
-    @media (max-width: 768px) {
+    @media (width < 1083px) {
         margin: 0 auto;
     }
 }
@@ -112,7 +111,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    // padding: 0 2rem;
 
     @media (max-width: 1083px) {
         width: 100%;
