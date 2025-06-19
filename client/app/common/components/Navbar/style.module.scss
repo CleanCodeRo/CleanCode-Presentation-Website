@@ -52,7 +52,7 @@
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
   color: $BlueDark;
 
@@ -76,8 +76,9 @@
     color: $BlueDark;
     cursor: pointer;
     position: relative;
-    padding-right:10px;
-    &:hover{
+    padding-right: 10px;
+
+    &:hover {
       color: $GreenMedium;
     }
   }
@@ -94,7 +95,6 @@
   font-family: $PoppinsBold;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  border: none;
   border-radius: $button-radious;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
   text-decoration: none;
@@ -119,7 +119,7 @@
   overflow: hidden;
 }
 
-.logo{
+.logo {
   width: 100%;
   max-width: 130px;
   display: block;
@@ -135,10 +135,17 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 867px) {
+  .navList {
+    width: 80%;
+  }
+}
+
 @media (max-width: 768px) {
   .navList {
     grid-template-columns: auto auto;
     justify-content: space-between;
+    padding-bottom: unset;
   }
 
   .mobileMenuButton {
@@ -192,7 +199,7 @@
 
 @media (max-width: 480px) {
   .navList {
-    padding: 10px;
+    padding-bottom: unset;
     grid-template-columns: 1fr auto;
   }
 

@@ -24,6 +24,7 @@
 .subTitleMain,
 .letsTalk {
     grid-column: 1;
+    z-index: 1;
 }
 
 .heroImage {
@@ -35,16 +36,17 @@
     align-self: start;
 
     @media (max-width: 900px) {
-
-        transform: scale(2) translate(50px, -5px);
+        margin: 0 auto;
+        transform: scale(2);
         align-self: center;
         padding-top:5rem;
         padding-bottom:5rem;
     }
     @media (min-width: 900px) {
+        margin: 0 auto;
         grid-column: 2;
         grid-row: 2;
-        transform: scale(3.5) translate(50px, -5px);
+        transform: scale(3.5);
     }
 }
 
@@ -53,7 +55,6 @@
     color: $White;
     font-size: 1.5rem;
     transform: none;
-    z-index:1;
     text-align: center;
 
     @media (min-width: 900px) {
