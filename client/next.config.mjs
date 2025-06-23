@@ -6,6 +6,7 @@ const nextConfig = {
   },
   trailingSlash: true,
   webpack(config) {
+    config.cache = false;
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
