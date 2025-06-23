@@ -1,0 +1,41 @@
+@import "globalVariables";
+
+.dark_blue_fill {
+    fill: $BlueDark;
+    fill-rule: nonzero;
+}
+.teal_fill {
+    fill: $Teal;
+    fill-rule: nonzero;
+}
+.blue_fill {
+    fill: $BlueMedium;
+    fill-rule: nonzero;
+}
+.aqua_fill {
+    fill: $Aqua;
+    fill-rule: nonzero;
+}
+.red_fill{
+    fill: $RedMedium;
+    fill-rule: nonzero;
+}
+.orange_fill {
+    fill: $Orange;
+    fill-rule: nonzero;
+}
+.yellow_fill {
+    fill: $Yellow;
+    fill-rule: nonzero;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }

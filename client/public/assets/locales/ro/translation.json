@@ -1,0 +1,24 @@
+{
+    "chooseUs": {
+      "title": "De ce să ne alegi",
+      "highlightedWord": "alege-ne",
+      "subtitle": "Lucrăm pentru a face CleanCode Solutions cel mai bun serviciu de codare"
+    },
+    "contact": {
+      "address": "103-105 Calea Victoriei, District 1, Bucharest",
+      "mail": "hello@cleancodeit.com",
+      "phone": "+40733311393",
+      "title": "Say hello to our friendly team at"
+    },
+    "services": {
+      "subtitle": "Core services",
+      "list": [
+        "Software development",
+        "Web & email hosting",
+        "Web & mobile apps",
+        "Digital transformation",
+        "Application modernization"
+      ]
+    }
+  }
+  

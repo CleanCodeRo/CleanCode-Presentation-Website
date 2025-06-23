@@ -1,0 +1,112 @@
+@import "@style/globalVariables";
+
+.wrapper {
+    background: $Yellow;
+    text-align: center;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.container {
+    max-width: 59rem;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        max-width: 90%;
+    }
+}
+
+.title {
+    font-weight: bold;
+    color: $BlueDark;
+    font-size: 2.5rem;
+    font-family: $PoppinsBold;
+
+    @media (max-width: 1024px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 0.8rem;
+
+    @media (max-width: 768px) {
+        gap: 0.5rem;
+    }
+}
+
+.tab {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-family: $PoppinsBold;
+    font-weight: bold;
+    color: $BlueDark;
+    cursor: pointer;
+    padding: 8px 12px;
+    margin-bottom: 1rem;
+
+    @media (max-width: 1024px) {
+        font-size: 1.3rem;
+        padding: 6px 10px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+        padding: 5px 8px;
+    }
+}
+
+.active {
+    background: $BlueDark;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.description {
+    font-size: $font-size-x-small;
+    color: $BlueDark;
+    margin-top: 10px;
+    line-height: 2rem;
+
+    @media (max-width: 1024px) {
+        font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+}
+
+.icon{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+}
