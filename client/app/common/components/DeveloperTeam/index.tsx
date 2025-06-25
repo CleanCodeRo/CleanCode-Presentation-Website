@@ -10,7 +10,7 @@ const DeveloperTeam = () => {
 
   return (
     <section className={style.wrapper}>
-      <div className={style.container}>
+      <div className={style.container} style={{gap: "2.5rem"}}>
         <div className={style.title}>{t('dedicated.title')}</div>
         <div className={style.content}>{t('dedicated.content')}</div>
           <Link href="/contact-us" className={style.button}>
