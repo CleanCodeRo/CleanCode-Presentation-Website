@@ -59,6 +59,10 @@
     padding: 8px 12px;
     margin-bottom: 1rem;
 
+    &:not(.active):hover {
+        color: $GreenMedium;
+    }
+
     @media (max-width: 1024px) {
         font-size: 1.3rem;
         padding: 6px 10px;
