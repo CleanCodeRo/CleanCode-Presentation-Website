@@ -64,7 +64,7 @@
 
   li {
     font-family: $MontserratRegular;
-    font-size: $font-size-x-small;
+    font-size: $font-size-small;
     cursor: pointer;
     transition: color 0.3s ease;
 
@@ -102,7 +102,7 @@
 }
 
 .copyright {
-  font-size: $font-size-x-small;
+  font-size: $font-size-small;
   color: white;
   font-family: $PoppinsLight;
 }
@@ -131,7 +131,7 @@
 
 .link {
   font-family: $MontserratRegular;
-  font-size: $font-size-x-small;
+  font-size: $font-size-small;
   color: white;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -220,7 +220,7 @@
 
   .footerCenterLeftTitle,
   .footerCenterRightTitle {
-    font-size: $font-size-x-small;
+    font-size: $font-size-small;
   }
 
   .mediaLinks {

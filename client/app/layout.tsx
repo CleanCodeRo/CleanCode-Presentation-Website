@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "@style/globalStyle.scss";
 import Script from "next/script";
 import { I18nProvider } from './common/providers/I18nProvider';
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,7 +42,9 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <I18nProvider>
-          {children}
+          <Navbar/>
+            {children}
+          <Footer/>
         </I18nProvider>
       </body>
     </html>

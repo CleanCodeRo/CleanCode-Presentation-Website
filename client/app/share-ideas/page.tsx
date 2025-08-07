@@ -1,8 +1,6 @@
 "use client";
 
 import Head from "next/head";
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
 import style from "@components/Contact/style.module.scss";
 import ProjectForm from "@components/ProjectForm";
 
@@ -16,11 +14,10 @@ const ShareIdeas = () => {
           content="Get in touch with us for inquiries, support, or more information about our services."
         />
       </Head>
-      <Navbar />
       <section className={style.contactComponent}>
         <div className={style.TitleAndDescription}>
           <div className={style.contactTitle}>
-            Don’t wait -{" "}
+            Don&apos;t wait -{" "}
             <span className={style.highlight}>share your ideas with us.</span>
           </div>
           <div className={style.contactDescription}>
@@ -33,7 +30,6 @@ const ShareIdeas = () => {
           <ProjectForm />
         </div>
       </section>
-      <Footer />
     </>
   );
 };

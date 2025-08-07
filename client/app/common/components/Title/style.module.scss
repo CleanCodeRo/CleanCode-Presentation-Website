@@ -83,11 +83,12 @@
 }
 
 .letsTalk {
+    text-decoration: none;
     display: inline-block;
     margin: 1.5rem 0;
     border-radius: 7px;
     font-family: $PoppinsBold;
-    font-size: $font-size-x-small;
+    font-size: $font-size-small;
     padding: 0.7rem 2rem;
     background-color: $Yellow;
     color: $BlueDark;

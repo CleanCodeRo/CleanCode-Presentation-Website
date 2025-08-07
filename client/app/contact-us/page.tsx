@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Head from 'next/head';
-import Navbar from '../common/components/Navbar';
-import Footer from '../common/components/Footer';
 import Contact from '../common/components/Contact';
 
 const ContactUs = () => {
@@ -13,9 +11,7 @@ const ContactUs = () => {
         <title>Contact Us</title>
         <meta name="description" content="Get in touch with us for inquiries, support, or more information about our services." />
       </Head>
-      <Navbar />
       <Contact />
-      <Footer />
     </>
   );
 };

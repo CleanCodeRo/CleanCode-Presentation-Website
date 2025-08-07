@@ -35,7 +35,7 @@
 
 .content{
     font-family: $MontserratRegular;
-    font-size: $font-size-x-small;
+    font-size: $font-size-small;
     color: white;
     text-align: center;
     line-height: 2rem;
@@ -52,9 +52,10 @@
 }
 
 .button{
+    text-decoration: none;
     border-radius: 7px;
     font-family: $PoppinsBold;
-    font-size: $font-size-x-small;
+    font-size: $font-size-small;
     padding: 1rem 1.5rem;
     background-color: $Yellow;
     color: $BlueDark;
