@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
-import styles from './style.module.scss';
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
+import styles from "./style.module.scss";
 
 interface Belief {
   name: string;
@@ -12,25 +12,23 @@ interface Belief {
 
 const WeBelieve: React.FC = () => {
   const { t } = useTranslation();
-  const beliefs = t('weBelieve.tabs', { returnObjects: true }) as Belief[];
+  const beliefs = t("weBelieve.tabs", { returnObjects: true }) as Belief[];
 
-  const [selectedBelief, setSelectedBelief] = useState<Belief | null>(null);
-
-  useEffect(() => {
-    if (beliefs.length > 0 && !selectedBelief) {
-      setSelectedBelief(beliefs[0]);
-    }
-  }, [beliefs, selectedBelief]);
+  const [selectedBelief, setSelectedBelief] = useState<Belief | null>(
+    beliefs.length > 0 ? beliefs[0] : null
+  );
 
   return (
     <section className={styles.wrapper}>
       <div className={styles.container}>
-        <h2 className={styles.title}>{t('weBelieve.title')}</h2>
+        <h2 className={styles.title}>{t("weBelieve.title")}</h2>
         <div className={styles.tabs}>
           {beliefs.map((belief, index) => (
             <button
               key={index}
-              className={`${styles.tab} ${selectedBelief?.name === belief.name ? styles.active : ''}`}
+              className={`${styles.tab} ${
+                selectedBelief?.name === belief.name ? styles.active : ""
+              }`}
               onClick={() => setSelectedBelief(belief)}
             >
               {belief.name}

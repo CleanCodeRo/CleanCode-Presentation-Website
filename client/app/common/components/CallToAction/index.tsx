@@ -1,27 +1,34 @@
-'use client';
+"use client";
 
-import style from './style.module.scss';
-import Link from 'next/link';
+import { useTranslation } from "react-i18next";
+import style from "./style.module.scss";
+import Link from "next/link";
 
 interface CallToActionProps {
-  title: string;
-  subtitle?: string;
-  content: string;
-  buttonText: string;
   buttonLink: string;
+  translationKey: string;
 }
 
-const CallToAction: React.FC<CallToActionProps> = ({ title, subtitle, content, buttonText, buttonLink }) => {
+const CallToAction: React.FC<CallToActionProps> = ({
+  translationKey,
+  buttonLink,
+}) => {
+  const { t, i18n } = useTranslation();
+
   return (
     <section className={style.wrapper}>
       <div className={style.container}>
         <div className={style.fullTitle}>
-        <div className={style.title}>{title}</div>
-        {subtitle && <div className={style.subTitle}>{subtitle}</div>}
+          <div className={style.title}>{t(`${translationKey}.title`)}</div>
+          {i18n.exists(`${translationKey}.subtitle`) && (
+            <div className={style.subTitle}>
+              {t(`${translationKey}.subtitle`)}
+            </div>
+          )}
         </div>
-        <div className={style.content}>{content}</div>
+        <div className={style.content}>{t(`${translationKey}.content`)}</div>
         <Link href={buttonLink} className={style.button}>
-          {buttonText}
+          {t(`${translationKey}.button`)}
         </Link>
       </div>
     </section>

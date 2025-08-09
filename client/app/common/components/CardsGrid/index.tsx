@@ -1,57 +1,49 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import style from './style.module.scss';
-import { CardProps } from "@models/card";
+import style from "./style.module.scss";
+import { CardGridData } from "@models/card";
+import Card from "@components/Card";
+import { useTranslation } from "react-i18next";
 
 interface CardsGridProps {
-  title: string;
-  highlightedWord: string;
-  subtitle?: string;
-  jsonPath: string;
+  cardData: CardGridData[];
   containerClass?: string;
-  CardComponent: React.ComponentType<CardProps>;
+  translationKey: string;
 }
 
 const CardsGrid: React.FC<CardsGridProps> = ({
-  title,
-  highlightedWord,
-  subtitle,
-  jsonPath,
-  containerClass = '',
-  CardComponent
+  translationKey,
+  cardData,
+  containerClass = "",
 }) => {
-  const [cards, setCards] = useState<CardProps[]>([]);
+  const { t, i18n } = useTranslation();
 
-  useEffect(() => {
-    fetch(jsonPath)
-      .then((response) => response.json())
-      .then((data) => setCards(data))
-      .catch((error) => console.error("Error loading JSON:", error));
-  }, [jsonPath]);
-
-  const [before, after] = title.split(highlightedWord);
+  const [before, after] = t(`${translationKey}.title`).split(
+    t(`${translationKey}.highlightedWord`)
+  );
 
   return (
     <section className={`${style.container} ${style[containerClass]}`}>
       <div className={style.subContainer}>
-      <h2 className={style.title}>
-        {before}
-        <span className={style.highlight}>{highlightedWord}</span>
-        {after}
-      </h2>
-      {subtitle && <div className={style.subTitle}>{subtitle}</div>}
-      <div className={style.gridContainer}>
-        {cards.length > 0 ? (
+        <h2 className={style.title}>
+          {before}
+          <span className={style.highlight}>
+            {t(`${translationKey}.highlightedWord`)}
+          </span>
+          {after}
+        </h2>
+        {i18n.exists(`${translationKey}.subtitle`) && (
+          <div className={style.subTitle}>
+            {t(`${translationKey}.subtitle`)}
+          </div>
+        )}
+        <div className={style.gridContainer}>
           <div className={style.cardContainer}>
-            {cards.map((card, index) => (
-              <CardComponent key={index} {...card} />
+            {cardData.map((card, index) => (
+              <Card key={index} {...card} />
             ))}
           </div>
-        ) : (
-          <p>Loading...</p>
-        )}
-      </div>
+        </div>
       </div>
     </section>
   );

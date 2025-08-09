@@ -1,28 +1,24 @@
-"use client";
-
-import React from "react";
-import Head from "next/head";
-import ChooseUs from "@components/ChooseUs";
-import NeedSomething from "@components/NeedSomething";
+import { Metadata } from "next";
 import WeCanOffer from "@components/WeCanOffer";
 import DeveloperTeam from "@components/DeveloperTeam";
+import CardsGrid from "@components/CardsGrid";
+import cardData from "@assets/json/chooseUs.json";
+import CallToAction from "@components/CallToAction";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Learn more about our services.",
+};
 
 const Services = () => {
   return (
     <>
-      <Head>
-        <title>Services</title>
-        <meta
-          name="Services"
-          content="Learn more about our services."
-        />
-      </Head>
-      <ChooseUs />
-      <NeedSomething />
+      <CardsGrid translationKey="chooseUs" cardData={cardData} />;
+      <CallToAction translationKey="needSomethingElse" buttonLink="/contact-us" />
       <WeCanOffer />
       <DeveloperTeam />
     </>
   );
-}
+};
 
 export default Services;

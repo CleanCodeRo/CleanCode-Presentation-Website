@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
-    apple: "/apple-touch-icon.png",
+    // apple: "/apple-touch-icon.png", TODO: add apple and android images
   },
 };
 

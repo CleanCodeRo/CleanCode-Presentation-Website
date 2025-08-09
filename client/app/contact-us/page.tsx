@@ -1,20 +1,14 @@
-"use client";
+import { Metadata } from "next";
+import Contact from "@components/Contact";
 
-import React from 'react';
-import Head from 'next/head';
-import Contact from '../common/components/Contact';
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with us for inquiries, support, or more information about our services.",
+};
 
 const ContactUs = () => {
-  return (
-    <>
-      <Head>
-        <title>Contact Us</title>
-        <meta name="description" content="Get in touch with us for inquiries, support, or more information about our services." />
-      </Head>
-      <Contact />
-    </>
-  );
+  return <Contact />;
 };
 
 export default ContactUs;
-

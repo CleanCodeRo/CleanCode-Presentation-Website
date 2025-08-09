@@ -1,15 +1,17 @@
-'use client';
+"use client";
 
-import style from './style.module.scss';
-import { useTranslation } from 'react-i18next';
+import Image from "next/image";
+import style from "./style.module.scss";
+import { useTranslation } from "react-i18next";
 
 const MissionVision = () => {
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation();
 
-  const missionData = t('mission.steps', { returnObjects: true }) as {
+  const missionData = t("mission.steps", { returnObjects: true }) as {
     id: number;
     name: string;
     detail: string;
+    imagePath: string;
   }[];
 
   return (
@@ -19,10 +21,12 @@ const MissionVision = () => {
           {missionData.map((step) => (
             <article key={step.id} className={style.missionVisionCard}>
               <div className={style.missionVisionIcon}>
-                <img
-                  src={`/assets/svg/AboutUs/${step.name.toLowerCase()}.svg`}
+                <Image
+                  src={step.imagePath}
                   alt={`${step.name} Icon`}
                   className={style.missionIcon}
+                  width={80}
+                  height={80}
                 />
               </div>
               <h3 className={style.missionVisionSubTitle}>{step.name}</h3>

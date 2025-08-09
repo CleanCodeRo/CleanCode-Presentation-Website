@@ -1,25 +1,22 @@
-import Landing from '@components/Landing';
-import Technologies from '@components/Technologies';
-import WhatWeDo from '@components/WhatWeDo';
+import Technologies from "@components/Technologies";
+import WhatWeDo from "@components/WhatWeDo";
 import CardsGrid from "@components/CardsGrid";
-import Card from "@components/Card";
-import Quote from '@components/Quote';
+import LandingTitle from "@components/Title";
+import cardData from "@assets/json/rightPartner.json";
+import CallToAction from "@components/CallToAction";
 
 export default function Home() {
-
   return (
     <>
-      <Landing />
+      <LandingTitle />
       <WhatWeDo />
       <Technologies />
       <CardsGrid
-        title="Why we're the right partner"
-        highlightedWord="right partner"
-        jsonPath="/assets/json/rightPartner.json"
+        translationKey="rightPartner"
+        cardData={cardData}
         containerClass="rightPartnerContainer"
-        CardComponent={Card}
       />
-      <Quote />
+      <CallToAction translationKey="quote" buttonLink={"/share-ideas"} />
     </>
   );
 }

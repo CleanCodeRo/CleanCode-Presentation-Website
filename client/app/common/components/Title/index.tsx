@@ -1,14 +1,19 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import style from "./style.module.scss";
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
 
-const Title = () => {
+const LandingTitle = () => {
   const { t } = useTranslation();
-  const changingWords = t('hero.changingWords', { returnObjects: true }) as string[];
-  const secondChangingWords = t('hero.secondChangingWords', { returnObjects: true }) as string[];
+  const changingWords = t("hero.changingWords", {
+    returnObjects: true,
+  }) as string[];
+  const secondChangingWords = t("hero.secondChangingWords", {
+    returnObjects: true,
+  }) as string[];
   const [index, setIndex] = useState<number>(0);
   const [secondIndex, setSecondIndex] = useState<number>(0);
 
@@ -22,39 +27,53 @@ const Title = () => {
   }, [changingWords.length, secondChangingWords.length]);
 
   return (
-    <div className={style.boxTitle}>
-      <h1 className={style.title}>
-        {t('hero.staticTitleStart')} <span>
-          {changingWords.map((word, wordIndex) => (
-            <b
-              className={`${style.changingTextFirst} ${index === wordIndex ? style.isVisible : style.isHidden}`}
-              key={wordIndex}
-            >
-              {word}
-            </b>
-          ))}
-        </span>
-        <br />
-        {t('hero.staticTitleMiddle')}
-        <br />
-        {t('hero.staticTitleEnd')} <span>
-          {secondChangingWords.map((word, wordIndex) => (
-            <b
-              className={`${style.changingTextSecond} ${secondIndex === wordIndex ? style.isVisible : style.isHidden}`}
-              key={wordIndex}
-            >
-              {word}
-            </b>
-          ))}
-        </span>
-      </h1>
-      <div className={style.subTitleMain}>{t('hero.subTitle')}</div>
-      <Link href="/contact-us" className={style.letsTalk}>
-        {t('hero.button')}
-      </Link>
-      <img src="/assets/svg/MainPage/hero-section.svg" alt="about us" className={style.heroImage} />
-    </div>
+    <section className={style.section}>
+      <div className={style.boxTitle}>
+        <h1 className={style.title}>
+          {t("hero.staticTitleStart")}{" "}
+          <span>
+            {changingWords.map((word, wordIndex) => (
+              <b
+                className={`${style.changingTextFirst} ${
+                  index === wordIndex ? style.isVisible : style.isHidden
+                }`}
+                key={wordIndex}
+              >
+                {word}
+              </b>
+            ))}
+          </span>
+          <br />
+          {t("hero.staticTitleMiddle")}
+          <br />
+          {t("hero.staticTitleEnd")}{" "}
+          <span>
+            {secondChangingWords.map((word, wordIndex) => (
+              <b
+                className={`${style.changingTextSecond} ${
+                  secondIndex === wordIndex ? style.isVisible : style.isHidden
+                }`}
+                key={wordIndex}
+              >
+                {word}
+              </b>
+            ))}
+          </span>
+        </h1>
+        <div className={style.subTitleMain}>{t("hero.subTitle")}</div>
+        <Link href="/contact-us" className={style.letsTalk}>
+          {t("hero.button")}
+        </Link>
+        <Image
+          src="/assets/svg/MainPage/hero-section.svg"
+          alt="about us"
+          className={style.heroImage}
+          width={181}
+          height={162}
+        />
+      </div>
+    </section>
   );
 };
 
-export default Title;
+export default LandingTitle;

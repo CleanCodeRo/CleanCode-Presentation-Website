@@ -25,7 +25,7 @@
     "content": "Hire skilled developers or an entire team dedicated exclusively to your projects, ensuring a high level of expertise, commitment, and on-time project completion.",
     "button": "START A CONVERSATION"
   },
-  "aboutUsHero": {
+  "aboutUs": {
     "titlePart1": "Outstanding individually.",
     "titlePart2": "Unstoppable together.",
     "imageAlt": "Team collaboration illustration"
@@ -54,12 +54,14 @@
       {
         "id": 1,
         "name": "Mission",
-        "detail": "We help clients boost revenue by using the latest technology to improve efficiency and performance."
+        "detail": "We help clients boost revenue by using the latest technology to improve efficiency and performance.",
+        "imagePath": "/assets/svg/AboutUs/mission.svg"
       },
       {
         "id": 2,
         "name": "Vision",
-        "detail": "Harness today’s technologies to effectively optimize your business and prepare it for tomorrow’s challenges."
+        "detail": "Harness today’s technologies to effectively optimize your business and prepare it for tomorrow’s challenges.",
+        "imagePath": "/assets/svg/AboutUs/vision.svg"
       }
     ]
   },
@@ -106,7 +108,7 @@
   },
   "rightPartner": {
     "title": "Why we're the right partner",
-    "highlight": "right partner",
+    "highlightedWord": "right partner",
     "content": [
       {
         "name": "High industry standards",
@@ -140,7 +142,11 @@
     "text": "We leverage industry-leading programming languages, frameworks, and tools, and we’ll assist you in implementing a strategically aligned tech stack for optimal reliability, flexibility, and scalability."
   },
   "hero": {
-    "changingWords": ["Hosting", "Product Development", "IT Staff Augmentation"],
+    "changingWords": [
+      "Hosting",
+      "Product Development",
+      "IT Staff Augmentation"
+    ],
     "secondChangingWords": ["lasting value", "data-driven value"],
     "staticTitleStart": "Leading global partner in",
     "staticTitleMiddle": "empowering ambitious businesses,",
@@ -173,15 +179,13 @@
       }
     ]
   },
-  "offer":{
+  "offer": {
     "title": "What <span class=\"highlight\">we can offer</span> you",
-    "content":
-      "Our flexible and effective approaches ensure that we can deliver customized solutions that meet our client's specific needs and exceed their expectations."
-    ,
+    "content": "Our flexible and effective approaches ensure that we can deliver customized solutions that meet our client's specific needs and exceed their expectations.",
     "titleProject": "Per Project",
-     "contentProject": "Ideal for projects with a clear scope and goals, this approach works well with a waterfall methodology, ensuring a fixed budget and timeline.",
+    "contentProject": "Ideal for projects with a clear scope and goals, this approach works well with a waterfall methodology, ensuring a fixed budget and timeline.",
     "titleAgile": "Agile Approach",
-     "contentAgile": "Have a long-term project with evolving goals and a shifting scope? Let our expert team craft a custom agile approach tailored to suit your needs."
+    "contentAgile": "Have a long-term project with evolving goals and a shifting scope? Let our expert team craft a custom agile approach tailored to suit your needs."
   },
   "whatNext": {
     "title": "What happens next?",

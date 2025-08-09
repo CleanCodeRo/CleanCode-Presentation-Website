@@ -1,6 +1,26 @@
 @import "@style/globalVariables";
+.section {
+  padding-top: 80px;
+  min-height: 480px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $BlueDark;
 
-.boxTitle {
+  @media (max-width: 1024px) {
+    padding-top: 60px;
+    min-height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 6rem;
+    min-height: auto;
+    height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .boxTitle {
     display: grid;
     max-width: 100%;
     height: auto;
@@ -15,19 +35,19 @@
     gap: 1rem;
 
     @media (min-width: 900px) {
-        grid-template-columns: 5fr 4fr;
-        text-align: left;
+      grid-template-columns: 5fr 4fr;
+      text-align: left;
     }
-}
+  }
 
-.title,
-.subTitleMain,
-.letsTalk {
+  .title,
+  .subTitleMain,
+  .letsTalk {
     grid-column: 1;
     z-index: 1;
-}
+  }
 
-.heroImage {
+  .heroImage {
     grid-column: 1;
     grid-row: 3;
     max-width: 100%;
@@ -36,21 +56,21 @@
     align-self: start;
 
     @media (max-width: 900px) {
-        margin: 0 auto;
-        transform: scale(2);
-        align-self: center;
-        padding-top:5rem;
-        padding-bottom:5rem;
+      margin: 0 auto;
+      transform: scale(2);
+      align-self: center;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
     }
     @media (min-width: 900px) {
-        margin: 0 auto;
-        grid-column: 2;
-        grid-row: 2;
-        transform: scale(3.5);
+      margin: 0 auto;
+      grid-column: 2;
+      grid-row: 2;
+      transform: scale(3.5);
     }
-}
+  }
 
-.title {
+  .title {
     font-family: $PoppinsBold;
     color: $White;
     font-size: 1.5rem;
@@ -58,13 +78,13 @@
     text-align: center;
 
     @media (min-width: 900px) {
-        font-size: $font-size-small;
-        transform: translate(30px, 80px);
-        text-align: left;
+      font-size: $font-size-small;
+      transform: translate(30px, 80px);
+      text-align: left;
     }
-}
+  }
 
-.subTitleMain {
+  .subTitleMain {
     font-family: $MontserratLight;
     font-size: 1.2rem;
     width: 90%;
@@ -75,14 +95,14 @@
     text-align: center;
 
     @media (min-width: 900px) {
-        font-size: 1.2rem;
-        transform: translate(30px, 40px);
-        margin-top: -3rem;
-        text-align: left;
+      font-size: 1.2rem;
+      transform: translate(30px, 40px);
+      margin-top: -3rem;
+      text-align: left;
     }
-}
+  }
 
-.letsTalk {
+  .letsTalk {
     text-decoration: none;
     display: inline-block;
     margin: 1.5rem 0;
@@ -100,51 +120,60 @@
     transform: none;
 
     @media (min-width: 900px) {
-        transform: translate(30px, -40px);
-        justify-self: start;
+      transform: translate(30px, -40px);
+      justify-self: start;
     }
-    @media (max-width: 370px){
-        font-size: 1rem;
-        padding: 0.5rem 1.5rem;
+    @media (max-width: 370px) {
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem;
     }
-}
+  }
 
-.letsTalk:hover {
+  .letsTalk:hover {
     background-color: $GreenLight;
-}
+  }
 
-.changingTextFirst {
+  .changingTextFirst {
     color: $Yellow;
     display: inline-block;
-    transition:
-        transform 0.5s ease,
-        opacity 0.5s ease;
-}
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
-.changingTextSecond {
+  .changingTextSecond {
     color: $GreenMedium;
     display: inline-block;
-    transition:
-        transform 0.5s ease,
-        opacity 0.5s ease;
-}
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
 
-.isHidden {
+  .isHidden {
     display: none;
     animation: pushOut 0.5s forwards;
-}
+  }
 
-.isVisible {
+  .isVisible {
     animation: pushIn 0.5s forwards;
-}
+  }
 
-/* Keyframes */
-@keyframes pushIn {
-    0% { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
+  /* Keyframes */
+  @keyframes pushIn {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
-@keyframes pushOut {
-    0% { transform: translateY(0%); opacity: 1; }
-    100% { transform: translateY(100%); opacity: 0; }
+  @keyframes pushOut {
+    0% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
 }
