@@ -14,7 +14,10 @@ const Services = () => {
   return (
     <>
       <CardsGrid translationKey="chooseUs" cardData={cardData} />;
-      <CallToAction translationKey="needSomethingElse" buttonLink="/contact-us" />
+      <CallToAction
+        translationKey="needSomethingElse"
+        buttonLink="/contact-us"
+      />
       <WeCanOffer />
       <DeveloperTeam />
     </>
