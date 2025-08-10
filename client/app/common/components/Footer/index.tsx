@@ -1,26 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import style from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation('translation');
+  const { t } = useTranslation("translation");
 
-  const services= t('services.list', { returnObjects: true }) as string[];
+  const services = t("services.list", { returnObjects: true }) as string[];
 
   return (
     <footer className={style.footerWrapper}>
       <div className={style.footerCenter}>
         <div className={style.footerCenterLeft}>
           <div className={style.footerCenterLeftTitle}>
-          {t('contact.title')}
+            {t("contact.title")}
           </div>
           <div className={style.footerCenterLeftContent}>
             <div className={style.iconWithText}>
-              <img
+              <Image
                 src="/assets/svg/Footer/location.svg"
                 alt="Location Icon"
                 className={style.icon}
+                width={24}
+                height={24}
               />
               <a
                 href="https://www.google.com/maps?q=103-105+Calea+Victoriei,+District+1,+Bucharest"
@@ -28,37 +31,42 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                {t('contact.address')}
+                {t("contact.address")}
               </a>
             </div>
             <div className={style.iconWithText}>
-              <img
+              <Image
                 src="/assets/svg/Footer/mail.svg"
                 alt="Mail Icon"
                 className={style.icon}
+                width={24}
+                height={24}
               />
-              <a href={`mailto:${t('contact.mail')}`} className={style.link}>
-              {t('contact.mail')}
+              <a href={`mailto:${t("contact.mail")}`} className={style.link}>
+                {t("contact.mail")}
               </a>
             </div>
             <div className={style.iconWithText}>
-              <img
+              <Image
                 src="/assets/svg/Footer/phone.svg"
                 alt="Phone Icon"
                 className={style.icon}
+                width={24}
+                height={24}
               />
-              <a href={`tel:${t('contact.phone')}`} className={style.link}>
-              {t('contact.phone')}
+              <a href={`tel:${t("contact.phone")}`} className={style.link}>
+                {t("contact.phone")}
               </a>
             </div>
           </div>
         </div>
         <div className={style.footerCenterRight}>
-          <div className={style.footerCenterRightTitle}>{t('services.subtitle')}</div>
+          <div className={style.footerCenterRightTitle}>
+            {t("services.subtitle")}
+          </div>
           <ul className={style.servicesList}>
-          {Array.isArray(services) && services.map((service, index) => (
-            <li key={index}>{service}</li>
-          ))}
+            {Array.isArray(services) &&
+              services.map((service, index) => <li key={index}>{service}</li>)}
           </ul>
         </div>
       </div>
@@ -75,10 +83,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                <img
+                <Image
                   src="/assets/svg/Footer/facebook.svg"
                   alt="Facebook Icon"
                   className={style.icon}
+                  width={24}
+                  height={24}
                 />
               </a>
             </div>
@@ -89,10 +99,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                <img
+                <Image
                   src="/assets/svg/Footer/linkedIn.svg"
                   alt="LinkedIn Icon"
                   className={style.icon}
+                  width={24}
+                  height={24}
                 />
               </a>
             </div>
@@ -103,10 +115,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                <img
+                <Image
                   src="/assets/svg/Footer/instagram.svg"
                   alt="Instagram Icon"
                   className={style.icon}
+                  width={24}
+                  height={24}
                 />
               </a>
             </div>
@@ -117,10 +131,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                <img
+                <Image
                   src="/assets/svg/Footer/x.svg"
                   alt="X Icon"
                   className={style.icon}
+                  width={24}
+                  height={24}
                 />
               </a>
             </div>
@@ -131,10 +147,12 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className={style.link}
               >
-                <img
+                <Image
                   src="/assets/svg/Footer/tik-tok.svg"
                   alt="TikTok Icon"
                   className={style.icon}
+                  width={24}
+                  height={24}
                 />
               </a>
             </div>

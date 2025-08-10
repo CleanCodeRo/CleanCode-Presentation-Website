@@ -89,10 +89,12 @@ const Navbar = () => {
       <ul className={style.navList}>
         <li className={style.navItem}>
           <Link href="/" className={pathname === "/" ? style.active : ""}>
-            <img
+            <Image
               src="/assets/svg/logo-clean-code-solution-vf.svg"
               alt="Clean Code IT Logo"
               className={style.logo}
+              width={130}
+              height={65}
             />
           </Link>
         </li>
